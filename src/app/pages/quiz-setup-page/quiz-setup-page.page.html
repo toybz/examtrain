@@ -1,0 +1,75 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center="">New Quiz Setup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+            <form (ngSubmit)="submitQuizConfiguration()" #quizConfigForm="ngForm">
+                <ion-list>
+                    <ion-list-header></ion-list-header>
+
+                    <ion-item>
+                        <ion-label >Category</ion-label>
+
+                        <ion-select  [interfaceOptions]="customActionSheetOptions" interface="action-sheet"   [(ngModel)]="quiz_config.category" name="category" [placeholder]="'Category'"  >
+
+                            <ion-select-option *ngFor="let cat of categories" value="{{cat.id}}">{{cat.name}}</ion-select-option>
+
+
+                        </ion-select>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>Difficulty Level</ion-label>
+
+                        <ion-select interface="action-sheet"  [(ngModel)]="quiz_config.difficulty" name="difficulty" [placeholder]="'Difficulty'">
+
+                            <ion-select-option value="hard">Hard</ion-select-option>
+                            <ion-select-option value="medium">Medium</ion-select-option>
+                            <ion-select-option value="easy">Easy</ion-select-option>
+
+                        </ion-select>
+                    </ion-item>
+
+
+
+
+                    <ion-item>
+
+                    <ion-label slot="start">Number of Question</ion-label>
+
+                        <ion-input slot="end" value="5" type="number" [(ngModel)]="quiz_config.amount" name="amount">
+                        </ion-input>
+
+                    <!--    <ion-grid  >
+                            <ion-row>
+                                <ion-col [size]="10" >
+                                </ion-col>
+
+                                <ion-col [size]="">
+
+                                </ion-col>
+
+                            </ion-row>
+                        </ion-grid>
+
+-->
+                    </ion-item>
+
+
+
+
+
+
+                </ion-list>
+
+                <ion-button padding-horizontal="" expand="block" (click)="submitQuizConfiguration()">START</ion-button>
+
+
+            </form>
+
+
+</ion-content>

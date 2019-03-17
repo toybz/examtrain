@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import {DashboardPagePageModule} from '../pages/dashboard-page/dashboard-page.module';
+import {QuizSetupPagePageModule} from '../pages/quiz-setup-page/quiz-setup-page.module';
 
 const routes: Routes = [
   {
@@ -8,42 +10,69 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'dashboard',
         children: [
           {
             path: '',
-            loadChildren: '../tab1/tab1.module#Tab1PageModule'
+            loadChildren: '../pages/dashboard-page/dashboard-page.module#DashboardPagePageModule'
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'history',
         children: [
           {
             path: '',
-            loadChildren: '../tab2/tab2.module#Tab2PageModule'
+            loadChildren: '../pages/history-page/history-page.module#HistoryPagePageModule'
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'quiz',
         children: [
-          {
+
+            {
             path: '',
-            loadChildren: '../tab3/tab3.module#Tab3PageModule'
-          }
+            loadChildren: '../pages/quiz-landing/quiz-landing.module#QuizLandingPageModule'
+          } ,
+            {
+                path: 'quiz_setup',
+                loadChildren: '../pages/quiz-setup-page/quiz-setup-page.module#QuizSetupPagePageModule'
+            } ,
+
         ]
       },
+        {
+            path: 'study',
+            children: [
+                {
+                    path: '',
+                    loadChildren: '../pages/study-page/study-page.module#StudyPagePageModule'
+                }
+            ]
+        },
+        {
+            path: 'leaderboard',
+            children: [
+                {
+                    path: '',
+                    loadChildren: '../pages/leaderboard-page/leaderboard-page.module#LeaderboardPagePageModule'
+                }
+            ]
+        },
+
+
+
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/dashboard',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/dashboard',
     pathMatch: 'full'
   }
 ];

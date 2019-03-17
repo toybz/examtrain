@@ -4,12 +4,16 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
-  --ion-color-primary-rgb: 56, 128, 255;
+
+  --ion-color-primary: #f04141;
+  --ion-color-primary-rgb: 245, 61, 61;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary-shade: #d33939;
+  --ion-color-primary-tint: #f25454;
+
+
+
 
   /** secondary **/
   --ion-color-secondary: #0cd1e8;
@@ -74,4 +78,43 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+
+  /* App Theme-ing Starts here */
+
+
+  --ion-tab-bar-background : #f4f5f8;
+  --ion-tab-bar-background-focused	: #d33939;--ion-tab-bar-color	: #1e2023;
+  --ion-tab-bar-color-activated	: #d33939;
+  --ion-toolbar-background	: #d33939;
+  --ion-toolbar-border-color: #d33939;
+  --ion-toolbar-color	: #f5f6f9;
+  --ion-toolbar-color-activated	: #f5f6f9;
+  --ion-toolbar-color-unchecked	: #f5f6f9;
+  --ion-toolbar-color-checked	: #f5f6f9;
+  --ion-placeholder-color	: #d33939;
+//  --ion-font-family : 'roboto';
+  --ion-statusbar-padding : 5px;
+   --ion-safe-area-top	: 10px;
+
+
+  ion-action-sheet{
+    --max-height : 60vh !important;
+  }
+
+  ion-popover{
+    --min-width: 70vw !important;
+  }
+
+  ion-header ion-toolbar:first-child {
+    padding-top: 0px !important;
+  }
+
+  .options_item {
+    --border-style: solid;
+    --border-radius : 35px;
+    --border-width: 1.5px;
+    --transition: ease-in-out ;
+  }
+
 }

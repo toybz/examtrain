@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center="">History</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding *ngIf="page_loaded">
+
+
+
+    <ion-list class="">
+
+        <ion-card *ngFor="let quiz of completed_quiz">
+            <ion-card-header>
+                <ion-card-title> Date :  {{ quiz.date_time | date : 'dd-MM-y h:m a' }}</ion-card-title>
+
+            </ion-card-header>
+
+            <ion-card-content>
+
+                <strong>Category :
+                    <ion-text color="primary" *ngIf="quiz.questions[0]">
+                        {{ quiz.questions[0].category}}
+                    </ion-text>
+                </strong>
+
+                <ion-grid>
+                    <ion-row>
+
+                        <ion-col size="4" text-center>
+                            <p>Difficulty</p>
+                            <ion-text text-capitalize color="primary">
+                                <strong>{{ quiz.quiz_config.difficulty}}</strong>
+
+                            </ion-text>
+
+                        </ion-col>
+
+
+
+                        <ion-col  size="4" text-center>
+                            <p>Scored</p>
+                            <ion-text text-capitalize color="primary">
+                                <strong>{{ quiz.correct_answers_count}}</strong>
+
+                            </ion-text>
+                        </ion-col>
+
+                        <ion-col size="4" text- text-center>
+                            <p>Amount</p>
+                            <ion-text text-capitalize color="primary">
+                                <strong> {{ quiz.quiz_config.amount}}</strong>
+                            </ion-text>
+
+                        </ion-col>
+
+
+
+
+                    </ion-row>
+                </ion-grid>
+
+
+            </ion-card-content>
+        </ion-card>
+
+    </ion-list>
+
+
+
+    <ion-infinite-scroll  threshold="10px" (ionInfinite)="loadData($event)">
+            <ion-infinite-scroll-content
+                    loadingSpinner="bubbles"
+                    loadingText="Loading more data...">
+            </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ion-content>

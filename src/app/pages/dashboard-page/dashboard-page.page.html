@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center="">Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding *ngIf="page_ready">
+
+  <ion-card>
+    <ion-card-header>
+
+      <ion-card-title>Quiz Data</ion-card-title>
+
+      <ion-grid no-margin="" no-padding="">
+        <ion-row no-margin="" no-padding="" justify-content-around>
+          <ion-col>
+            <ion-card-subtitle>Total Answered :
+              <ion-text color="primary">{{dashboard_data.total_question }}</ion-text>
+
+            </ion-card-subtitle>
+
+          </ion-col>
+
+          <!--
+          <ion-col>
+            <ion-card-subtitle>Last Played </ion-card-subtitle>
+            <ion-card-subtitle> 29-02-19 10:11</ion-card-subtitle>
+          </ion-col>
+          -->
+
+
+
+        </ion-row>
+      </ion-grid>
+
+
+    </ion-card-header>
+
+    <ion-card-content >
+
+      <div style="display: block"  >
+        <canvas style="height:45vh;"  baseChart
+                [data]="doughnutChartData"
+                [labels]="doughnutChartLabels"
+                [chartType]="doughnutChartType"
+                 [options]="lineChartOptions"
+                 [colors]="doughnutChartColor"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+
+
+
+      <ion-grid>
+        <ion-row justify-content-center>
+
+          <ion-col  size="4" text-center>
+            <p>Hard</p>
+            <ion-text color="primary">
+              <strong>
+                {{dashboard_data.difficulty.hard}}
+
+              </strong>
+            </ion-text>
+          </ion-col>
+
+          <ion-col size="4" text-center>
+            <p>Medium</p>
+            <ion-text color="primary">
+            <strong>{{dashboard_data.difficulty.medium}}</strong>
+            </ion-text>
+          </ion-col>
+
+          <ion-col size="4" text-center>
+
+            <p>Easy</p>
+            <ion-text color="primary">
+            <strong>{{dashboard_data.difficulty.easy}}</strong>
+            </ion-text>
+          </ion-col>
+
+
+        </ion-row>
+      </ion-grid>
+
+
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

@@ -1,0 +1,28 @@
+
+.progress-percentage-wrapper {
+  position: relative;
+}
+.progress-percentage {
+  pleft: 10px;
+  top: 40%;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+
+}
+ion-backdrop{
+  opacity: 0.8 !important;
+}
+
+/*
+.options_item {
+
+  --border-style: solid;
+  --border-radius : 35px;
+  --border-width: 1.5px;
+ --transition: ease-in-out ;
+
+
+
+}
+*/
