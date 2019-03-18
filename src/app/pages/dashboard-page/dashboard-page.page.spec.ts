@@ -1,18 +1,17 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { DashboardPagePage } from './dashboard-page.page';
+import { DashboardPagePage } from "./dashboard-page.page";
 
-describe('DashboardPagePage', () => {
+describe("DashboardPagePage", () => {
   let component: DashboardPagePage;
   let fixture: ComponentFixture<DashboardPagePage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardPagePage ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    })
-    .compileComponents();
+      declarations: [DashboardPagePage],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -21,7 +20,7 @@ describe('DashboardPagePage', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

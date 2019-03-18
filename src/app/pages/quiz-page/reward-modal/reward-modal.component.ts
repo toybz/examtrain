@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-reward-modal',
-  templateUrl: './reward-modal.component.html',
-  styleUrls: ['./reward-modal.component.scss']
+  selector: "app-reward-modal",
+  templateUrl: "./reward-modal.component.html",
+  styleUrls: ["./reward-modal.component.scss"]
 })
 export class RewardModalComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

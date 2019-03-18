@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PausedComponent } from './paused.component';
+import { PausedComponent } from "./paused.component";
 
-describe('PausedComponent', () => {
+describe("PausedComponent", () => {
   let component: PausedComponent;
   let fixture: ComponentFixture<PausedComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PausedComponent ]
-    })
-    .compileComponents();
+      declarations: [PausedComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('PausedComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

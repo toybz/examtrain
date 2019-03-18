@@ -134,5 +134,9 @@
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
     "directive-class-suffix": true
-  }
+  },
+  "extends": [
+    "tslint:latest",
+    "tslint-config-prettier"
+  ]
 }

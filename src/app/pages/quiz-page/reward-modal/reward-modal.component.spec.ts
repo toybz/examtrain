@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { RewardModalComponent } from './reward-modal.component';
+import { RewardModalComponent } from "./reward-modal.component";
 
-describe('RewardModalComponent', () => {
+describe("RewardModalComponent", () => {
   let component: RewardModalComponent;
   let fixture: ComponentFixture<RewardModalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RewardModalComponent ]
-    })
-    .compileComponents();
+      declarations: [RewardModalComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('RewardModalComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

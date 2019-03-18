@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-leaderboard-page',
-  templateUrl: './leaderboard-page.page.html',
-  styleUrls: ['./leaderboard-page.page.scss'],
+  selector: "app-leaderboard-page",
+  templateUrl: "./leaderboard-page.page.html",
+  styleUrls: ["./leaderboard-page.page.scss"]
 })
 export class LeaderboardPagePage implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
