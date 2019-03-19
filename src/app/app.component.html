@@ -1,3 +1,7 @@
 <ion-app>
+  <button *ngIf="pwa.promptEvent" (click)="pwa.installPwa()">
+    Add To Home screen
+  </button>
+
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
