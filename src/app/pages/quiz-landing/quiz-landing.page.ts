@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { LocalStorageService } from "../../services/local-storage.service";
-import { UtilsService } from "../../services/utils.service";
+import { LocalStorageService } from "../../services/local-storage/local-storage.service";
+import { UtilsService } from "../../services/utils/utils.service";
 import { ActivatedRoute, Router } from "@angular/router";
 import { QuizService } from "../../services/quiz/quiz.service";
 
@@ -41,13 +41,6 @@ export class QuizLandingPage implements OnInit {
         this.paused_quiz.category = paused_quiz.questions[0].category;
       }
       this.data_loaded = true;
-
-      /*   else{
-
-             if(!this.quiz_journey_data)
-             this.router.navigate(['./quiz_setup'] ,  { relativeTo: this.route } )
-         }
-*/
     });
 
     this.quizService.getCategories().subscribe((categories: any) => {

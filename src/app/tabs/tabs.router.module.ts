@@ -2,7 +2,6 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { TabsPage } from "./tabs.page";
 import { DashboardPagePageModule } from "../pages/dashboard-page/dashboard-page.module";
-import { QuizSetupPagePageModule } from "../pages/quiz-setup-page/quiz-setup-page.module";
 
 const routes: Routes = [
   {
@@ -36,11 +35,6 @@ const routes: Routes = [
             path: "",
             loadChildren:
               "../pages/quiz-landing/quiz-landing.module#QuizLandingPageModule"
-          },
-          {
-            path: "quiz_setup",
-            loadChildren:
-              "../pages/quiz-setup-page/quiz-setup-page.module#QuizSetupPagePageModule"
           }
         ]
       },

@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import * as url from "../../api_url";
+import * as url from "../api_url";
 import { HttpClient } from "@angular/common/http";
 import { BehaviorSubject } from "rxjs/index";
 
@@ -86,7 +86,7 @@ export class QuizService {
 
   setInstantStartWithPausedQuiz(val: boolean) {
     this.instant_start_with_paused_quiz = val;
-    
+
   }
 
   getInstantStartWithPausedQuiz() {

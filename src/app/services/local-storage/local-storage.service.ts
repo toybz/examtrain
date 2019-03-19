@@ -1,7 +1,6 @@
 import { Injectable } from "@angular/core";
 import { LocalStorage } from "@ngx-pwa/local-storage";
-import { BehaviorSubject, of, ReplaySubject } from "rxjs/index";
-import { skip } from "rxjs/operators";
+import { ReplaySubject } from "rxjs/index";
 
 @Injectable({
   providedIn: "root"
@@ -19,8 +18,6 @@ interface completed_quiz  {
 */
 export class LocalStorageService {
   completedQuiz = new ReplaySubject(1);
-  //pausedQuiz = new ReplaySubject(1);
-
   pausedQuiz = new ReplaySubject(1);
 
   other_data = new ReplaySubject(1);
@@ -61,22 +58,7 @@ export class LocalStorageService {
     });
   }
 
-  journey = {};
-  other_settings = {};
-
   saveCompletedQuiz(param) {
-    /*
-         param = {
-             dateTime : null ,
-             amount : null ,
-             difficulty : null ,
-             score : null ,
-             questions : null ,
-             category : null
-         }
-
-         */
-
     console.log(param);
 
     this.localStorage.getItem("completed_quiz").subscribe(quiz => {

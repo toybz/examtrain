@@ -1,8 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Input } from "@angular/core";
 import { ModalController, PopoverController } from "@ionic/angular";
-import { LocalStorageService } from "../../../services/local-storage.service";
-import { ActivatedRoute, Router } from "@angular/router";
+import { LocalStorageService } from "../../../services/local-storage/local-storage.service";
 
 @Component({
   selector: "app-paused",
@@ -11,10 +10,6 @@ import { ActivatedRoute, Router } from "@angular/router";
 })
 export class PausedComponent implements OnInit {
   @Input() data: any;
-
-  /*   {
-     countdown : string , answered : number , remaining : number
-   };*/
 
   constructor(
     public modalController: PopoverController,

@@ -5,10 +5,9 @@ import {
   PopoverController
 } from "@ionic/angular";
 import { ActivatedRoute, Router } from "@angular/router";
-import { RewardModalComponent } from "../reward-modal/reward-modal.component";
 import { MemesService } from "../memes.service";
 import { Observable, ReplaySubject } from "rxjs/index";
-import { LocalStorageService } from "../../../services/local-storage.service";
+import { LocalStorageService } from "../../../services/local-storage/local-storage.service";
 
 @Component({
   selector: "app-quiz-review",

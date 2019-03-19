@@ -9,3 +9,4 @@ export const get_category_question_count = function(category_id) {
 export const get_question = function(category_id, difficulty, amount) {
   return `https://opentdb.com/api.php?amount=${amount}&category=${category_id}&difficulty=${difficulty}`;
 };
+

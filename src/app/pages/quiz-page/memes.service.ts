@@ -1,14 +1,11 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { map } from "rxjs/internal/operators";
 import { ReplaySubject } from "rxjs/index";
 @Injectable({
   providedIn: "root"
 })
 export class MemesService {
   memes_url = "https://api.gfycat.com/v1/reactions/populated?tagName=";
-
-  //track progress, and use appropriate for progress..if a low score user scores high, use a memes that encourages.e.g 'shocked' reaction
 
   impressions = {
     10: ["Frown", "Rofl", "Shocked", "Haha", "You Got This"],
