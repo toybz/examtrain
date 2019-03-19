@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { LocalStorageService } from "../../services/local-storage.service";
+import { LocalStorageService } from "../../services/local-storage/local-storage.service";
 import { IonInfiniteScroll } from "@ionic/angular";
 
 @Component({
@@ -15,7 +15,6 @@ export class HistoryPagePage implements OnInit {
   totalData;
   current_page = 1;
   page_loaded = false;
-  //test more
 
   constructor(private localStorage: LocalStorageService) {}
 
@@ -55,12 +54,4 @@ export class HistoryPagePage implements OnInit {
       this.current_page * this.dataPerPage
     );
   }
-
-  /*
-  todo: Fix the bug of data not showing at the bottom of the page
-  Let the most recent data come first
-  Use dynamic scroller so data come in 10 batches when scrolled to the bottom service gets more data
-  Implemet sort and filter
-
-  */
 }

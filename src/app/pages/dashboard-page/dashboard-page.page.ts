@@ -7,18 +7,7 @@ import { DashboardService } from "./dashboard.service";
   styleUrls: ["./dashboard-page.page.scss"]
 })
 export class DashboardPagePage implements OnInit {
-  dashboard_data; //= new BehaviorSubject({});
-  /*   = {
-     total_question : 45 ,
-       correct_answers_count : 20,
-       wrong_answers_count : 25 ,
-       difficulty : {
-       hard : 3 ,
-           medium : 20 ,
-           easy : 22
-       }
-
-   }  */
+  dashboard_data;
 
   public doughnutChartLabels: string[] = ["Correct", "In-Correct"];
   public doughnutChartData: number[];
@@ -27,7 +16,6 @@ export class DashboardPagePage implements OnInit {
 
   public doughnutChartColor: Array<any> = [
     {
-      // red
       backgroundColor: ["#d33939", "#989aa2"]
     }
   ];
@@ -35,8 +23,6 @@ export class DashboardPagePage implements OnInit {
   public lineChartOptions: any = {
     maintainAspectRatio: false
   };
-
-  // events
 
   page_ready = false;
 
@@ -48,9 +34,6 @@ export class DashboardPagePage implements OnInit {
 
   init() {
     this.dashboardService.getDashboardData().subscribe(quiz_data => {
-      // if(!quiz_data)return false
-      console.log(quiz_data);
-
       let response_data = {
         total_question: 0,
         correct_answers_count: 0,
@@ -79,8 +62,6 @@ export class DashboardPagePage implements OnInit {
             break;
         }
       });
-
-      console.table(response_data);
 
       this.dashboard_data = response_data;
       this.doughnutChartData = [

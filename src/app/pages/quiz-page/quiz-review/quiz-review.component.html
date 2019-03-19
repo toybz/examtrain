@@ -1,200 +1,135 @@
-
 <ion-header id="top_section">
   <ion-toolbar>
-
     <ion-title text-center>
       Quiz Review
     </ion-title>
-
 
     <ion-buttons slot="end" (click)="showOptions()">
       <ion-button>
         <ion-icon slot="icon-only" name="more"></ion-icon>
       </ion-button>
     </ion-buttons>
-
-
-
   </ion-toolbar>
-
-
-
 </ion-header>
 
 <ion-content>
-
-
-
-
   <ion-card class="trophy_card" text-center="">
-
-
     <div>
+      <img
+        *ngIf="!showMemes"
+        class="trophy_image"
+        margin-horizontal=""
+        src="/assets/images/animated_trophy_5.gif"
+      />
 
-      <img  *ngIf="!showMemes" class="trophy_image" margin-horizontal="" src="/assets/images/trophies/animated_trophy_5.gif">
+      <picture
+        margin-horizontal
+        class="trophy_image"
+        *ngIf="(showMemes && $memesUrl | async) as memes"
+      >
+        <source srcset="{{memes }}" type="image/webp" />
 
+        <img src="/assets/images/animated_trophy_5.gif" />
+      </picture>
 
-
-
-    <picture margin-horizontal class="trophy_image" *ngIf="showMemes && $memesUrl | async as memes">
-
-      <source srcset="{{memes }}" type="image/webp">
-
-   <img  src="/assets/images/trophies/animated_trophy_5.gif">
-
-    </picture>
-
-      <ion-text *ngIf="showMemes && !$memesUrl | async ">Loading... </ion-text>
-
-
+      <ion-text *ngIf="(showMemes && !$memesUrl | async)">Loading... </ion-text>
     </div>
 
-
-
-
-
-
-
     <ion-card-header>
-
-      <ion-card-title text-center=""> {{review}} </ion-card-title>
+      <ion-card-title text-center=""> {{ review }} </ion-card-title>
       <p text-center="">
-        You Scored {{correct_answers_count}} Out Of {{quiz_config.amount}}
+        You Scored {{ correct_answers_count }} Out Of {{ quiz_config.amount }}
       </p>
     </ion-card-header>
-
   </ion-card>
 
   <ion-item>
     <ion-label>Always Show Memes Reaction? </ion-label>
-    <ion-toggle [(ngModel)]="showMemes" (ionChange)="updateMemesSettings()"></ion-toggle>
+    <ion-toggle
+      [(ngModel)]="showMemes"
+      (ionChange)="updateMemesSettings()"
+    ></ion-toggle>
   </ion-item>
 
   <ion-card>
-
-    <ion-card-content >
-
-      <ion-button class="" expand="block" (click)="share()"  >
-
-
-          Share
-          <ion-icon slot="end"  name="share"></ion-icon>
-
-
-
-
+    <ion-card-content>
+      <ion-button class="" expand="block" (click)="share()">
+        Share
+        <ion-icon slot="end" name="share"></ion-icon>
       </ion-button>
 
-      <ion-button expand="block"  (click)=" dismissModal({'action': 'reload'})"   > Play Again
-        <ion-icon slot="end"  name="refresh"></ion-icon>
+      <ion-button expand="block" (click)="dismissModal({ action: 'reload' })">
+        Play Again
+        <ion-icon slot="end" name="refresh"></ion-icon>
       </ion-button>
 
-      <ion-button expand="block" (click)=" dismissModal({'action': 'new_quiz'})"  > New Quiz
-        <ion-icon slot="end"  name="play"></ion-icon>
-
+      <ion-button expand="block" (click)="dismissModal({ action: 'new_quiz' })">
+        New Quiz
+        <ion-icon slot="end" name="play"></ion-icon>
       </ion-button>
 
-      <ion-button expand="block" (click)="showCorrections('correction_section')"  > View Corrections
-
-
+      <ion-button
+        expand="block"
+        (click)="showCorrections('correction_section')"
+      >
+        View Corrections
       </ion-button>
-
     </ion-card-content>
-
-
-
   </ion-card>
-
-
 
   <div *ngIf="show_corrections" id="correction_section">
+    <ion-card *ngFor="let question of questions; let i = index">
+      <ion-card-header>
+        <ion-card-subtitle> Question : {{ i + 1 }} </ion-card-subtitle>
+      </ion-card-header>
 
+      <ion-card-content>
+        <ion-text color="dark" text-center="">
+          <h1 [innerHTML]="question.question"></h1>
+        </ion-text>
 
+        <ion-list>
+          <ion-item
+            margin=""
+            text-center=""
+            *ngIf="question.selected_answer != question.correct_answer"
+            color="danger"
+            class="options_item"
+            lines="none"
+          >
+            <ion-label
+              [innerHTML]="
+                question.selected_answer
+                  ? question.selected_answer
+                  : 'No Option Selected'
+              "
+            >
+            </ion-label>
+          </ion-item>
 
-  <ion-card  *ngFor="let question of questions ;let i = index" >
-
-
-    <ion-card-header>
-
-      <ion-card-subtitle>
-        Question :  {{ i  + 1 }}
-      </ion-card-subtitle>
-
-    </ion-card-header>
-
-
-
-
-    <ion-card-content>
-
-      <ion-text color="dark" text-center="">
-        <h1 [innerHTML]="question.question">
-
-
-        </h1>
-      </ion-text>
-
-      <ion-list>
-
-        <ion-item  margin="" text-center="" *ngIf="question.selected_answer != question.correct_answer"   color="danger" class="options_item"   lines="none" >
-
-          <ion-label [innerHTML]="question.selected_answer ? question.selected_answer : 'No Option Selected'  " >
-          </ion-label>
-
-
-        </ion-item>
-
-
-        <ion-item margin="" text-center=""   color="success"  class="options_item"   lines="none">
-
-          <ion-label [innerHTML]="question.correct_answer">
-          </ion-label>
-
-
-        </ion-item>
-
-
-      </ion-list>
-
-
-
-
-    </ion-card-content>
-  </ion-card>
-
-
-
-
+          <ion-item
+            margin=""
+            text-center=""
+            color="success"
+            class="options_item"
+            lines="none"
+          >
+            <ion-label [innerHTML]="question.correct_answer"> </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
 
     <div class="fix-bottom">
-      <ion-fab (click)="showCorrections('top_section')" vertical="bottom" horizontal="end">
-        <ion-fab-button><ion-icon name="arrow-round-up"></ion-icon></ion-fab-button>
+      <ion-fab
+        (click)="showCorrections('top_section')"
+        vertical="bottom"
+        horizontal="end"
+      >
+        <ion-fab-button
+          ><ion-icon name="arrow-round-up"></ion-icon
+        ></ion-fab-button>
       </ion-fab>
     </div>
-
-</div>
-
-
-
-
+  </div>
 </ion-content>
-
-
-<!--
-
-
-<p> Quiz Review</p>
-
-
-
-
-
-
-
-<ion-button (click)="playAgain()">Play Again</ion-button>
-
-<ion-button>Return to New Quiz</ion-button>
-
-<ion-button> Share </ion-button>
-
--->
