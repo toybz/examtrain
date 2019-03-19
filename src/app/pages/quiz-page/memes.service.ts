@@ -31,7 +31,7 @@ export class MemesService {
       ? this.memes_url + `${impression}&cursor=${this.memes_next_page_cursor}`
       : this.memes_url + impression;
 
-    this.$http.get(url).subscribe(response => {
+    this.$http.get(url).subscribe((response: any) => {
       //image not found
       this.memes_next_page_cursor = response.cursor;
 

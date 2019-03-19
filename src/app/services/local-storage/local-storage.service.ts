@@ -1,30 +1,15 @@
 import { Injectable } from "@angular/core";
 import { LocalStorage } from "@ngx-pwa/local-storage";
 import { ReplaySubject } from "rxjs/index";
-
 @Injectable({
   providedIn: "root"
 })
-
-/*
-interface completed_quiz  {
-    dateTime : any ,
-    quiz_config : {
-      amount : number , difficulty : string , category : number
-    } ,
-    score : number ,
-    questions :  any,
-}
-*/
 export class LocalStorageService {
   completedQuiz = new ReplaySubject(1);
   pausedQuiz = new ReplaySubject(1);
-
   other_data = new ReplaySubject(1);
-
   constructor(private localStorage: LocalStorage) {
-    //check if local items are initialize and set if not
-    this.localStorage.getItem("completed_quiz").subscribe(quiz => {
+    this.localStorage.getItem("completed_quiz").subscribe((quiz: any) => {
       if (quiz) {
         this.completedQuiz.next(quiz);
       } else {
@@ -33,7 +18,7 @@ export class LocalStorageService {
       }
     });
 
-    this.localStorage.getItem("paused_quiz").subscribe(quiz => {
+    this.localStorage.getItem("paused_quiz").subscribe((quiz: any) => {
       if (quiz) {
         this.pausedQuiz.next(quiz);
       } else {
@@ -41,8 +26,8 @@ export class LocalStorageService {
         this.localStorage.setItemSubscribe("paused_quiz", []);
       }
     });
-
-    this.localStorage.getItem("others").subscribe(others => {
+    // @ts-ignore
+    this.localStorage.getItem("others").subscribe((others: any) => {
       if (others) {
         this.other_data.next(others);
       } else {
@@ -50,6 +35,7 @@ export class LocalStorageService {
           first_time: true,
           show_memes: true
         });
+        // @ts-ignore
         this.localStorage.setItemSubscribe("others", {
           first_time: true,
           show_memes: true
@@ -61,7 +47,7 @@ export class LocalStorageService {
   saveCompletedQuiz(param) {
     console.log(param);
 
-    this.localStorage.getItem("completed_quiz").subscribe(quiz => {
+    this.localStorage.getItem("completed_quiz").subscribe((quiz: any) => {
       let new_data = [...quiz, param];
       this.localStorage.setItem("completed_quiz", new_data).subscribe(() => {
         this.completedQuiz.next(new_data);
@@ -88,6 +74,7 @@ export class LocalStorageService {
   }
 
   deletePausedQuiz() {
+    // @ts-ignore
     this.localStorage.setItem("paused_quiz", {}).subscribe(() => {
       this.pausedQuiz.next({});
     });
@@ -98,7 +85,7 @@ export class LocalStorageService {
   }
 
   saveOtherData(value) {
-    this.localStorage.getItem("others").subscribe(other_data => {
+    this.localStorage.getItem("others").subscribe((other_data: any) => {
       let new_data = { ...other_data, ...value };
       this.localStorage.setItem("others", new_data).subscribe(() => {
         this.other_data.next(new_data);

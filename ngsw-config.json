@@ -33,7 +33,7 @@
       "version": 1,
       "cacheConfig": {
         "maxSize": 2,
-        "maxAge": "30days",
+        "maxAge": "30d",
         "timeout": "5s",
         "strategy": "performance"
 

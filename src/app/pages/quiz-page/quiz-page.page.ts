@@ -144,7 +144,7 @@ export class QuizPagePage implements OnInit {
     });
   }
 
-  async showLoadingBar(): Promise {
+  async showLoadingBar() {
     const loading = await this.loadingController.create({
       message: "Loading",
       animated: true,
@@ -299,7 +299,7 @@ export class QuizPagePage implements OnInit {
     return await pause_quiz_modal.present();
   }
 
-  reArrangeOptions(options: [any]) {
+  reArrangeOptions(options: any) {
     let re_arranged_options = options.sort();
 
     return re_arranged_options;

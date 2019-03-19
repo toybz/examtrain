@@ -53,7 +53,7 @@ export class QuizReviewComponent implements OnInit {
       this.review = "You The Champ. Great Job";
     }
 
-    this.localStorage.getOtherData().subscribe(other_data => {
+    this.localStorage.getOtherData().subscribe((other_data: any) => {
       this.showMemes = other_data.show_memes;
     });
 

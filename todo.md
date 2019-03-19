@@ -1,3 +1,7 @@
+Comment Code
+Re arrange codes, for easy reading
+
+
 Fix issue, if page is reloaded or loaded from quiz page then paused and navigated to dashboard, graph doesnt show.
 
 

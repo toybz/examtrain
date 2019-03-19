@@ -35,7 +35,7 @@ export class QuizLandingPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.localStorage.getPausedQuiz().subscribe(paused_quiz => {
+    this.localStorage.getPausedQuiz().subscribe((paused_quiz: any) => {
       if (!this.util.isEmptyObject(paused_quiz)) {
         this.paused_quiz = paused_quiz;
         this.paused_quiz.category = paused_quiz.questions[0].category;

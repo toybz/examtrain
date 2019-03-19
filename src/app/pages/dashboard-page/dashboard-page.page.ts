@@ -33,7 +33,7 @@ export class DashboardPagePage implements OnInit {
   }
 
   init() {
-    this.dashboardService.getDashboardData().subscribe(quiz_data => {
+    this.dashboardService.getDashboardData().subscribe((quiz_data: any) => {
       let response_data = {
         total_question: 0,
         correct_answers_count: 0,
