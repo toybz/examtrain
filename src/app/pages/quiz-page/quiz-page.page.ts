@@ -226,7 +226,7 @@ export class QuizPagePage implements OnInit {
         this.page_ready = false;
         this.initialise();
       } else if (res.data.action == "new_quiz") {
-        this.router.navigate(["/tabs/quiz/quiz_setup/"]);
+        this.router.navigate(["/tabs/quiz/"]);
       } else if (res.data.action == "dashboard") {
         this.router.navigate(["/tabs/dashboard/"]);
       }

@@ -46,7 +46,7 @@ export class MemesService {
   }
 
   generateMemes(score_in_percent) {
-    this.$memesData.next("/assets/images/spinner-icon.jpg");
+    this.$memesData.next("assets/images/spinner-icon.jpg");
 
     for (let [key, value] of Object.entries(this.impressions)) {
       if (key >= score_in_percent) {

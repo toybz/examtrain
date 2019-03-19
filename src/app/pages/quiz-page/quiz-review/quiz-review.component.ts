@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { MemesService } from "../memes.service";
 import { Observable, ReplaySubject } from "rxjs/index";
 import { LocalStorageService } from "../../../services/local-storage/local-storage.service";
+import { app_url } from "../../../services/urls";
 
 @Component({
   selector: "app-quiz-review",
@@ -22,13 +23,12 @@ export class QuizReviewComponent implements OnInit {
   $memesUrl;
   showMemes = new ReplaySubject(1);
   review;
+  whatsapp_share_url;
+  app_url = app_url;
 
   constructor(
     private modalController: ModalController,
-    private route: ActivatedRoute,
-    private router: Router,
     public actionSheetController: ActionSheetController,
-    private popoverController: PopoverController,
     public memesService: MemesService,
     public localStorage: LocalStorageService
   ) {}
@@ -58,6 +58,14 @@ export class QuizReviewComponent implements OnInit {
     });
 
     this.$memesUrl = this.memesService.generateMemes(score_in_percent);
+
+    let share_text = encodeURIComponent(
+      `Hi I Scored ${this.correct_answers_count} / ${
+        this.quiz_config.amount
+      } In A  Quiz On Quizo. You Can Also Play On ${this.app_url}`
+    );
+
+    this.whatsapp_share_url = `https://wa.me/?text=${share_text}`;
   }
 
   updateMemesSettings() {
@@ -125,7 +133,7 @@ export class QuizReviewComponent implements OnInit {
   }
 
   share() {
-    console.log("Share To SM");
+    var win = window.open(this.whatsapp_share_url, "_blank");
   }
 
   showCorrections(id) {

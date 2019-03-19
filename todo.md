@@ -1,6 +1,10 @@
 Comment Code
 Re arrange codes, for easy reading
 
+PWA- Add to home screen
+
+PWA- Show no internet, cant get quiz if network is unavailable
+
 
 Fix issue, if page is reloaded or loaded from quiz page then paused and navigated to dashboard, graph doesnt show.
 

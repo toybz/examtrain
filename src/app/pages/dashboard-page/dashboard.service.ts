@@ -5,9 +5,7 @@ import { LocalStorageService } from "../../services/local-storage/local-storage.
   providedIn: "root"
 })
 export class DashboardService {
-  constructor(private localStorage: LocalStorageService) {
-
-  }
+  constructor(private localStorage: LocalStorageService) {}
 
   getDashboardData() {
     return this.localStorage.getCompletedQuiz();
