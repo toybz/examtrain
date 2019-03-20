@@ -1,6 +1,8 @@
 Comment Code
 Re arrange codes, for easy reading
 
+Check quiz review side menu functions.
+
 PWA- Add to home screen
 
 PWA- Show no internet, cant get quiz if network is unavailable

@@ -1,26 +1,30 @@
-import { Injectable } from '@angular/core';
-import {SwUpdate} from '@angular/service-worker';
+import { Injectable } from "@angular/core";
+import { SwUpdate } from "@angular/service-worker";
+import { ReplaySubject } from "rxjs";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class PwaService {
-  promptEvent:any
-  constructor(private swUpdate: SwUpdate) {
+  promptEvent: any;
+  promptStream = new ReplaySubject(1);
 
-  /*  swUpdate.available.subscribe(event => {
+  constructor(private swUpdate: SwUpdate) {
+    /*swUpdate.available.subscribe(event => {
       if (askUserToUpdate()) {
         window.location.reload();
+
       }
     }); */
 
-    window.addEventListener('beforeinstallprompt', event => {
+    window.addEventListener("beforeinstallprompt", (event: any) => {
       this.promptEvent = event;
+      this.promptStream.next(event);
     });
-}
-
-  installPwa(): void {
-    this.promptEvent.prompt();
   }
 
+  installPwa(): void {
+    // console.log(this.promptEvent);
+    this.promptEvent.prompt();
+  }
 }

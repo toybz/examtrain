@@ -10,6 +10,7 @@ import { PwaService } from "./services/pwa/pwa.service";
   templateUrl: "app.component.html"
 })
 export class AppComponent {
+  public show_add_to_home = false;
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -24,5 +25,14 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+
+    this.pwa.promptStream.subscribe(() => {
+      this.show_add_to_home = true;
+    });
+  }
+
+  addToHome() {
+    this.pwa.installPwa();
+    this.show_add_to_home = false;
   }
 }

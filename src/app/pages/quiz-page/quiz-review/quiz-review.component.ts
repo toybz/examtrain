@@ -104,9 +104,7 @@ export class QuizReviewComponent implements OnInit {
           text: "Share",
           icon: "share",
           handler: () => {
-            this.dismissModal({
-              action: "share"
-            });
+            this.share();
           }
         },
         {

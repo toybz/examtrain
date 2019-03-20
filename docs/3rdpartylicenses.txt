@@ -365,10 +365,10 @@ MIT
 
 loader
 
-@angular/core
+@angular/forms
 MIT
 
-@angular/forms
+@angular/core
 MIT
 
 zone.js

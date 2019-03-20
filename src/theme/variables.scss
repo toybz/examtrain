@@ -117,4 +117,15 @@
     --transition: ease-in-out ;
   }
 
+  .add_to_home_screen{
+
+      --border-style: solid;
+      --border-width: 1.5px;
+      --transition: ease-in-out ;
+    --border-color: red;
+    --background-color : wheat;
+    --margin-top :80vh;
+
+  }
+
 }
