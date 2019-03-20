@@ -1,9 +1,8 @@
 Comment Code
 Re arrange codes, for easy reading
 
-Check quiz review side menu functions.
 
-PWA- Add to home screen
+PWA- Add to home screen - to check
 
 PWA- Show no internet, cant get quiz if network is unavailable
 
@@ -22,7 +21,7 @@ Create swUpdate service to show toast that update exist and a button for users t
 
 Add PWA- Configure PWA
 
-Fix History page error info not showing on some items --Done
+
 
 
 Show Toast Error if any network request fails.
