@@ -4,6 +4,8 @@ import { Platform } from "@ionic/angular";
 import { SplashScreen } from "@ionic-native/splash-screen/ngx";
 import { StatusBar } from "@ionic-native/status-bar/ngx";
 import { PwaService } from "./services/pwa/pwa.service";
+import { ActivatedRoute, Router } from "@angular/router";
+import { LocalStorageService } from "./services/local-storage/local-storage.service";
 
 @Component({
   selector: "app-root",
@@ -15,9 +17,12 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    public pwa: PwaService
+    public pwa: PwaService,
+    private router: Router,
+    private localStorage: LocalStorageService
   ) {
     this.initializeApp();
+    
   }
 
   initializeApp() {
@@ -28,6 +33,14 @@ export class AppComponent {
 
     this.pwa.promptStream.subscribe(() => {
       this.show_add_to_home = true;
+    });
+
+    this.localStorage.getOtherData().subscribe((other_data: any) => {
+      let first_visit = other_data.first_time;
+      if (first_visit) {
+        this.localStorage.saveOtherData({ first_time: false });
+        this.router.navigate(["tabs/quiz"]);
+      }
     });
   }
 

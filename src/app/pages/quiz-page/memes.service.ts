@@ -41,12 +41,13 @@ export class MemesService {
       }
 
       this.memes_next_page_cursor = response.cursor;
-      this.$memesData.next(response.gfycats[0].webpUrl);
+      console.log("new url" + response.gfycats[0].mp4Url);
+      this.$memesData.next(response.gfycats[0].mp4Url);
     });
   }
 
   generateMemes(score_in_percent) {
-    this.$memesData.next("assets/images/spinner-icon.jpg");
+    this.$memesData.next("assets/media/giphy.mp4");
 
     for (let [key, value] of Object.entries(this.impressions)) {
       if (key >= score_in_percent) {

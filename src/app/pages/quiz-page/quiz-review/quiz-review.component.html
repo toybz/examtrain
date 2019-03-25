@@ -4,8 +4,8 @@
       Quiz Review
     </ion-title>
 
-    <ion-buttons slot="end" (click)="showOptions()">
-      <ion-button>
+    <ion-buttons color="white" slot="end" (click)="showOptions()">
+      <ion-button style="color: #f4f5f8">
         <ion-icon slot="icon-only" name="more"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -22,7 +22,7 @@
         src="assets/images/animated_trophy_5.gif"
       />
 
-      <picture
+      <!-- <picture
         margin-horizontal
         class="trophy_image"
         *ngIf="(showMemes && $memesUrl | async) as memes"
@@ -30,7 +30,18 @@
         <source srcset="{{memes }}" type="image/webp" />
 
         <img src="/assets/images/animated_trophy_5.gif" />
-      </picture>
+      </picture> -->
+
+      <video
+        *ngIf="(showMemes && $memesUrl | async) as memes"
+        width="320"
+        height="240"
+        autoplay
+        loop
+        muted
+        playsinline
+        [src]="memes"
+      ></video>
 
       <ion-text *ngIf="(showMemes && !$memesUrl | async)">Loading... </ion-text>
     </div>

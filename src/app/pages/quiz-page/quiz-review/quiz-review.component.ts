@@ -34,6 +34,8 @@ export class QuizReviewComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    console.log("ng ini called");
+
     let score_in_percent =
       (this.correct_answers_count / this.quiz_config.amount) * 100;
 

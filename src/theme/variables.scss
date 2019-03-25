@@ -128,4 +128,9 @@
 
   }
 
+  //fix action-sheet not scrolling on ios
+  .action-sheet-group {
+    overflow: auto !important;
+  }
+
 }

@@ -2,24 +2,23 @@ Comment Code
 Re arrange codes, for easy reading
 
 
-PWA- Add to home screen - to check
-
 PWA- Show no internet, cant get quiz if network is unavailable
 
+fix dashboard not showing data
 
 Fix issue, if page is reloaded or loaded from quiz page then paused and navigated to dashboard, graph doesnt show.
 
 
   //track progress, and use appropriate for progress..if a low score user scores high, use a memes that encourages.e.g 'shocked' reaction
 
-Clean code and layout
+
 
 Checkout best prettify with tsconfig for ionic or angular on save and commit
 
 
 Create swUpdate service to show toast that update exist and a button for users to refresh app
 
-Add PWA- Configure PWA
+
 
 
 
