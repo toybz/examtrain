@@ -34,6 +34,7 @@ export class DashboardPagePage implements OnInit {
 
   init() {
     this.dashboardService.getDashboardData().subscribe((quiz_data: any) => {
+      console.log(quiz_data);
       let response_data = {
         total_question: 0,
         correct_answers_count: 0,
@@ -69,6 +70,7 @@ export class DashboardPagePage implements OnInit {
         this.dashboard_data.wrong_answers_count
       ];
 
+      console.log("page_ready");
       this.page_ready = true;
     });
   }
