@@ -1,0 +1,406 @@
+{
+    "subject": "government",
+    "status": 200,
+    "data": [
+        {
+            "id": 117,
+            "question": "Nigeria hosted the commonwealth conference which eventually led to the independence of ",
+            "option": {
+                "a": "Mozambique ",
+                "b": "Namibia  ",
+                "c": "Zimbabwe ",
+                "d": "Malawi"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 121,
+            "question": "According to Karl Marx, the mode of production that precedes capitalism is ",
+            "option": {
+                "a": "mercantilism ",
+                "b": "feudalism ",
+                "c": "socialism ",
+                "d": "communalism"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 108,
+            "question": "One major factor that differentiates the presidential from the parliamentary system is  ",
+            "option": {
+                "a": "separation of the powers ",
+                "b": "judicial independence  ",
+                "c": "passage of bills ",
+                "d": "party system"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 115,
+            "question": "In the process of implementing laws, the executive sometimes performs: ",
+            "option": {
+                "a": "judicial function ",
+                "b": "bureaucratic function ",
+                "c": "oversight function ",
+                "d": "legislative function"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 107,
+            "question": "Proportional representation favours a ",
+            "option": {
+                "a": "multi-party system ",
+                "b": "three party system ",
+                "c": "two-party system ",
+                "d": "one party system "
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 120,
+            "question": "Fascism originated from ",
+            "option": {
+                "a": "Greece ",
+                "b": "Italy  ",
+                "c": "China  ",
+                "d": "Germany"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 123,
+            "question": "Serfs are the dominated class under ",
+            "option": {
+                "a": "capitalisms ",
+                "b": "socialism ",
+                "c": "fascism ",
+                "d": "feudalism "
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 100,
+            "question": "Under the 1963 Republican constitution the president exercise ",
+            "option": {
+                "a": "judicial powers  ",
+                "b": "executive powers  ",
+                "c": "nominal powers ",
+                "d": "concurrent powers"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 116,
+            "question": "Which of the these was the main organ of the defunct OAU? ",
+            "option": {
+                "a": "The liberation committee ",
+                "b": "The Council of Ministers  ",
+                "c": "The commission for Mediation, Conciliation and Arbitration ",
+                "d": "the Assembly of Heads of the state and Government."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 119,
+            "question": "The ancient Greeks practiced: ",
+            "option": {
+                "a": "direct democracy ",
+                "b": "representative democracy ",
+                "c": "liberal democracy ",
+                "d": "benevolent dictatorships"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 103,
+            "question": "During the period 1960-1966, Nigerian was governed under the ",
+            "option": {
+                "a": "presidential system of government ",
+                "b": "Westminster system of government ",
+                "c": "confederal system of government ",
+                "d": "Unitary system of government."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 101,
+            "question": "The Clifford Constitution was notable for ",
+            "option": {
+                "a": "amalgamating the Northern and southern provinces ",
+                "b": "introducing indirect rule ",
+                "c": "establishing the legislature  council ",
+                "d": "creating a Northern majority in the legislature council."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 110,
+            "question": "In the First Republic, Politics in Northern Nigeria was dominated by: ",
+            "option": {
+                "a": "NEPU ",
+                "b": "UMBC ",
+                "c": "NCNC ",
+                "d": "NPC"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 118,
+            "question": "Multilaterism in Nigeria\u2019s foreign policy entails ",
+            "option": {
+                "a": "Africa being the centre piece of Nigeria\u2019s foreign policy ",
+                "b": "Non aligned posture in international affairs ",
+                "c": " Quest   for a permanent membership  of the UN security Council ",
+                "d": "Membership of International Organizations"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 113,
+            "question": "A special election organized to decide on a political issue is known as ",
+            "option": {
+                "a": "plebiscite ",
+                "b": "by-election  ",
+                "c": "general election ",
+                "d": "primary election."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 102,
+            "question": "In a federal constitution, legislative powers that are shared by two levels of government are referred to as ",
+            "option": {
+                "a": "exclusive ",
+                "b": "extra-ordinary  ",
+                "c": "residual  ",
+                "d": "concurrent"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 111,
+            "question": "The creation of classless society is the ultimate aim of ",
+            "option": {
+                "a": "communism ",
+                "b": "socialism  ",
+                "c": "fascism ",
+                "d": "capitalism."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 104,
+            "question": "Which of the following in the Sokoto Caliphate performed functions similar to that of the Bashorun in Oyo Kingdom? ",
+            "option": {
+                "a": "Waziri ",
+                "b": "Galadima ",
+                "c": "Ma\u2019aji  ",
+                "d": "Alkali  "
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 112,
+            "question": "Herbert Macaulay was the first president of ",
+            "option": {
+                "a": "NCNC ",
+                "b": " AG  ",
+                "c": "UMBC ",
+                "d": "NEPU"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 122,
+            "question": "One of the distinctive features of a democracy is that it ",
+            "option": {
+                "a": "Connotes civil rule ",
+                "b": "facilitates popular participation ",
+                "c": "provides for a unicameral legislature ",
+                "d": "is not associated with one party state."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 105,
+            "question": "In the Igbo political system, the most senior  member of the council of elders is the ",
+            "option": {
+                "a": "Okpara  ",
+                "b": " Obi  ",
+                "c": " Eze  ",
+                "d": " Ofo"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 114,
+            "question": "Equality before the law is a component of: ",
+            "option": {
+                "a": "separation of powers ",
+                "b": "checks and balances ",
+                "c": "the rule of law  ",
+                "d": "constitutional law"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 106,
+            "question": "A non-monarchial state can best be described as a ",
+            "option": {
+                "a": "republic ",
+                "b": "confederation ",
+                "c": "nation ",
+                "d": "federation "
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 109,
+            "question": "A state with a hegemonic party is one in which ",
+            "option": {
+                "a": "there is one dominant party ",
+                "b": "there is no opposition party  ",
+                "c": "there is only one party  ",
+                "d": "other parties are officially recognized."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 99,
+            "question": "The Arthur Richards Constitution was designed to last ",
+            "option": {
+                "a": "nine years  ",
+                "b": "five years ",
+                "c": "twelve years  ",
+                "d": "six year"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2010"
+        }
+    ]
+}

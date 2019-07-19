@@ -1,0 +1,374 @@
+{
+    "subject": "economics",
+    "status": 200,
+    "data": [
+        {
+            "id": 3,
+            "question": "In economics , rational decision-making requires that: ",
+            "option": {
+                "a": "one\u2019s choices be arrived at logically and without error   ",
+                "b": "one\u2019s choice be consistent with one\u2019s goals ",
+                "c": "one\u2019s choice never very ",
+                "d": "one makes choice that do not involve trade-offs"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 21,
+            "question": "If the marginal propensity to save is 0.4 and consumption expenditure changes by N10 million , the equilibrium  level of income will change by ",
+            "option": {
+                "a": "N15.0million ",
+                "b": "N4,0million",
+                "c": "N2.5million ",
+                "d": "N25million."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 13,
+            "question": "A drawer of a cheque is the ",
+            "option": {
+                "a": "person who is to be paid ",
+                "b": "bank on which the cheque is drawn ",
+                "c": "person who writes out the cheque ",
+                "d": "bank official who certifies the payment. "
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 16,
+            "question": "Which of the following is not a member of OPEC?",
+            "option": {
+                "a": "Indonesia",
+                "b": " Iran ",
+                "c": "Venezuela",
+                "d": "Egypt"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 22,
+            "question": "Economic freedom is brought about by the existence of ",
+            "option": {
+                "a": "Government ",
+                "b": "Money ",
+                "c": "Availability of Credit ",
+                "d": "choice"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 14,
+            "question": "The liability of a sole trade is",
+            "option": {
+                "a": "indeterminate ",
+                "b": "unlimited ",
+                "c": "limited ",
+                "d": "transferable"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 1,
+            "question": "Which of the following is the best general definition of the study of economics? ",
+            "option": {
+                "a": "the best way invest in the stock market",
+                "b": "business decision making under foreign competition ",
+                "c": "individual and social choice",
+                "d": "inflation unemployment in a growing economy"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 4,
+            "question": "What happens to a supply curve when the variables that are normally held constant are allowed to changer? ",
+            "option": {
+                "a": "the curve flattens out",
+                "b": "there is a movement along the curve",
+                "c": "the curve shifts ",
+                "d": "the curve becomes steeper."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 9,
+            "question": "For which market model is there a very large number of firms? ",
+            "option": {
+                "a": "monopolistic competition",
+                "b": "oligopoly ",
+                "c": "pure monopoly ",
+                "d": "pure- competition"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 23,
+            "question": "The only essential attribute of the good currency is ",
+            "option": {
+                "a": "scarcity ",
+                "b": "homogeneity",
+                "c": "acceptability ",
+                "d": "cognoscibility."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 11,
+            "question": "Which tends to be a progressive tax in Nigeria? ",
+            "option": {
+                "a": "income tax ",
+                "b": "property tax ",
+                "c": "sales tax ",
+                "d": "import- duties."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 18,
+            "question": "The production within the domestic territory of a country is called the ",
+            "option": {
+                "a": "net national product ",
+                "b": "gross domestic product ",
+                "c": "disposable income",
+                "d": "gross national product."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 6,
+            "question": "Suppose wages paid by a firm increase what would reasonably be expected to happen to the equilibrium price and equilibrium quantity for the firm\u2019s output? ",
+            "option": {
+                "a": "price increase,  quantity decreases ",
+                "b": "price decrease, quantity decrease",
+                "c": "price decreases, quantity increase",
+                "d": "price increases, quantity increase."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 17,
+            "question": "The creation of utility can be referred to as ",
+            "option": {
+                "a": "value added ",
+                "b": "profit marginalization ",
+                "c": "production",
+                "d": "entrepreneurship."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 10,
+            "question": "Which of the following is an economic cost ",
+            "option": {
+                "a": "uninsurable risk ",
+                "b": "normal profit ",
+                "c": "economic profit ",
+                "d": "monopoly profit."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 2,
+            "question": "What implication does resources scarcity have for the satisfaction of wants?",
+            "option": {
+                "a": "not all wants can be satisfied ",
+                "b": "we will never be faced with the need to make choice ",
+                "c": "we must develop ways to decreases our individual wants ",
+                "d": "the discovery of new resource."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 7,
+            "question": "When a nation\u2019s exports are greater than its imports ",
+            "option": {
+                "a": "the net foreign trade is zero ",
+                "b": "an unfavourable balance of payments exists ",
+                "c": "a favourable balance of trade exists ",
+                "d": "a favourable balance of payment exists."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 12,
+            "question": "A deficit budget is usually drawn up during ",
+            "option": {
+                "a": "economic buoyancy ",
+                "b": "inflationary period ",
+                "c": "war time ",
+                "d": "economic recession."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 20,
+            "question": "The Multiplier is always the reciprocal of ",
+            "option": {
+                "a": "MPC ",
+                "b": "MPS ",
+                "c": "APC",
+                "d": "APS"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 19,
+            "question": "Suppose a consumer\u2019s income increases from N30,000 to N36, 000. As a result the consumer increases her purchase of compact discs (CDS) from 25 CDS to 30CDS.What is consumer\u2019s income elasticity of demand for CDS?",
+            "option": {
+                "a": "0.5",
+                "b": "1,0 ",
+                "c": "1",
+                "d": "1.5"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 8,
+            "question": "Inflation is likely to benefit ",
+            "option": {
+                "a": "persons with bank savings",
+                "b": "persons who live on fixed pension funds ",
+                "c": "creditors ",
+                "d": "debtors."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 5,
+            "question": "If the price of Pepsi decrease relative to the price of coke and 7-up the demand for ",
+            "option": {
+                "a": "coke will decrease ",
+                "b": "7-up will decrease ",
+                "c": "coke and 7-up will increase",
+                "d": "coke and 7-up will decrease."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 15,
+            "question": "Which of the following is regarded as fixed cost? ",
+            "option": {
+                "a": "cost of raw materials ",
+                "b": "labour wages ",
+                "c": "rent land ",
+                "d": "cost of light.                                                                                                                                                                                                                   "
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        }
+    ]
+}

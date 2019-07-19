@@ -1,0 +1,646 @@
+{
+    "subject": "commerce",
+    "status": 200,
+    "data": [
+        {
+            "id": 442,
+            "question": "The assembling of products into usable forms is known as ",
+            "option": {
+                "a": "creation ",
+                "b": "manufacturing ",
+                "c": "construction ",
+                "d": "formation "
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 459,
+            "question": "Which of the following will NOT be stated in a Memorandum of Association? ",
+            "option": {
+                "a": "Name clause ",
+                "b": "Rights of shareholders ",
+                "c": "object clause ",
+                "d": "Registered office"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 483,
+            "question": "The physical component of a computer system is ",
+            "option": {
+                "a": "software ",
+                "b": "hardware ",
+                "c": "hard disk",
+                "d": "floppy disk "
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 485,
+            "question": "The type of computer application software used mainly for management information is ",
+            "option": {
+                "a": "Corel draw ",
+                "b": "AutoCAD",
+                "c": "data base",
+                "d": "word perfect"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 470,
+            "question": "The most suitable organizational structure for small or medium-sized enterprises is ",
+            "option": {
+                "a": "line structure ",
+                "b": "staff structure ",
+                "c": "committee structure ",
+                "d": "functional structure "
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 451,
+            "question": "The two main forms of communication are ",
+            "option": {
+                "a": "oral and written ",
+                "b": "verbal and non-verbal ",
+                "c": "e-mail and fax",
+                "d": "traditional and modern media "
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 478,
+            "question": "A motor dealer who agreed to sell a car to Mr. X but sold and delivered it to Mr. Y on the delivery date agreed with Mr. X. He has discharged the contract by ",
+            "option": {
+                "a": "performance ",
+                "b": "frustration ",
+                "c": "an agreement ",
+                "d": "breach "
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 463,
+            "question": "In the Nigeria GSM industry, a parliament is organized by the Nigerian Communication Commission in order to ",
+            "option": {
+                "a": "increase profit of service providers ",
+                "b": "protect the interest of government ",
+                "c": "encourage more people into the business ",
+                "d": "protect the interest of consumers "
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 452,
+            "question": "The most reliable and efficient means of conveying urgent documents is through",
+            "option": {
+                "a": "postal order ",
+                "b": "ordinary letters ",
+                "c": "registered letters ",
+                "d": "courier services"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 447,
+            "question": "The document lodged with the customs authorities before a ship can leave the port is a ",
+            "option": {
+                "a": "shipping note ",
+                "b": "ship report ",
+                "c": "ship manifest",
+                "d": "dock warrant "
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 482,
+            "question": "The process of transferring data from one computer to another is referred to as ",
+            "option": {
+                "a": "down loading ",
+                "b": "faxing ",
+                "c": "browsing ",
+                "d": "decoding "
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 464,
+            "question": "Trade Fairs in Nigeria are organized by ",
+            "option": {
+                "a": "the Federal Government ",
+                "b": "Manufactures\u2019 Association of Nigeria",
+                "c": "Ministry of Commerce and industry ",
+                "d": "Chambers of commerce"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 487,
+            "question": "A major factor that affects business operations is ",
+            "option": {
+                "a": "technology ",
+                "b": "supply ",
+                "c": "product ",
+                "d": "rivalry "
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 479,
+            "question": "A contract can be terminated through ",
+            "option": {
+                "a": "physical combat ",
+                "b": "family intervention ",
+                "c": "frustration ",
+                "d": "consultation "
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 443,
+            "question": "The final link in the chain of distribution is ",
+            "option": {
+                "a": "Middlemen ",
+                "b": "wholesaling ",
+                "c": "consumer ",
+                "d": "retailing "
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 458,
+            "question": "A business partner who provides capital but abstains from participation in administration of a firm is a ",
+            "option": {
+                "a": "general partner ",
+                "b": "nominal partner ",
+                "c": "secret partner ",
+                "d": "dormant partner "
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 448,
+            "question": "The document which must be endorsed by the ambassador of a country of destination before shipment of goods is a ",
+            "option": {
+                "a": "consular invoice ",
+                "b": "certificate of origin ",
+                "c": "bill of lading ",
+                "d": "closed indent "
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 444,
+            "question": "A country is said to be experiencing an unfavourable balance of trade if her",
+            "option": {
+                "a": "exports exceed imports ",
+                "b": "visible exports  exceed  visible imports ",
+                "c": "imports and export are equal ",
+                "d": "visible imports exceed visible exports "
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 460,
+            "question": "The amount of authorized capital that shareholders have subscribed to is ",
+            "option": {
+                "a": "issued share capital ",
+                "b": "authorized share capital ",
+                "c": "owner\u2019s equity ",
+                "d": "working capital "
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 481,
+            "question": "The sole legal right held by the author to publish his book is a ",
+            "option": {
+                "a": "trademark ",
+                "b": "copyright ",
+                "c": "patent right ",
+                "d": "book mark"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 455,
+            "question": "The difference between indemnity insurance and non-indemnity insurance is that the latter provides ",
+            "option": {
+                "a": "cover for exporters against risks ",
+                "b": "cover for importers against risks ",
+                "c": "full payment to the insured ",
+                "d": "consolation payment to the insured "
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 469,
+            "question": "The initial function of a manager is ",
+            "option": {
+                "a": "setting up an organization ",
+                "b": "coordinating ",
+                "c": "planning ",
+                "d": "provision of welfare package "
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 467,
+            "question": "Money can simply be referred to as a ",
+            "option": {
+                "a": "measure of value",
+                "b": "standard of value",
+                "c": "means of settlement ",
+                "d": "durable asset for doing business"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 471,
+            "question": "In a staff-authority relationship, the opinion of a specialist is one department to another is ",
+            "option": {
+                "a": "a directive ",
+                "b": "an advice ",
+                "c": "a command",
+                "d": "a delegation "
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 476,
+            "question": "A contract that is acknowledged before the law court is referred to as ",
+            "option": {
+                "a": "informal contract",
+                "b": "formal contract ",
+                "c": "contract of records ",
+                "d": "specialty contract "
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 457,
+            "question": "In order to increase the capital owned, a sole trader may ",
+            "option": {
+                "a": "seek for bank loan ",
+                "b": "issue debentures ",
+                "c": "acquire extra shop fittings on credit ",
+                "d": "draw less of his profit for personal use"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 477,
+            "question": "An agent employed to sell goods delivered to him by the principal is referred to as a ",
+            "option": {
+                "a": "Special agent ",
+                "b": "del credere agent ",
+                "c": "factor ",
+                "d": "universal agent"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 461,
+            "question": "The rate of turnover of a firm in a given year is 5 times while the average stock is \n N12.500. what is the turnover of the firm? \n",
+            "option": {
+                "a": "N24,000",
+                "b": "N46,500",
+                "c": "N62, 500",
+                "d": "N65,000"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 486,
+            "question": "To meet security requirement before gaining access to data, a computer operator supplies ",
+            "option": {
+                "a": "an e-mail address ",
+                "b": "a yahoo address ",
+                "c": "a password ",
+                "d": "a modem"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 462,
+            "question": "A lawyer that defrauds his client may be derobed by the Nigerian Bar Association in order to ",
+            "option": {
+                "a": "protect other lawyers ",
+                "b": "protect the integrity of the association",
+                "c": "compensate the affected client ",
+                "d": "prevent the client from sueing the association "
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 453,
+            "question": "An undertaking given by a person to another assuring his integrity is ",
+            "option": {
+                "a": "proximate clause ",
+                "b": "fidelity guarantee ",
+                "c": "subrogation ",
+                "d": "insurable interest "
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 484,
+            "question": "A computer accessory through which information can be retrieved is the ",
+            "option": {
+                "a": "hard disk ",
+                "b": "input  device ",
+                "c": "control unit ",
+                "d": "floppy disk "
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 454,
+            "question": "If Mr. N takes a fire insurance policy with average clause, his compensation will be ",
+            "option": {
+                "a": "N5, 000",
+                "b": "N7, 500",
+                "c": "N70, 000",
+                "d": "N75,000"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 474,
+            "question": "The essential utility derived from the use of a product is known as ",
+            "option": {
+                "a": "augmented benefit",
+                "b": "branded benefit ",
+                "c": "core benefit ",
+                "d": "formal benefit"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 488,
+            "question": "The environmental hazard that is most difficult to control is ",
+            "option": {
+                "a": "land pollution",
+                "b": "water pollution ",
+                "c": "air pollution",
+                "d": "political unrest "
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 465,
+            "question": "Money is generally acceptable for transactions due to",
+            "option": {
+                "a": "the legal backing ",
+                "b": "the rule of law ",
+                "c": "it\u2019s acceptability in the global market ",
+                "d": "the Central Bank Governor\u2019s signature "
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 466,
+            "question": "Which of the following is a quality of money?  ",
+            "option": {
+                "a": "Availability",
+                "b": "Scarcity  ",
+                "c": "Indivisibility ",
+                "d": "Convertibility "
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 456,
+            "question": "An importance of warehousing is in the ",
+            "option": {
+                "a": "production of goods ",
+                "b": "transportation of goods ",
+                "c": "Importation of goods ",
+                "d": "repackaging of goods"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 445,
+            "question": "Trading position of Nigeria is the same as her ",
+            "option": {
+                "a": "desire  to trade with many countries",
+                "b": "willingness to grant credit to foreigners ",
+                "c": "balance of trade ",
+                "d": "terms of trade"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 450,
+            "question": "Which of the following advertising medium appeals to only the literate it the society?",
+            "option": {
+                "a": "Radio advertising ",
+                "b": "Print Media advertising ",
+                "c": "Television advertising ",
+                "d": "Cinema advertising "
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2013"
+        }
+    ]
+}
