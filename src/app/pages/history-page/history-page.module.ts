@@ -6,6 +6,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { IonicModule } from "@ionic/angular";
 
 import { HistoryPagePage } from "./history-page.page";
+import {SharedComponentsModule} from "../../shared-components/shared-components.module";
 
 const routes: Routes = [
   {
@@ -17,8 +18,10 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+
     FormsModule,
     IonicModule,
+      SharedComponentsModule,
     RouterModule.forChild(routes)
   ],
   declarations: [HistoryPagePage]

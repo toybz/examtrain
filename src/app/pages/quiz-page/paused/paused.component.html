@@ -8,14 +8,18 @@
 
     <ion-card-content>
       <ion-item no-padding="" no-margin="">
-        <ion-label>Category > {{ data.questions[0].category }}</ion-label>
+        <ion-label>Exam Type :-  {{ quizService.getExamTypeDisplayName( data.quiz_config.type) }}</ion-label>
+      </ion-item>
+
+      <ion-item no-padding="" no-margin="">
+        <ion-label>Subject :-  {{ quizService.getSubjectDisplayName( data.quiz_config.subject) }}</ion-label>
       </ion-item>
 
       <ion-grid>
         <ion-row justify-content-center="">
           <ion-col>
             <p>Countdown</p>
-            <p>{{ data.countdown }}</p>
+            <p>{{ data.countdown }} sec</p>
           </ion-col>
 
           <ion-col>

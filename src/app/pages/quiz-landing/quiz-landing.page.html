@@ -54,7 +54,10 @@
 
       <ion-card-content>
         <ion-item no-padding="" no-margin="">
-          <ion-label>Category > {{paused_quiz.category}}</ion-label>
+          <ion-label>Exam Type :- {{quizService.getExamTypeDisplayName(paused_quiz.quiz_config.type)}}</ion-label>
+        </ion-item>
+        <ion-item no-padding="" no-margin="">
+          <ion-label>Subject :- {{quizService.getSubjectDisplayName(paused_quiz.quiz_config.subject)}}</ion-label>
         </ion-item>
 
         <ion-grid>
@@ -98,33 +101,41 @@
         <ion-list-header></ion-list-header>
 
         <ion-item>
-          <ion-label>Category</ion-label>
+          <ion-label>Exam Type</ion-label>
 
           <ion-select
             [interfaceOptions]="customActionSheetOptions"
             interface="action-sheet"
-            [(ngModel)]="quiz_config.category"
-            name="category"
-            [placeholder]="'Category'"
+            [(ngModel)]="quiz_config.type"
+            name="type"
+            [placeholder]="'E.g Jamb'"
           >
-            <ion-select-option *ngFor="let cat of categories" value="{{cat.id}}"
-              >{{cat.name}}</ion-select-option
+            <ion-select-option *ngFor="let type of exam_types" value="{{type.name}}"
+              >{{type.title}}</ion-select-option
             >
+
+   <ion-select-option  value="ican" disabled>ICAN (N/A .Coming Soon)</ion-select-option>
+
+            <ion-select-option  value="ccna" disabled >CCNA (N/A. Coming Soon)</ion-select-option>
+
+            <ion-select-option  value="pmp" disabled >PMP (N/A. Coming Soon)</ion-select-option>
+
           </ion-select>
         </ion-item>
 
         <ion-item>
-          <ion-label>Difficulty Level</ion-label>
+          <ion-label>Subject</ion-label>
 
           <ion-select
-            interface="action-sheet"
-            [(ngModel)]="quiz_config.difficulty"
-            name="difficulty"
-            [placeholder]="'Difficulty'"
+                  [interfaceOptions]="customActionSheetOptions"
+ interface="action-sheet"
+            [(ngModel)]="quiz_config.subject"
+            name="subject"
+            [placeholder]="'E.g English'"
           >
-            <ion-select-option value="hard">Hard</ion-select-option>
-            <ion-select-option value="medium">Medium</ion-select-option>
-            <ion-select-option value="easy">Easy</ion-select-option>
+            <ion-select-option *ngFor="let subject of subjects" value="{{subject.name}}"
+            >{{subject.title}}</ion-select-option
+            >
           </ion-select>
         </ion-item>
 

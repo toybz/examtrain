@@ -1,0 +1,64 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      Date : {{ quiz.date_time | date : 'dd-MM-y h:m a' }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <strong>Exam Type :-
+      <ion-text color="primary" *ngIf="quiz.quiz_config.type">
+        {{ quizService.getExamTypeDisplayName(quiz.quiz_config.type)}}
+      </ion-text>
+    </strong>
+
+    <br/>
+    <strong
+    > Subject :-
+      <ion-text color="primary" *ngIf="quiz.quiz_config.subject">
+        {{ quizService.getSubjectDisplayName(quiz.quiz_config.subject)}}
+      </ion-text>
+    </strong>
+
+
+
+    <ion-grid>
+      <ion-row>
+
+        <ion-col size="3" text- text-center>
+          <p>Amount</p>
+          <ion-text text-capitalize color="primary">
+            <strong> {{ quiz.quiz_config.amount}}</strong>
+          </ion-text>
+        </ion-col>
+
+
+        <ion-col size="3" text-center>
+          <p>Correct</p>
+          <ion-text text-capitalize color="primary">
+            <strong>{{ quiz.correct_answers_count}}</strong>
+          </ion-text>
+        </ion-col>
+
+
+        <ion-col size="3" text-center>
+          <p>Wrong</p>
+          <ion-text text-capitalize color="primary">
+            <strong>{{ quiz.quiz_config.amount - quiz.correct_answers_count}}</strong>
+          </ion-text>
+        </ion-col>
+
+
+        <ion-col size="3" text-center>
+          <p>View</p>
+          <ion-text text-capitalize color="primary">
+            <strong> > </strong>
+          </ion-text>
+        </ion-col>
+
+
+
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>
+

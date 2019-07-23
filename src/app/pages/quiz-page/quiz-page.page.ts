@@ -91,36 +91,53 @@ export class QuizPagePage implements OnInit {
         this.quiz_config = this.start_with_existing_data
           ? this.existing_data.quiz_config
           : {
-              category: "",
-              difficulty: "",
+              type: "",
+              subject: "",
               amount: 0
             };
 
         if (!this.start_with_existing_data) {
           this.questions$ = this.route.paramMap.pipe(
             switchMap((params: any) => {
-              this.quiz_config.category = params.get("category");
-              this.quiz_config.difficulty = params.get("difficulty");
+              this.quiz_config.type = params.get("exam_type");
+              this.quiz_config.subject = params.get("subject");
               this.quiz_config.amount = parseInt(params.get("amount"));
 
               return this.quizService.fetchQuizQuestions(
-                this.quiz_config.category,
-                this.quiz_config.difficulty,
+                this.quiz_config.type,
+                this.quiz_config.subject,
                 this.quiz_config.amount
               );
             })
           );
 
-          this.questions$.subscribe(data => {
-            console.log(data.results);
+          this.questions$.subscribe(response => {
+              this.questions = response.data;
+            console.log( this.questions );
 
-            this.questions = data.results;
+            /*  data_example = {answer: "c"
+                  examtype: "utme"
+                  examyear: "2002"
+                  id: 45
+                  image: ""
+                  option: {a: "4 moles of chlorine", b: "3 moles of ozone", c: "1 mole of butane", d: "7 moles of argon"}
+                  question: "Which of the following gases contains the least number of atoms at s.t.p"
+                  section: ""
+                  solution: ""}*/
 
             this.questions.map(question => {
-              question.options = this.reArrangeOptions([
-                ...question.incorrect_answers,
-                question.correct_answer
-              ]);
+
+            let  options = Object.values(question.option) ;
+          question.correct_answer = question.option[question.answer]
+
+                question.question = question.section ? `(${  question.section[0].toUpperCase() + question.section.substring(1)    })  <br/>  ${question.question}` : question.question
+
+
+           question.type = '' , question.category = '' , question.difficulty = '';
+
+
+
+              question.options = this.reArrangeOptions(options);
             });
           });
         }

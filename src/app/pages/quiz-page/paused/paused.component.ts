@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Input } from "@angular/core";
 import { ModalController, PopoverController } from "@ionic/angular";
 import { LocalStorageService } from "../../../services/local-storage/local-storage.service";
+import {QuizService} from "../../../services/quiz/quiz.service";
 
 @Component({
   selector: "app-paused",
@@ -11,9 +12,11 @@ import { LocalStorageService } from "../../../services/local-storage/local-stora
 export class PausedComponent implements OnInit {
   @Input() data: any;
 
+
   constructor(
     public modalController: PopoverController,
-    private localStorage: LocalStorageService
+    private localStorage: LocalStorageService,
+    public quizService: QuizService
   ) {}
 
   ngOnInit() {

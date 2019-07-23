@@ -16,7 +16,7 @@ const routes: Routes = [
   },
 
   {
-    path: "quiz-page/:category/:difficulty/:amount",
+    path: "quiz-page/:exam_type/:subject/:amount",
     loadChildren: "./pages/quiz-page/quiz-page.module#QuizPagePageModule",
     runGuardsAndResolvers: "always"
   },

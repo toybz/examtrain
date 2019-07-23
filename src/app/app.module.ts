@@ -12,17 +12,19 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ServiceWorkerModule } from "@angular/service-worker";
 import { environment } from "../environments/environment";
+import {SharedComponentsModule} from "./shared-components/shared-components.module";
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
+      SharedComponentsModule,
     FormsModule,
     HttpClientModule,
     RoundProgressModule,
-    IonicModule.forRoot(),
-    AppRoutingModule,
+      IonicModule.forRoot(),
+      AppRoutingModule,
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production
     })

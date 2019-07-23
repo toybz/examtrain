@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { ToastController } from "@ionic/angular";
+import {forEach} from "@angular-devkit/schematics";
 
 @Injectable({
   providedIn: "root"
@@ -12,6 +13,9 @@ export class UtilsService {
   isEmptyObject(obj) {
     return obj && Object.keys(obj).length === 0;
   }
+
+
+
 
   async showToast(message: string, duration: number) {
     const toast = await this.toastController.create({

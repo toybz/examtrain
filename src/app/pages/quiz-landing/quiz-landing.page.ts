@@ -19,35 +19,51 @@ export class QuizLandingPage implements OnInit {
   };
 
   quiz_config = {
-    category: "",
-    difficulty: "",
+    type: "",
+    subject: "",
     amount: 10
   };
 
-  categories = [];
+  exam_types = [];
+  subjects = [];
+
+    /*getExamTypeDisplayName = this.quizService.getExamTypeDisplayName
+    getSubjectDisplayName = this.quizService.getSubjectDisplayName*/
 
   constructor(
     private localStorage: LocalStorageService,
     private util: UtilsService,
     private router: Router,
     private route: ActivatedRoute,
-    private quizService: QuizService
+    public quizService: QuizService
   ) {}
 
   ngOnInit() {
     this.localStorage.getPausedQuiz().subscribe((paused_quiz: any) => {
       if (!this.util.isEmptyObject(paused_quiz)) {
         this.paused_quiz = paused_quiz;
-        this.paused_quiz.category = paused_quiz.questions[0].category;
+        this.paused_quiz.type = paused_quiz.type;
+console.log(this.paused_quiz)
+
       }
       this.data_loaded = true;
     });
 
-    this.quizService.getCategories().subscribe((categories: any) => {
-      console.log(categories);
-      this.categories = categories.trivia_categories;
+    this.quizService.getQuizConfig().subscribe((config_data: any) => {
+      console.log(config_data);
+      this.exam_types = config_data.exam_types;
+        this.subjects = config_data.subjects;
+
     });
+
   }
+
+
+
+
+
+
+
 
   startNewQuiz() {
     this.paused_quiz = false;
@@ -57,8 +73,8 @@ export class QuizLandingPage implements OnInit {
     this.quizService.setInstantStartWithPausedQuiz(false);
 
     this.router.navigate([
-      `/quiz-page/${this.paused_quiz.quiz_config.category}/${
-        this.paused_quiz.quiz_config.difficulty
+      `/quiz-page/${this.paused_quiz.quiz_config.type}/${
+        this.paused_quiz.quiz_config.subject
       }/${this.paused_quiz.quiz_config.amount}?testes=` +
         Math.random() * 10
     ]);
@@ -68,8 +84,8 @@ export class QuizLandingPage implements OnInit {
     console.log(this.quiz_config);
 
     if (
-      !this.quiz_config.category ||
-      !this.quiz_config.difficulty ||
+      !this.quiz_config.type ||
+      !this.quiz_config.subject ||
       this.quiz_config.amount < 1
     ) {
       this.util.showToast("Please Enter Data For all Fields To Proceed", 5000);
@@ -80,7 +96,7 @@ export class QuizLandingPage implements OnInit {
     this.localStorage.deletePausedQuiz();
 
     this.router.navigate([
-      `/quiz-page/${this.quiz_config.category}/${this.quiz_config.difficulty}/${
+      `/quiz-page/${this.quiz_config.type}/${this.quiz_config.subject}/${
         this.quiz_config.amount
       }`
     ]);

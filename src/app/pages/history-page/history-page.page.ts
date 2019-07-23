@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { LocalStorageService } from "../../services/local-storage/local-storage.service";
 import { IonInfiniteScroll } from "@ionic/angular";
+import {QuizService} from "../../services/quiz/quiz.service";
 
 @Component({
   selector: "app-history-page",
@@ -16,7 +17,8 @@ export class HistoryPagePage implements OnInit {
   current_page = 1;
   page_loaded = false;
 
-  constructor(private localStorage: LocalStorageService) {}
+  constructor(private localStorage: LocalStorageService,
+              public  quizService: QuizService) {}
 
   ngOnInit() {
     this.initialize();

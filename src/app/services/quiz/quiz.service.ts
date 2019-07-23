@@ -1,13 +1,100 @@
 import { Injectable } from "@angular/core";
 import * as url from "../urls";
 import { HttpClient } from "@angular/common/http";
-import { BehaviorSubject } from "rxjs/index";
+import {BehaviorSubject, Observable, of} from "rxjs/index";
 
 @Injectable({
   providedIn: "root"
 })
 export class QuizService {
   quiz_question = [];
+  exam_types = [
+      {
+          name: 'utme',
+          title: 'Jamb(UTME)'
+
+      },
+      {
+          name: 'wassce',
+          title: 'Waec'
+
+      },
+      {
+          name: 'post-utme',
+          title: 'Post Jamb'
+
+      },
+  ];
+  subjects = [
+      {
+          name: 'english',
+          title: 'English'
+      } ,
+      {
+          name: 'mathematics',
+          title: 'Mathematics'
+      } ,
+      {
+          name: 'commerce',
+          title: 'Commerce'
+      } ,
+      {
+          name: 'accounting',
+          title: 'Accounting'
+      } ,
+      {
+          name: 'biology',
+          title: 'Biology'
+      } ,
+      {
+          name: 'physics',
+          title: 'Physics'
+      } ,
+      {
+          name: 'chemistry',
+          title: 'Chemistry'
+      } ,
+      {
+          name: 'englishlit',
+          title: 'English Literature'
+      } ,
+      {
+          name: 'government',
+          title: 'Government'
+      } ,
+      {
+          name: 'crk',
+          title: 'CRK'
+      } ,
+      {
+          name: 'geography',
+          title: 'Geography'
+      } ,
+      {
+          name: 'economics',
+          title: 'Economics'
+      } ,
+      {
+          name: 'irk',
+          title: 'IRK'
+      } ,
+      {
+          name: 'civiledu',
+          title: 'Civil Education'
+      } ,
+      {
+          name: 'insurance',
+          title: 'Insurance'
+      } ,
+      {
+          name: 'currentaffairs',
+          title: 'Current Affairs'
+      } ,
+      {
+          name: 'history',
+          title: 'History'
+      } ,
+  ];
 
   /*
  {
@@ -27,7 +114,7 @@ export class QuizService {
 
   instant_start_with_paused_quiz = true;
 
-  fetchQuizQuestions(category_id, difficulty, amount) {
+  fetchQuizQuestions(exam_type, subject, amount) {
     /*
     this.quiz_question = [
         {
@@ -69,7 +156,7 @@ export class QuizService {
     ] ;
 */
 
-    return this.http.get(url.get_question(category_id, difficulty, amount));
+    return this.http.get(url.get_question(exam_type, subject, amount))
   }
 
   getQuizQuestions() {
@@ -83,6 +170,50 @@ export class QuizService {
   getCategories() {
     return this.http.get(url.get_categories);
   }
+
+    getExamTypes() {
+       return this.exam_types
+    }
+
+    getSubjects() {
+
+    return this.subjects
+
+
+
+
+    }
+    getQuizConfig(){
+     let exam_types = this.getExamTypes()
+        let subjects = this.getSubjects()
+
+        return  of({
+            exam_types,
+            subjects
+        })
+    }
+
+    getExamTypeDisplayName(exam){
+        let exam_title
+        this.exam_types.forEach((item)=>{
+            if(item.name == exam){
+                exam_title = item.title
+            }
+
+        })
+        return exam_title
+    }
+
+    getSubjectDisplayName(subject){
+        let subject_title
+        this.subjects.forEach((item)=>{
+            if(item.name == subject){
+                subject_title = item.title
+            }
+
+        })
+        return subject_title
+    }
 
   setInstantStartWithPausedQuiz(val: boolean) {
     this.instant_start_with_paused_quiz = val;
