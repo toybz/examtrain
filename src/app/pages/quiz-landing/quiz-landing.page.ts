@@ -21,7 +21,7 @@ export class QuizLandingPage implements OnInit {
   quiz_config = {
     type: "",
     subject: "",
-    amount: 10
+    amount: 5
   };
 
   exam_types = [];

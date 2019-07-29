@@ -48,7 +48,19 @@ const routes: Routes = [
           }
         ]
       },
-      {
+        {
+            path: "feed",
+            children: [
+                {
+                    path: "",
+                    loadChildren:
+                        "../pages/feed-page/feed-page.module#FeedPageModule"
+                }
+            ]
+        },
+
+
+        {
         path: "leaderboard",
         children: [
           {

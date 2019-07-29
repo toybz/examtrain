@@ -9,6 +9,7 @@ import { MemesService } from "../memes.service";
 import { Observable, ReplaySubject } from "rxjs/index";
 import { LocalStorageService } from "../../../services/local-storage/local-storage.service";
 import { app_url } from "../../../services/urls";
+import {AnswerExplanationComponent} from "../answer-explanation/answer-explanation.component";
 
 @Component({
   selector: "app-quiz-review",
@@ -151,4 +152,33 @@ export class QuizReviewComponent implements OnInit {
       el.scrollIntoView({ behavior: "smooth" });
     }
   }
+
+
+    async showExplanation(question){
+    console.log(question)
+        const explanation_modal = await this.modalController.create({
+            component: AnswerExplanationComponent,
+            componentProps: {
+                question: question
+            },
+            animated: true
+        });
+
+        explanation_modal.onDidDismiss().then(res => {
+            console.log(res);
+
+            if (res.data.action == "reload") {
+                this.page_ready = false;
+                this.initialise();
+            } else if (res.data.action == "new_quiz") {
+                this.router.navigate(["/tabs/quiz/"]);
+            } else if (res.data.action == "dashboard") {
+                this.router.navigate(["/tabs/dashboard/"]);
+            }
+        });
+
+        return await explanation_modal.present();
+
+    }
+
 }

@@ -10,6 +10,7 @@ import { QuizPagePage } from "./quiz-page.page";
 
 import { QuizReviewComponent } from "./quiz-review/quiz-review.component";
 import { PausedComponent } from "./paused/paused.component";
+import { AnswerExplanationComponent } from './answer-explanation/answer-explanation.component';
 
 const routes: Routes = [
   {
@@ -26,7 +27,7 @@ const routes: Routes = [
     RoundProgressModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [QuizPagePage, QuizReviewComponent, PausedComponent],
-  entryComponents: [QuizPagePage, QuizReviewComponent, PausedComponent]
+  declarations: [QuizPagePage, QuizReviewComponent, PausedComponent, AnswerExplanationComponent],
+  entryComponents: [QuizPagePage, QuizReviewComponent, PausedComponent , AnswerExplanationComponent]
 })
 export class QuizPagePageModule {}
