@@ -168,12 +168,7 @@ export class QuizReviewComponent implements OnInit {
             console.log(res);
 
             if (res.data.action == "reload") {
-                this.page_ready = false;
-                this.initialise();
-            } else if (res.data.action == "new_quiz") {
-                this.router.navigate(["/tabs/quiz/"]);
-            } else if (res.data.action == "dashboard") {
-                this.router.navigate(["/tabs/dashboard/"]);
+
             }
         });
 

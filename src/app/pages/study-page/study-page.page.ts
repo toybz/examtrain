@@ -6,6 +6,22 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./study-page.page.scss"]
 })
 export class StudyPagePage implements OnInit {
+
+  customPopoverOptionsCategory: any = {
+    header: 'Select Category',
+    subHeader: '',
+    message: ''
+  };
+  customPopoverOptionsExamType: any = {
+    header: 'Select Exam Type',
+    subHeader: '',
+    message: ''
+  };
+
+  selected_category = "explore";
+  selected_exam = "jamb";
+
+
   constructor() {}
 
   ngOnInit() {}

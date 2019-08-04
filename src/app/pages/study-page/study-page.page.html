@@ -1,13 +1,58 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title text-center=""> Study</ion-title>
+
+
+    <ion-title>
+
+      <ion-grid>
+        <ion-row>
+
+          <ion-col>
+
+            <ion-select [interfaceOptions]="customPopoverOptionsCategory" interface="popover" [(ngModel)]="selected_category" name="selected_category">
+              <ion-select-option value="explore" selected>Explore</ion-select-option>
+              <ion-select-option value="in-progress">In Progress</ion-select-option>
+              <ion-select-option value="completed">Completed</ion-select-option>
+            </ion-select>
+          </ion-col>
+
+          <ion-col *ngIf="selected_category == 'explore'">
+            <ion-select placeholder="Select Exam" [interfaceOptions]="customPopoverOptionsExamType" interface="popover" [(ngModel)]="selected_exam" name="selected_exam">
+              <ion-select-option value="jamb" selected>JAMB</ion-select-option>
+              <ion-select-option value="waec">WAEC</ion-select-option>
+              <ion-select-option value="post_jamb">Post JAMB</ion-select-option>
+            </ion-select>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+
+
+
+
+
+
+
+
+
+
+    </ion-title>
+
+
+
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-<ion-card>
-  <ion-card-header>
 
-  </ion-card-header>
-</ion-card>
+
+    <app-explore *ngIf="selected_category == 'explore'"></app-explore>
+
+    <app-completed *ngIf="selected_category == 'completed'"></app-completed>
+
+    <app-in-progress *ngIf="selected_category == 'in-progress'"></app-in-progress>
+
+
+
 </ion-content>

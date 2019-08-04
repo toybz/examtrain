@@ -25,7 +25,14 @@ const routes: Routes = [
     path: "onboarding-page",
     loadChildren:
       "./pages/onboarding-page/onboarding-page.module#OnboardingPagePageModule"
+  } ,
+
+  {
+    path: "view-tutorial-page",
+    loadChildren:
+      "./pages/study-page/view-tutorial/view-tutorial.module#ViewTutorialModule"
   }
+
 
   // { path: '**', component: PageNotFoundComponent }
 ];

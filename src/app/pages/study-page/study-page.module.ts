@@ -6,6 +6,9 @@ import { Routes, RouterModule } from "@angular/router";
 import { IonicModule } from "@ionic/angular";
 
 import { StudyPagePage } from "./study-page.page";
+import { ExploreComponent } from './explore/explore.component';
+import { CompletedComponent } from './completed/completed.component';
+import { InProgressComponent } from './in-progress/in-progress.component';
 
 const routes: Routes = [
 
@@ -21,12 +24,6 @@ const routes: Routes = [
         component: StudyPagePage
     } ,
 
-    {
-      //study materials page.Pdf, Video, article.Contains link to test yourself on current studying topic--leads to quiz page
-        path: "view",
-        component: StudyPagePage
-    } ,
-
 ];
 
 @NgModule({
@@ -36,6 +33,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [StudyPagePage]
+  declarations: [StudyPagePage, ExploreComponent, CompletedComponent, InProgressComponent] ,
+  entryComponents: [StudyPagePage, ExploreComponent, CompletedComponent, InProgressComponent]
 })
 export class StudyPagePageModule {}
