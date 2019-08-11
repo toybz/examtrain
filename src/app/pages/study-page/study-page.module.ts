@@ -9,6 +9,8 @@ import { StudyPagePage } from "./study-page.page";
 import { ExploreComponent } from './explore/explore.component';
 import { CompletedComponent } from './completed/completed.component';
 import { InProgressComponent } from './in-progress/in-progress.component';
+import { SafeUrl } from "@angular/platform-browser";
+import { SafeUrlPipe } from "../../pipes/safe-url/safe-url.pipe";
 
 const routes: Routes = [
 
@@ -33,7 +35,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [StudyPagePage, ExploreComponent, CompletedComponent, InProgressComponent] ,
-  entryComponents: [StudyPagePage, ExploreComponent, CompletedComponent, InProgressComponent]
+  declarations: [StudyPagePage, ExploreComponent, CompletedComponent, InProgressComponent, SafeUrlPipe] ,
+  entryComponents: [StudyPagePage, ExploreComponent, CompletedComponent, InProgressComponent ]
 })
 export class StudyPagePageModule {}

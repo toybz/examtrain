@@ -13,6 +13,7 @@ import { AppComponent } from "./app.component";
 import { ServiceWorkerModule } from "@angular/service-worker";
 import { environment } from "../environments/environment";
 import {SharedComponentsModule} from "./shared-components/shared-components.module";
+import { SafeUrlPipe } from './pipes/safe-url/safe-url.pipe';
 
 @NgModule({
   declarations: [AppComponent],

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StudyService } from "../../../services/study/study.service";
 
 @Component({
   selector: 'app-explore',
@@ -8,14 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class ExploreComponent implements OnInit {
 
   slideOpts = {
-    initialSlide: 1,
+    initialSlide: 0,
     speed: 400,
     slidesPerView : 3,
    // loop: true,
 
   };
 
-  subjects = [
+/*  subjects = [
     {
       name: 'english',
       title: 'English'
@@ -84,21 +85,37 @@ export class ExploreComponent implements OnInit {
       name: 'history',
       title: 'History'
     } ,
-  ];
+  ];*/
 
-  selected_subject = {
-    title : "",
-    name : ""
-  }
+subjects = [];
 
-  constructor() { }
+  selected_subject ;
+  subject_topics ;
+
+  constructor(private study_service: StudyService) { }
 
   ngOnInit() {
+
+      this.study_service.getSubjects().subscribe((subjects)=>{
+        this.subjects = subjects
+      })
+
+
   }
 
   showTopicsFor(subject){
     console.log(subject)
     this.selected_subject = subject
+    this.study_service.getSubjectTopics(subject).subscribe(
+      (topics)=>{
+        this.subject_topics = topics
+        console.log(this.subject_topics)
+      }
+    )
+
+
+
+
   }
 
 }

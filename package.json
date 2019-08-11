@@ -5,12 +5,13 @@
   "homepage": "http://ionicframework.com/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod --base-href '/quizo/' ",
+    "start": "ng serve --host 0.0.0.0   --port 9300 --disable-host-check",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "push": "npx angular-cli-ghpages --dir=www"
+    "push": "npx angular-cli-ghpages --dir=www",
+    "remote-serve": ""
   },
   "private": true,
   "dependencies": {

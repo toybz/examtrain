@@ -1,15 +1,25 @@
+<ion-header>
+<ion-toolbar>
 
+  <ion-buttons color="white" slot="start" (click)="goBack()">
+    <ion-button>
+      <ion-icon slot="icon-only" name="arrow-back" style="color: #f4f5f8"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+<ion-title>{{subject + '- ' + topic }}</ion-title>
+</ion-toolbar>
 
+</ion-header>
 
-<ion-content padding style="padding-top: 0px">
+<ion-content padding>
 
   <ion-card>
-    <ion-card-header class="card-video-header">
+   <!-- <ion-card-header class="card-video-header">
       <ion-card-title style="text-align: center;color:white"> Algebra</ion-card-title>
-    </ion-card-header>
+    </ion-card-header>-->
     <ion-card-content no-margin no-padding style="background-color: black">
 
-      <iframe width="" height="200" src="https://www.youtube.com/embed/5TbUxGZtwGI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%"></iframe>
+      <iframe width="" height="200"  [src]="selected_sub_topic.url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%"></iframe>
 
     </ion-card-content>
   </ion-card>
@@ -20,29 +30,32 @@
       <ion-row>
         <ion-col>
 
-          <ion-item>
+
+
+          <ion-tab-button tab="schedule">
             <ion-icon name="bookmark"></ion-icon>
-            <br>
-            <p>Bookmark</p>
-          </ion-item>
+            <ion-label>Bookmark</ion-label>
+          </ion-tab-button>
+
+
 
         </ion-col>
 
         <ion-col>
-          <ion-item>
-          <ion-icon name="share"></ion-icon>
-         <br>
-          <p>Share</p>
-          </ion-item>
+
+          <ion-tab-button tab="schedule">
+            <ion-icon name="share"></ion-icon>
+            <ion-label>Share</ion-label>
+          </ion-tab-button>
+
         </ion-col>
 
-        <!--<ion-col>
-          <ion-item>
-          <ion-icon name="filing"></ion-icon>
-            <br>
-          <p>Transcript</p>
-          </ion-item>
-        </ion-col>-->
+      <ion-col>
+        <ion-tab-button tab="schedule">
+          <ion-icon name="play-circle"></ion-icon>
+          <ion-label>Assessment</ion-label>
+        </ion-tab-button>
+        </ion-col>
 
 
       </ion-row>
@@ -54,20 +67,29 @@
 
   <ion-card>
     <ion-card-content>
-      In this lesson we will look at how to solve linear equations using the ALmighty Formula
+     {{selected_sub_topic.description || selected_sub_topic.topic}}
     </ion-card-content>
   </ion-card>
 
 
 
-      <ion-list>
-        <ion-item>  <ion-icon name="checkmark-circle-outline"></ion-icon>    1- Introduction      </ion-item>
+      <ion-list *ngIf="sub_topics">
 
-        <ion-item>   <ion-icon name="checkmark-circle-outline"></ion-icon>    2- Introduction      </ion-item>
+   <!--     <ion-item>  <ion-icon name="checkmark-circle-outline"></ion-icon>    1- Introduction      </ion-item>-->
 
-        <ion-item class="currently_playing"> <p class="currently_playing"> 3- Algebra   </p>        </ion-item>
-        <ion-item>       4- Introduction      </ion-item>
-        <ion-item>       5- Introduction      </ion-item>
+
+
+
+
+          <ion-item (click)="setSelectedTopic(sub)" *ngFor="let sub of sub_topics ; let count = index" >
+          <p class="sub_topics" [class.currently_playing]="sub.sub_topic_id==selected_sub_topic.sub_topic_id" >  {{ count+1 + '- ' + sub.sub_topic}} </p>
+                </ion-item>
+
+
+
+
+
+
       </ion-list>
 
 

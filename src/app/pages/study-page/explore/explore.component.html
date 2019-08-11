@@ -3,37 +3,38 @@
 <ion-slides [options]="slideOpts">
 
   <ion-slide *ngFor="let subject of subjects"  (click)="showTopicsFor(subject)">
-  <ion-button color="primary" class="subject-slide" style=" letter-spacing : 0.0em !important;padding-start: 2.1em !important;max-width: 30vw !important;width: 30vw !important;">{{subject.title}}</ion-button>
+  <ion-button color="primary" class="subject-slide" style=" letter-spacing : 0.0em !important;padding-start: 2.1em !important;max-width: 30vw !important;width: 30vw !important;">{{subject}}</ion-button>
   </ion-slide>
 </ion-slides>
 
 <br>
 <ion-text>
-  <h1>{{selected_subject.title}}</h1>
+  <h1>{{selected_subject}}</h1>
 
 </ion-text>
 
 
-  <ion-card *ngFor="let subject of subjects" routerLink="/view-tutorial-page">
+  <ion-card *ngFor="let topic of subject_topics" routerLink="/view-tutorial-page/{{selected_subject}}/{{topic[0]}}">
     <ion-card-content>
       <ion-grid>
         <ion-row>
           <ion-col size="8" style="border-right: solid #efc8bb 1px">
 
-            <h2>Algebra</h2>
+            <h2>{{topic[1].topic}}</h2>
 
             <p>
-              <span>Course contains tutorials on how to use the algebraic equations to sokve maths problems</span>
+             <span>{{topic[1].description}}</span>
 
             </p>
 
+            <br>
             <ion-progress-bar value="0.5"></ion-progress-bar>
 
 
           </ion-col>
 
           <ion-col>
-            <ion-img src="assets/images/animated_trophy_5.gif">
+            <ion-img src="{{topic[1].logo_path || 'assets/images/animated_trophy_5.gif' }}">
 
             </ion-img>
           </ion-col>
