@@ -97,8 +97,11 @@ subjects = [];
   ngOnInit() {
 
       this.study_service.getSubjects().subscribe((subjects)=>{
+
         this.subjects = subjects
+        this.showTopicsFor(this.subjects[0])
       })
+
 
 
   }
@@ -109,7 +112,12 @@ subjects = [];
     this.study_service.getSubjectTopics(subject).subscribe(
       (topics)=>{
         this.subject_topics = topics
+        this.subject_topics.map((topic)=>{
+          topic[1].progress = parseFloat( (Math.random()).toFixed(1))
+        })
         console.log(this.subject_topics)
+
+
       }
     )
 
@@ -117,5 +125,6 @@ subjects = [];
 
 
   }
+
 
 }

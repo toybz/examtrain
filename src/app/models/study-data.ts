@@ -7,7 +7,7 @@ export const Study = {
         topic_id: 1,
         topic : 'Lexis and Structure',
         logo_path: "",
-        description: "On this course you are going to see that lexis is so much more than individual words",
+        description: "In this lesson you are going to see that lexis is so much more than individual words",
         sub_topics: {
           1:  {
             sub_topic_id: 1,
@@ -46,7 +46,7 @@ export const Study = {
         topic_id: 1,
         topic : 'Oral Forms',
         logo_path: "",
-        description: "Oral Forms",
+        description: "This lesson covers the vowel phonemes (monophthongs and diphthongs) and other oral topics",
         sub_topics: {
           1:  {
             sub_topic_id: 1,
@@ -162,7 +162,7 @@ export const Study = {
         topic_id: 3 ,
         topic : "Indices, Logarithms and Surds",
         logo_path: "",
-        description: "jkjnb",
+        description: "This lesson covers Laws of indices, Standard form, Laws of logarithm",
         sub_topics: {
           1:  {
             sub_topic_id: 1,
@@ -205,7 +205,7 @@ export const Study = {
         topic_id: 4 ,
         topic : "Sets",
         logo_path: "",
-        description: "Sets",
+        description: "This math video tutorial provides a basic introduction into the intersection of sets and union of sets as it relates to venn diagrams.",
         sub_topics: {
           1:  {
             sub_topic_id: 1,

@@ -5,6 +5,7 @@ import { switchMap } from "rxjs/operators";
 import { StudyService } from "../../../services/study/study.service";
 import { Observable } from "rxjs";
 import { DomSanitizer } from "@angular/platform-browser";
+import { LoadingController } from "@ionic/angular";
 
 @Component({
   selector: 'app-view-tutorial',
@@ -21,7 +22,7 @@ export class ViewTutorialComponent implements OnInit {
   sub_topics;
   selected_sub_topic ;
 
-  constructor(private _location: Location, private router: Router, private route: ActivatedRoute, private study_service: StudyService , private sanitizer: DomSanitizer) {
+  constructor(private _location: Location, private router: Router, private route: ActivatedRoute, private study_service: StudyService , private sanitizer: DomSanitizer , public loadingController: LoadingController) {
 
 
 
@@ -55,16 +56,40 @@ export class ViewTutorialComponent implements OnInit {
     sub_topic.url =  this.sanitizer.bypassSecurityTrustResourceUrl(sub_topic.url || 'https://www.youtube.com/embed/5TbUxGZtwGI');
     this.selected_sub_topic = sub_topic
 
+
+this.presentLoading()
+
+
     console.log(this.selected_sub_topic)
+
+  }
+
+  async presentLoading() {
+    const loading = await this.loadingController.create({
+      message: 'Please Wait...',
+      backdropDismiss: true
+    });
+    await loading.present();
+
+
+    document.getElementById('video_frame').onload = ()=> {
+      console.log('iframe loaded')
+       loading.dismiss();
+    };
+
+
+
 
   }
 
 
 
 
-
   goBack(){
-    this._location.back();
+    this.router.navigate([
+      `/tabs/study/`
+    ]);
+
   }
 
 }
