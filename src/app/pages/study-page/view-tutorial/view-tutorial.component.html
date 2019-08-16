@@ -13,16 +13,17 @@
 
 <ion-content>
 
-  <ion-card no-margin no-padding >
-   <!-- <ion-card-header class="card-video-header">
-      <ion-card-title style="text-align: center;color:white"> Algebra</ion-card-title>
-    </ion-card-header>-->
-    <ion-card-content no-margin no-padding style="background-color: black">
+  <ion-card no-margin no-padding slot="fixed">
+
+    <ion-card-content no-margin no-padding style="background-color: black"  >
 
       <iframe width="" height="200"  [src]="selected_sub_topic.url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%" id="video_frame"></iframe>
 
     </ion-card-content>
   </ion-card>
+
+    <div class="after_video"></div>
+
 
 <ion-card>
   <ion-card-content>

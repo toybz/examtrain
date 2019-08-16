@@ -66,7 +66,8 @@ this.presentLoading()
 
   async presentLoading() {
     const loading = await this.loadingController.create({
-      message: 'Please Wait...',
+      message: 'Please Wait...' ,
+      backdropDismiss: true,
     });
     await loading.present();
 

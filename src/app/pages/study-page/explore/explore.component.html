@@ -1,12 +1,15 @@
 
-<script src="../study-page.page.ts"></script>
-<ion-slides [options]="slideOpts">
+  <ion-slides  [options]="slideOpts">
 
-  <ion-slide *ngFor="let subject of subjects"  (click)="showTopicsFor(subject)">
-  <ion-button color="primary" class="subject-slide" style=" letter-spacing : 0.0em !important;padding-start: 2.1em !important;max-width: 30vw !important;width: 30vw !important;">{{subject}}</ion-button>
-  </ion-slide>
-</ion-slides>
+    <ion-slide *ngFor="let subject of subjects"  (click)="showTopicsFor(subject)">
+      <ion-button color="primary" class="subject-slide" style=" letter-spacing : 0.0em !important;padding-start: 2.1em !important;max-width: 30vw !important;width: 30vw !important;">{{subject}}</ion-button>
+    </ion-slide>
 
+  </ion-slides>
+
+
+
+<div style="margin-top: 30px"></div>
 
 <ion-text>
   <h1>{{selected_subject}}</h1>
