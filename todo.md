@@ -1,3 +1,17 @@
+Finish the study page 
+Finish the quiz page
+Finish the feed page with static data
+Get Jamb syllabus for Maths, English, Biology,Etc
+Update the video links
+Work on going from study page to quiz page from the study page
+
+Add new sections and info cards tp the dashboard page
+
+
+
+Children section using the text to speech to call out name of object and kids can select the right object or letter for learning
+
+
 Comment Code
 Re arrange codes, for easy reading
 
@@ -30,7 +44,6 @@ Show no data on history, dashboard page. Show error on quiz page if quiz fails t
 unsubscribe on ngdestroy; write a  function to be used for all subscriptions
 
 Use the session so users dont see same question in thier app session.
-
 
 
 
