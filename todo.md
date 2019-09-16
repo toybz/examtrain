@@ -7,7 +7,10 @@ Work on going from study page to quiz page from the study page
 
 Add new sections and info cards tp the dashboard page
 
-
+Add Google analytics
+ Add production error tracker e.g sentry or the like
+ Add custom logging and tracking for all user events save data
+ 
 
 Children section using the text to speech to call out name of object and kids can select the right object or letter for learning
 
