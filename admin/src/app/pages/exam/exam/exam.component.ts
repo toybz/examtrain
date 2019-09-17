@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NbIconLibraries} from "@nebular/theme";
 
 @Component({
   selector: 'ngx-exam',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExamComponent implements OnInit {
 
-  constructor() { }
+  exams: any = [
+    {
+      name: "Jamb",
+      subjects: ['Mathematics' , 'English' , 'Physics']
+    },
+    {
+      name: "Waec",
+      subjects: ['Mathematics' , 'English' , 'Physics']
+    },
+    {
+      name: "Neco",
+      subjects: ['Mathematics' , 'English' , 'Physics']
+    },
+  ];
+
+  constructor(iconsLibrary: NbIconLibraries) {
+    iconsLibrary.registerFontPack('ion', { iconClassPrefix: 'ion' });
+
+
+  }
 
   ngOnInit() {
+    console.log('Exam Module')
   }
 
 }

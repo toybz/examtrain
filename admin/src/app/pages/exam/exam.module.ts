@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { ExamRoutingModule } from './exam-routing.module';
 import { ExamComponent } from './exam/exam.component';
 import { AddExamComponent } from './add-exam/add-exam.component';
 
+import  {ExamPages} from "./exam.components";
+import {SharedModule} from "../../shared/shared.module";
+
 @NgModule({
-  declarations: [ExamComponent, AddExamComponent],
+  declarations: [ExamPages, ExamComponent, AddExamComponent],
   imports: [
-    CommonModule,
-    ExamRoutingModule
+   SharedModule,
+    ExamRoutingModule,
   ]
 })
 export class ExamModule { }

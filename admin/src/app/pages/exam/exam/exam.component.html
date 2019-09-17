@@ -1,3 +1,66 @@
-<p>
-  exam works!
-</p>
+<div class="accordions-container row">
+  <div class="accordion-container col-md-12 col-lg-12 col-xxxl-12">
+
+
+    <nb-card>
+      <nb-card-header>Exams</nb-card-header>
+      <nb-card-body>
+
+        <nb-accordion>
+
+          <nb-accordion-item *ngFor="let exam of exams">
+            <nb-accordion-item-header>
+              {{exam.name}}
+            </nb-accordion-item-header>
+            <nb-accordion-item-body>
+              <nb-list-item *ngFor="let subject of exam.subjects">
+                <div class="row">
+            <div class="col-sm-5">{{ subject }}</div>
+            <div class="col-sm-7">
+
+              <!--
+              <nb-icon  [icon]="'edit'" pack="ion"></nb-icon>
+              <nb-icon  [icon]="'trash-a'" pack="ion"></nb-icon>
+              <nb-icon  [icon]="'arrow-right-b'" pack="ion"></nb-icon>
+
+      <nb-icon  [icon]="'arrow-right-b'" pack="ion"></nb-icon>
+-->
+              <nb-actions size="medium" >
+                <nb-action>
+                  <nb-icon  [icon]="'edit'" pack="ion"></nb-icon>
+                  <span>Edit</span>
+                </nb-action>
+                <nb-action>
+
+                  <span> <nb-checkbox status="success">Show In App</nb-checkbox></span>
+                </nb-action>
+                <nb-action>
+                  <nb-icon  [icon]="'trash-a'" pack="ion"></nb-icon>
+                  <span>Delete</span>
+                </nb-action>
+                <nb-action>
+                  <nb-icon  [icon]="'arrow-right-b'" pack="ion"></nb-icon>
+                  <span>View Syllabus</span>
+                </nb-action>
+              </nb-actions>
+
+            </div>
+
+                </div>
+
+              </nb-list-item>
+                </nb-accordion-item-body>
+          </nb-accordion-item>
+
+
+
+
+        </nb-accordion>
+      </nb-card-body>
+    </nb-card>
+
+
+
+  </div>
+
+</div>

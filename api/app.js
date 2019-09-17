@@ -38,11 +38,11 @@ if(isProduction){
   mongoose.set('debug', true);
 }
 
-require('./models/SubTopic');
+/*require('./models/SubTopic');
 require('./models/Topic');
-require('./models/Tutorial');
+//require('./models/Tutorial');
 require('./models/ExamType');
-require('./models/User');
+require('./models/User');*/
 require('./config/passport');
 
 app.use(require('./routes'));

@@ -12,14 +12,18 @@ import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {
-  NbChatModule,
+  NbActionsModule,
+  NbButtonModule,
+  NbCardModule,
+  NbChatModule, NbCheckboxModule,
   NbDatepickerModule,
-  NbDialogModule,
-  NbMenuModule,
+  NbDialogModule, NbIconModule, NbInputModule,
+  NbMenuModule, NbRadioModule, NbSelectModule,
   NbSidebarModule,
-  NbToastrModule,
+  NbToastrModule, NbUserModule,
   NbWindowModule,
 } from '@nebular/theme';
+import {FormsRoutingModule} from "./pages/template/forms/forms-routing.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -41,6 +45,8 @@ import {
       messageGoogleMapKey: 'AIzaSyA_wNuCzia92MAmdLRzmqitRGvCF7wCZPY',
     }),
     CoreModule.forRoot(),
+
+
   ],
   bootstrap: [AppComponent],
 })
