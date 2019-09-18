@@ -6,9 +6,10 @@ import { AddExamComponent } from './add-exam/add-exam.component';
 
 import  {ExamPages} from "./exam.components";
 import {SharedModule} from "../../shared/shared.module";
+import { CurriculumComponent } from './curriculum/curriculum.component';
 
 @NgModule({
-  declarations: [ExamPages, ExamComponent, AddExamComponent],
+  declarations: [ExamPages, ExamComponent, AddExamComponent, CurriculumComponent],
   imports: [
    SharedModule,
     ExamRoutingModule,

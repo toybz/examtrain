@@ -24,6 +24,8 @@ import {
   NbWindowModule,
 } from '@nebular/theme';
 import {FormsRoutingModule} from "./pages/template/forms/forms-routing.module";
+import {NbEvaIconsModule} from "@nebular/eva-icons";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -45,6 +47,7 @@ import {FormsRoutingModule} from "./pages/template/forms/forms-routing.module";
       messageGoogleMapKey: 'AIzaSyA_wNuCzia92MAmdLRzmqitRGvCF7wCZPY',
     }),
     CoreModule.forRoot(),
+    NbEvaIconsModule,
 
 
   ],

@@ -21,6 +21,8 @@ import {
 } from "@nebular/theme";
 import {FormsRoutingModule} from "../pages/template/forms/forms-routing.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {NgxFloatButtonModule} from "ngx-float-button";
+import {NgxFabModule} from "ngx-fab";
 
 const SHARED_MODULES = [
   CommonModule,
@@ -52,6 +54,9 @@ const SHARED_MODULES = [
   NbIconModule,
   NbAlertModule,
   ThemeModule,
+  NbIconModule,
+  NgxFabModule,
+
 ]
 
 @NgModule({

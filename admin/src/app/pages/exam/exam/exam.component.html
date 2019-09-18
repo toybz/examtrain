@@ -13,10 +13,28 @@
               {{exam.name}}
             </nb-accordion-item-header>
             <nb-accordion-item-body>
+
+              <nb-list-item>
+                <div class="row">
+
+                  <div class="col-sm-4">Add New Subject</div>
+                  <div class="col-sm-4"><nb-select>
+                    <option>CRK</option>
+                    <option>IRK</option>
+                  </nb-select>
+
+                  </div>
+                  <div class="col-sm-4"><button nbButton>Add</button></div>
+
+                </div>
+
+              </nb-list-item>
+
               <nb-list-item *ngFor="let subject of exam.subjects">
                 <div class="row">
-            <div class="col-sm-5">{{ subject }}</div>
-            <div class="col-sm-7">
+            <div class="col-sm-8">{{ subject }}</div>
+            <div class="col-sm-4">
+\
 
               <!--
               <nb-icon  [icon]="'edit'" pack="ion"></nb-icon>
@@ -25,23 +43,22 @@
 
       <nb-icon  [icon]="'arrow-right-b'" pack="ion"></nb-icon>
 -->
-              <nb-actions size="medium" >
-                <nb-action>
-                  <nb-icon  [icon]="'edit'" pack="ion"></nb-icon>
-                  <span>Edit</span>
-                </nb-action>
-                <nb-action>
 
-                  <span> <nb-checkbox status="success">Show In App</nb-checkbox></span>
-                </nb-action>
-                <nb-action>
-                  <nb-icon  [icon]="'trash-a'" pack="ion"></nb-icon>
-                  <span>Delete</span>
-                </nb-action>
-                <nb-action>
-                  <nb-icon  [icon]="'arrow-right-b'" pack="ion"></nb-icon>
-                  <span>View Syllabus</span>
-                </nb-action>
+              <nb-actions size="small" >
+
+                <nb-action icon="edit-outline" title="Edit" link="home"></nb-action>
+
+                <nb-action icon="checkmark-circle-2-outline" title="Show In App" link="home"></nb-action>
+
+
+
+                <nb-action icon="trash-2-outline" title="Delete" link="home"></nb-action>
+
+                <nb-action icon="arrow-circle-right-outline" title="View Curriculum" link="curriculum"></nb-action>
+
+              <!--  <nb-checkbox status="success">Show In App</nb-checkbox> -->
+
+
               </nb-actions>
 
             </div>
@@ -55,6 +72,8 @@
 
 
 
+
+
         </nb-accordion>
       </nb-card-body>
     </nb-card>
@@ -64,3 +83,4 @@
   </div>
 
 </div>
+<ngx-fab></ngx-fab>

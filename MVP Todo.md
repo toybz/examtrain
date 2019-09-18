@@ -2,6 +2,24 @@ User Registration
 Create Backend To Enter Tutorials link  for Study page
 Create Exam Category Model and the many to many connections between them .i.e a subject can belong to many exams, the subject_sub_topic can also belong to or not belong to such exams.
 
+
+
+dns1.p06.nsone.net
+dns2.p06.nsone.net
+dns3.p06.nsone.net
+dns4.p06.nsone.net
+
+
+
+
+
+
+
+
+
+
+
+
 Tutorials 
 - Create the models
 - Create the model methods and helper classes
