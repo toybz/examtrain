@@ -24,6 +24,7 @@ node_modules/
 tmp/
 temp/
 platforms/
+website/template/
 plugins/
 admin/src/app/pages/template/
 plugins/android.json

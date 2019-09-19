@@ -3,12 +3,13 @@ Create Backend To Enter Tutorials link  for Study page
 Create Exam Category Model and the many to many connections between them .i.e a subject can belong to many exams, the subject_sub_topic can also belong to or not belong to such exams.
 
 
-examtrain.com - nameservers
-dns1.p06.nsone.net
-dns2.p06.nsone.net
-dns3.p06.nsone.net
-dns4.p06.nsone.net
 
+
+
+Website Landing Page Note and Inspiration
+- Use Atlassian font and font size and color and bg color
+- Use SVG
+- SVG, Landing Page inspiration: atlassian.com, netlify, 
 
 
 
