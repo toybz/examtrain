@@ -425,15 +425,15 @@ function getOs() {
 let downnloadButtons = document.querySelectorAll('.download-button');
 
 if( getOs() == 'iOS' ){
-  $('.download-button').attr('href', 'https://itunes.apple.com/us/app/notis/id1266538254?mt=8');
+  $('.download-button').attr('href', 'https://app.examtrain.ng');
 }else if( getOs() == 'Android' ) {
-  $('.download-button').attr('href', 'https://play.google.com/store/apps/details?id=com.slatedev.notis');
+  $('.download-button').attr('href', 'https://app.examtrain.ng');
 }else{
   $('.download-button').on('click', function(e){
-    e.preventDefault();
+  /*  e.preventDefault();
     $.fn.fullpage.moveTo($('.section').length);    
     $.fn.fullpage.setAllowScrolling(false);  
-    openFooter();      
+    openFooter(); */
   });
   
 }
