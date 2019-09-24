@@ -9,14 +9,13 @@
   --text-color : #f1e2e2b5;
   --red-text-color: #c30009eb;
   --loading-line-color: #ff2824;
-
     --bg-gradient: linear-gradient(to right top, #e0004e, #e10248, #e20742, #e20d3c, #e21335, #e21431, #e3162c, #e31827, #e41623, #e5141e, #e61318, #e71212);
 
 }
 .red-text{
   color: var(--red-text-color)
 }
-.scroll-down-wrapper{
+.scroll-down-wrapper, .numbers-wrapper{
   color: black !important;
 }
 .slide-1{

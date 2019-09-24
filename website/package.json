@@ -1,0 +1,16 @@
+{
+  "name": "examtrain",
+  "version": "1.0.0",
+  "description": "Exam Preparation App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compress_images": "compress --input C:/xampp/htdocs/toybz/projects/quizo/website/img/ --output C:/xampp/htdocs/toybz/projects/quizo/website/img/ --force false"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compress-images": "^1.5.8",
+    "gulp": "^4.0.2"
+  }
+}

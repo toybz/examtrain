@@ -429,12 +429,13 @@ if( getOs() == 'iOS' ){
 }else if( getOs() == 'Android' ) {
   $('.download-button').attr('href', 'https://app.examtrain.ng');
 }else{
-  $('.download-button').on('click', function(e){
-  /*  e.preventDefault();
+    $('.download-button').attr('href', 'https://app.examtrain.ng');
+ /* $('.download-button').on('click', function(e){
+  /!*  e.preventDefault();
     $.fn.fullpage.moveTo($('.section').length);    
     $.fn.fullpage.setAllowScrolling(false);  
-    openFooter(); */
-  });
+    openFooter(); *!/
+  });*/
   
 }
 
