@@ -18,7 +18,7 @@ container.y = 0;
 
 
 var textureRectangle = new PIXI.Rectangle(0,0, 170, 152);
-var texture =  PIXI.Texture.from('//notis.com/img/pattern3.png');
+var texture =  PIXI.Texture.from('img/pattern3.png');
 
 
 var tilingSprite = new PIXI.extras.TilingSprite(
@@ -33,7 +33,7 @@ tilingSprite.scale.y = 0.5;
 container.addChild(tilingSprite);
 app.stage.addChild(container);
 
-var brush =  PIXI.Sprite.fromImage('//notis.com/img/brush3.png');
+var brush =  PIXI.Sprite.fromImage('img/brush3.png');
 
 brush.anchor.set(0.5);
 app.stage.addChild(brush);

@@ -1,3 +1,34 @@
+:root {
+ // --main-color: #c30009;
+    --main-color: linear-gradient(to right top, #e0004e, #e10248, #e20742, #e20d3c, #e21335, #e21431, #e3162c, #e31827, #e41623, #e5141e, #e61318, #e71212);
+  --primary-color: #c30009eb;
+  --button: #690d04;
+  --animation-color : #dbdbd5;
+    --animation-text-color : #0a0404;
+    --animation-shadow-color : #c30009eb;
+  --text-color : #f1e2e2b5;
+  --red-text-color: #c30009eb;
+  --loading-line-color: #ff2824;
+
+    --bg-gradient: linear-gradient(to right top, #e0004e, #e10248, #e20742, #e20d3c, #e21335, #e21431, #e3162c, #e31827, #e41623, #e5141e, #e61318, #e71212);
+
+}
+.red-text{
+  color: var(--red-text-color)
+}
+.scroll-down-wrapper{
+  color: black !important;
+}
+.slide-1{
+     background: var(--bg-gradient) !important; ;
+   // background-image: var(--bg-gradient) !important;
+}
+
+/*//check where this color is used and replace apppropraitely #8AC6FF*/
+
+
+
+/*//var(--main-color)*/
 @font-face {
   font-family: "notis";
   src: url("../fonts/notis.eot");
@@ -82,14 +113,14 @@
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.71429em;
-  color: #1ABDC3;
+  color: var(--primary-color);
   letter-spacing: 0.3em;
   display: inline-block;
   vertical-align: top;
   text-decoration: none;
   line-height: 1em;
   padding: 1.8em 5em;
-  background: #1A93C3;
+  background: var(--button);
   border-radius: 100px;
   color: #fff;
   white-space: nowrap;
@@ -98,15 +129,15 @@
   z-index: 2; }
   .button.white {
     background: #fff;
-    color: #1ABDC3;
+    color: var(--primary-color);
     background: #fff; }
     .button.white .button-background .button-animation-container path {
       fill: #fff; }
   .button.blue {
     color: #fff;
-    background: #1A93C3; }
+    background: var(--button); }
     .button.blue .button-background .button-animation-container path {
-      fill: #1A93C3; }
+      fill: var(--button); }
   .button.clear {
     background: none;
     color: #fff; }
@@ -184,7 +215,7 @@ h3 {
 
 h4 {
   font-size: 1.14286em;
-  color: #3AC5CA;
+  color: var(--text-color);
   margin-bottom: 1.875em;
   line-height: 1.375em; }
 
@@ -210,7 +241,7 @@ ol {
       counter-increment: li;
       content: "0" counter(li);
       font-weight: 700;
-      color: #3AC5CA;
+      color: var(--text-color);
       position: absolute;
       left: 0;
       top: 0;
@@ -398,7 +429,7 @@ body.page-businesses.fp-viewing-slide-1 .mobile-phone-wrapper {
     transition: 0.75s 1.25s; }
 
 body.fp-viewing-slide-2 .line-wrapper .loading-line:before {
-  background: #DBDBDB; }
+  background: var(--loading-line-color); }
 
 body.fp-viewing-slide-2 .line-wrapper .loading-line .loading-line-inner-wrapper:after {
   background: #DBDBDB; }
@@ -470,7 +501,7 @@ nav {
     left: 0;
     width: 100%;
     height: 200%;
-    background: linear-gradient(#2041F8, rgba(32, 65, 248, 0));
+    background: linear-gradient(var(--main-color), rgba(32, 65, 248, 0));
     pointer-events: none;
     left: -100%; }
   nav .logo {
@@ -511,11 +542,11 @@ nav {
     width: 50%;
     height: 100%;
     z-index: 2;
-    background: #2041F8;
+    background: var(--main-color);
     padding-left: 13.28571em;
     padding-top: 7.14286em;
     padding-bottom: 7.14286em;
-    color: #3AC5CA;
+    color: var(--text-color);
     transition: 0.5s; }
     @media (max-width: 1024px) {
       nav .menu {
@@ -576,7 +607,7 @@ body.homepage.fp-viewing-slide-2 nav .logo .logo-blue {
   opacity: 1; }
 
 body.homepage.fp-viewing-slide-3 .menu-trigger div {
-  background: #1ABDC3; }
+  background: var(--primary-color); }
 
 body.homepage.fp-viewing-slide-3 .menu-trigger.active div {
   background: #fff; }
@@ -600,7 +631,7 @@ body.page-high-schools .menu-trigger div {
   background: #fff; }
 
 body.page-businesses.fp-viewing-slide-3 .menu-trigger div {
-  background: #1ABDC3; }
+  background: var(--primary-color); }
 
 body.page-businesses.fp-viewing-slide-3 .menu-trigger.active div {
   background: #fff; }
@@ -741,7 +772,7 @@ body.loaded nav .menu-trigger {
     opacity: 1; }
   body.page-colleges .menu-trigger div,
   body.page-high-schools .menu-trigger div {
-    background: #1ABDC3; }
+    background: var(--primary-color); }
   body.page-colleges .menu-trigger.active div,
   body.page-high-schools .menu-trigger.active div {
     background: #fff; } }
@@ -940,13 +971,14 @@ body.homepage.loaded .slide-1 .text-container-right ul li {
     width: 4px;
     height: 4px;
     border-radius: 100px;
-    background: #8AC6FF;
+    background: white;
     transition: 0.3s; }
+
   .prop-list li:hover {
-    color: #fff; }
+    color: var(--animation-text-color); }
 
 .prop-list .prop-wrapper {
-  color: #8AC6FF;
+  color: white;
   padding-left: 2.85714em;
   position: relative;
   font-weight: 500;
@@ -977,7 +1009,7 @@ body.homepage.loaded .slide-1 .text-container-right ul li {
     left: -16.42857em;
     height: 100%;
     right: 0;
-    background: #106BFF;
+    background: var(--animation-color);
     transform: scaleY(0);
     border-radius: 0 50px 50px 0;
     transition: 0.3s;
@@ -987,11 +1019,11 @@ body.homepage.loaded .slide-1 .text-container-right ul li {
       .prop-list .prop-wrapper:after {
         left: -14.54545em; } }
   .prop-list .prop-wrapper:hover {
-    color: #fff; }
+    color: var(--animation-text-color); }
   .prop-list .prop-wrapper.active {
     padding-top: 1.42857em;
     padding-bottom: 1.42857em;
-    color: #fff; }
+    color: var(--animation-text-color); }
     .prop-list .prop-wrapper.active .prop-background {
       opacity: 1;
       transition: 0.5s 0.5s; }
@@ -999,7 +1031,7 @@ body.homepage.loaded .slide-1 .text-container-right ul li {
       transform: scale(1) translateX(-2.85714em); }
     .prop-list .prop-wrapper.active:after {
       transform: scaleY(1);
-      box-shadow: 0 12px 24px 0 rgba(23, 58, 199, 0.22); }
+      box-shadow: 0 12px 24px 0 var(--animation-shadow-color); }
 
 /* animations */
 .slide-2.animated .right ul li {
@@ -1048,7 +1080,7 @@ body.homepage.loaded .slide-1 .text-container-right ul li {
     width: 100%;
     height: 100%; }
     .button-background .button-animation-container path, .button-background .prop-animation-container path, .prop-background .button-animation-container path, .prop-background .prop-animation-container path {
-      fill: #106BFF; }
+      fill: var(--animation-color); }
   .button-background svg, .prop-background svg {
     position: absolute;
     top: 0;
@@ -1087,7 +1119,7 @@ body.homepage.loaded .slide-1 .text-container-right ul li {
       float: none;
       padding-top: 22.5em;
       padding-bottom: 3.57143em;
-      background: #2041F8; }
+      background: var(--main-color); }
       .homepage .slide-2 .right .inner-wrapper {
         padding-left: 3.57143em;
         padding-right: 3.57143em; }
@@ -2000,7 +2032,7 @@ footer {
   /*nav{
     .menu-trigger{
       div{
-        background: #1A93C3;
+        background: var(--button);
       }
       &.active{
         div{
@@ -2072,7 +2104,7 @@ footer {
       text-align: center; }
     .page-colleges .slide-1 .right {
       padding-top: 15.71429em;
-      background-image: linear-gradient(-134deg, #2041F8 0%, #0066FF 100%);
+      background-image: linear-gradient(-134deg, var(--main-color) 0%, #0066FF 100%);
       padding-bottom: 3.57143em; }
       .page-colleges .slide-1 .right .inner-wrapper {
         display: block; }
@@ -2210,7 +2242,7 @@ footer {
   /*nav{
     .menu-trigger{
       div{
-        background: #1A93C3;
+        background: var(--button);
       }
       &.active{
         div{
@@ -2280,7 +2312,7 @@ footer {
       text-align: center; }
     .page-high-schools .slide-1 .right {
       padding-top: 15.71429em;
-      background-image: linear-gradient(-134deg, #2041F8 0%, #0066FF 100%);
+      background-image: linear-gradient(-134deg, var(--main-color) 0%, #0066FF 100%);
       padding-bottom: 3.57143em; }
       .page-high-schools .slide-1 .right .inner-wrapper {
         display: block; }
@@ -2639,7 +2671,7 @@ html, body {
   font-size: 14px;
   background: #fff;
   font-family: 'AvenirNext', sans-serif;
-  background: #2041F8; }
+  background: var(--main-color); }
 
 @media screen and (min-width: 1700px) {
   html, body {

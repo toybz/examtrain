@@ -1,5 +1,9 @@
 For Visibility and getting people to know about the product
 
+
+Create 50k schorlaship for student with highest  scores
+Gifts etc
+
 ** Advertise on FB , Instagram, Google, edu platforms and target the student age group
 
 ** Go to school events/ schools, cafe, anywhere that students visit/ public bus and  Share pamplet or advert papers

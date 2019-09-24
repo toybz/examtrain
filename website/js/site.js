@@ -1,8 +1,10 @@
+let backgroud_color = "var(--main-color)";
 let totalItems = $('.section').length;
 let currentItem = 0;
 let loadingLine = $('.loading-line-inner-wrapper');
 let links = [];
 let isMobile = window.innerWidth < 640;
+let exam_url = 'app.examtrain.ng';
 
 $('.section').each(function(){
   var link = $(this).attr('data-href');
@@ -128,7 +130,7 @@ let animateBackground = (nextSlide, direction) => {
         duration: bgDuration,
         easing: bgEasing,
         complete: function(){
-          $('html, body').css('background-color', '#2041f8');
+          $('html, body').css('background-color', backgroud_color);
           anime({
             targets: bg,
             background: '#fff',
@@ -150,7 +152,7 @@ let animateBackground = (nextSlide, direction) => {
         rotate: -90,
         duration: 0,
         opacity: 1,
-        background: '#2041F8'   
+        background: backgroud_color   
       });
       anime({
         targets: bg,
@@ -178,7 +180,7 @@ let animateBackground = (nextSlide, direction) => {
         duration: 1,
         delay: 1000,
         width: '400%',
-        background: '#2041F8',
+        background: backgroud_color,
         top: '80%',   
         rotate: 90,     
         complete: function(){
@@ -191,7 +193,7 @@ let animateBackground = (nextSlide, direction) => {
         rotate: 90,
         duration: 0,
         opacity: 1,
-        background: '#2041F8'   
+        background: backgroud_color   
       });
           
       anime({
@@ -207,7 +209,7 @@ let animateBackground = (nextSlide, direction) => {
   
   if( nextSlide == 5 ){
     
-    $('html, body').css('background-color', '#2041f8');
+    $('html, body').css('background-color', backgroud_color);
 
     anime({
       targets: bg,

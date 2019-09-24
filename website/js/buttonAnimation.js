@@ -27,7 +27,7 @@ $('.button').on('mouseout', function(){
   buttonAnimation.addEventListener('loopComplete', buttonStopAnimation);
 });
 
-
+   // 106BFF
 //props animation
 
 if( $('.prop-list') && window.innerWidth > 640  ){
