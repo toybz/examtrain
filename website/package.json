@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compress_images": "compress --input C:/xampp/htdocs/toybz/projects/quizo/website/img/ --output C:/xampp/htdocs/toybz/projects/quizo/website/img/ --force false"
+    "compress_images": "compress --input C:/xampp/htdocs/toybz/projects/quizo/website/img/*/ --output C:/xampp/htdocs/toybz/projects/quizo/website/compressed/ --force false"
   },
   "author": "",
   "license": "ISC",
