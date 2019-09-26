@@ -67,6 +67,7 @@ this.presentLoading()
   async presentLoading() {
     const loading = await this.loadingController.create({
       message: 'Please Wait...' ,
+        backdropDismiss: true
     });
     await loading.present();
 
@@ -75,9 +76,6 @@ this.presentLoading()
       console.log('iframe loaded')
        loading.dismiss();
     };
-
-
-
 
   }
 

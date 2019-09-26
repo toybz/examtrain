@@ -11,7 +11,7 @@ export class ExploreComponent implements OnInit {
   slideOpts = {
     initialSlide: 0,
     speed: 400,
-    slidesPerView : 3,
+    slidesPerView : 2,
    // loop: true,
 
   };

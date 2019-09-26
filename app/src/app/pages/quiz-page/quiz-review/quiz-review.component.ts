@@ -65,7 +65,7 @@ export class QuizReviewComponent implements OnInit {
     let share_text = encodeURIComponent(
       `Hi I Scored ${this.correct_answers_count} / ${
         this.quiz_config.amount
-      } In A  Quiz On Quizo. You Can Also Play On ${this.app_url}`
+      } In A  Test On ExamTrain. You Can Also Play On ${this.app_url}`
     );
 
     this.whatsapp_share_url = `https://wa.me/?text=${share_text}`;

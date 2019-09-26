@@ -233,7 +233,7 @@ export const Study = {
     }
   },
 
-  Biology: {
+ /* Biology: {
     subject_id: 1,
     logo_path: "",
     topics: {
@@ -533,7 +533,7 @@ export const Study = {
       } ,
 
     }
-  },
+  },*/
 
 
 

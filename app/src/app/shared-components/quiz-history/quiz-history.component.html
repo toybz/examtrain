@@ -24,7 +24,7 @@
     <ion-grid>
       <ion-row>
 
-        <ion-col size="3" text- text-center>
+        <ion-col size="4" text- text-center>
           <p>Amount</p>
           <ion-text text-capitalize color="primary">
             <strong> {{ quiz.quiz_config.amount}}</strong>
@@ -32,7 +32,7 @@
         </ion-col>
 
 
-        <ion-col size="3" text-center>
+        <ion-col size="4" text-center>
           <p>Correct</p>
           <ion-text text-capitalize color="primary">
             <strong>{{ quiz.correct_answers_count}}</strong>
@@ -40,7 +40,7 @@
         </ion-col>
 
 
-        <ion-col size="3" text-center>
+        <ion-col size="4" text-center>
           <p>Wrong</p>
           <ion-text text-capitalize color="primary">
             <strong>{{ quiz.quiz_config.amount - quiz.correct_answers_count}}</strong>
@@ -48,13 +48,13 @@
         </ion-col>
 
 
-        <ion-col size="3" text-center>
+       <!-- <ion-col size="3" text-center>
           <p>View</p>
           <ion-text text-capitalize color="primary">
             <strong> > </strong>
           </ion-text>
         </ion-col>
-
+-->
 
 
       </ion-row>
