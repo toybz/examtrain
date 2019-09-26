@@ -22,7 +22,7 @@ const routes: Routes = [
   },
 
   {
-    path: "onboarding-page",
+    path: "onboard",
     loadChildren:
       "./pages/onboarding-page/onboarding-page.module#OnboardingPagePageModule"
   } ,

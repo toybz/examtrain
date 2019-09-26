@@ -1,0 +1,25 @@
+.slides-md {
+  --bullet-background: red;
+
+}
+
+.swiper-slide {
+  display: block;
+}
+ion-slide > h2 {
+  margin-top: 2.8rem;
+}
+ion-slide > img {
+  max-height: 40%;
+  max-width: 80%;
+  margin: 40% 0;
+}
+.swiper-pagination-bullet {
+  width: 11px !important;
+  height: 11px !important;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 1px !important;
+}
+
+

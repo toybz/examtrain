@@ -39,7 +39,7 @@ export class AppComponent {
       let first_visit = other_data.first_time;
       if (first_visit) {
         this.localStorage.saveOtherData({ first_time: false });
-        this.router.navigate(["tabs/quiz"]);
+        this.router.navigate(["onboard"]);
       }
     });
   }

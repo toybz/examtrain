@@ -6,6 +6,15 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./onboarding-page.page.scss"]
 })
 export class OnboardingPagePage implements OnInit {
+
+
+    slideOpts = {
+        initialSlide: 0,
+        slidesPerView : 1,
+      //  speed: 400,
+        pager: true,
+
+    };
   constructor() {}
 
   ngOnInit() {}

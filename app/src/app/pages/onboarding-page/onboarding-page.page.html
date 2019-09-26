@@ -1,9 +1,38 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>onboarding_page</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content padding>
+<ion-content fullscreen padding scroll-y="false">
+
+
+  <ion-slides pager="true" [options]="slideOpts">
+
+    <ion-slide>
+      <img src="assets/svg/1.svg"/>
+      <h2>Welcome to <b>ExamTrain</b></h2>
+      <p>The exam preparation app that yields success</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/svg/2.svg"/>
+      <h2>Practice Past Questions</h2>
+      <p>Practice JAMB CBT on your phone for free . With 16 years of JAMB Past-Questions and Answers</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/svg/3.svg"/>
+      <h2>Free Tutorials</h2>
+      <p>View  curated tutorials that explains each topic comprehensively</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/svg/4.svg"/>
+      <h2>Ready to Start?</h2>
+      <ion-button fill="clear">Continue <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+    </ion-slide>
+
+
+  </ion-slides>
+
+
+
 
 </ion-content>
+

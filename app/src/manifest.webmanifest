@@ -1,11 +1,11 @@
 {
-  "name": "Quizo",
-  "short_name": "Quizo",
+  "name": "ExamTrain",
+  "short_name": "ExamTrain",
   "theme_color": "#d33939",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
-  "start_url": "https://toybz.github.io/quizo/",
+  "start_url": "app.examtrain.ng",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
