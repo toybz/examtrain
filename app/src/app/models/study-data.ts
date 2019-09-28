@@ -1,7 +1,7 @@
 export const Study = {
   English: {
     subject_id: 1,
-    logo_path: "",
+    logo_path: "assets/images/english.jpg",
     topics: {
       1: {
         topic_id: 1,
@@ -90,7 +90,7 @@ export const Study = {
 
   Mathematics: {
     subject_id: 2,
-    logo_path: "",
+    logo_path: "assets/images/maths.jpg",
     topics: {
 
       1 : {

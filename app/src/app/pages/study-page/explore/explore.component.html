@@ -11,7 +11,7 @@
 
 <div style="margin-top: 30px"></div>
 
-<ion-text>
+<ion-text class="selected-subject">
   <h1>{{selected_subject}}</h1>
 
 </ion-text>
@@ -21,9 +21,9 @@
     <ion-card-content>
       <ion-grid>
         <ion-row>
-          <ion-col size="8" style="border-right: solid #efc8bb 1px">
+          <ion-col size="9" style="border-right: solid #efc8bb 1px">
 
-            <h2>{{topic[1].topic}}</h2>
+            <h2 class="topic">{{topic[1].topic}}</h2>
 
             <p>
              <span>{{topic[1].description}}</span>
@@ -31,16 +31,18 @@
             </p>
 
             <br>
-            <ion-progress-bar value="{{topic[1].progress}}"></ion-progress-bar>
+           <!-- <ion-progress-bar value="{{topic[1].progress}}"></ion-progress-bar>-->
 
 
           </ion-col>
 
-          <ion-col>
-            <ion-img src="{{topic[1].logo_path || 'assets/images/animated_trophy_5.gif' }}">
+          <ion-col class="ion-align-self-center ion-justify-content-center">
+            <ion-img src="{{getSubjectImage() || 'assets/images/book.jpg' }}">
 
             </ion-img>
           </ion-col>
+
+
         </ion-row>
       </ion-grid>
 

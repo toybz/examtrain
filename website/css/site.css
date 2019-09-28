@@ -26,14 +26,60 @@
 /*//check where this color is used and replace apppropraitely #8AC6FF*/
 
 
-
-/*//var(--main-color)*/
 @font-face {
-  font-family: "notis";
-  src: url("../fonts/notis.eot");
-  src: url("../fonts/notis.eot?#iefix") format("embedded-opentype"), url("../fonts/notis.woff") format("woff"), url("../fonts/notis.ttf") format("truetype"), url("../fonts/notis.svg#notis") format("svg");
+  font-family: 'CW BR Firma';
+  src: url("../fonts/br-firma/BRFirmaCW-Regular.woff2") format("woff2");
   font-weight: normal;
-  font-style: normal; }
+  font-display:fallback;font-style: normal
+}
+
+@font-face {
+  font-family: 'CW BR Firma';
+  src: url("../fonts/br-firma/BRFirmaCW-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display:fallback;font-style: normal
+}
+
+@font-face {
+  font-family: 'CW BR Firma';
+  src: url("../fonts/br-firma/BRFirmaCW-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display:fallback;font-style: normal
+}
+
+@font-face {
+  font-family: 'CW BR Firma';
+  src: url("../fonts/br-firma/BRFirmaCW-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-display:fallback;font-style: normal
+}
+
+@font-face {
+  font-family: 'Sailec';
+  src: url("../fonts/sailec/Sailec-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display:fallback;font-style: normal
+}
+
+@font-face {
+  font-family: 'Sailec';
+  src: url("../fonts/sailec/Sailec-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-display:fallback;font-style: normal
+}
+
+body , *{
+  font-family: "CW BR Firma" !important;
+}
+
+
+
+
+
+
+
+
+
 
 [data-icon]:before {
   font-family: "notis" !important;
@@ -2725,3 +2771,5 @@ body.footer-open .container {
   @media screen and (max-width: 640px) {
     .mask-bg {
       display: none; } }
+
+

@@ -45,4 +45,9 @@ export class StudyService {
 
   }
 
+  getSubjectImage(subject){
+     return  study_data[subject].logo_path
+  }
+
+
 }

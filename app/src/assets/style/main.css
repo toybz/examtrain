@@ -1,0 +1,55 @@
+
+@font-face {
+    font-family: 'CW BR Firma';
+    src: url("../fonts/br-firma/BRFirmaCW-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-display:fallback;font-style: normal
+}
+
+@font-face {
+    font-family: 'CW BR Firma';
+    src: url("../fonts/br-firma/BRFirmaCW-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-display:fallback;font-style: normal
+}
+
+@font-face {
+    font-family: 'CW BR Firma';
+    src: url("../fonts/br-firma/BRFirmaCW-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-display:fallback;font-style: normal
+}
+
+@font-face {
+    font-family: 'CW BR Firma';
+    src: url("../fonts/br-firma/BRFirmaCW-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-display:fallback;font-style: normal
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src: url("../fonts/sailec/Sailec-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-display:fallback;font-style: normal
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src: url("../fonts/sailec/Sailec-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-display:fallback;font-style: normal
+}
+
+body , button,  *{
+    font-family: "CW BR Firma" !important;
+}
+
+.swal-toast-container-class{
+    width: 100% !important;
+    margin-top: 20vh !important;
+}
+.swal-toast-icon-class{
+    color: red !important;
+    border-color: red !important;
+}

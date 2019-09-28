@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StudyService } from "../../../services/study/study.service";
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-explore',
@@ -102,11 +103,28 @@ subjects = [];
         this.showTopicsFor(this.subjects[0])
       })
 
+      Swal.fire({
+          position: 'center',
+          type: 'info',
+          title: 'We are constantly updating the tutorials, please always check back for updates',
+          showConfirmButton: false,
+          timer: 5000,
+          backdrop: false,
+          toast: true,
+          width: '100%',
+          customClass: {
+              container: 'swal-toast-container-class',
+              icon: 'swal-toast-icon-class',
 
+          }
+
+      })
 
   }
 
   showTopicsFor(subject){
+
+
     console.log(subject)
     this.selected_subject = subject
     this.study_service.getSubjectTopics(subject).subscribe(
@@ -126,5 +144,9 @@ subjects = [];
 
   }
 
+  //todo: refactor this
+  getSubjectImage(){
+   return this.study_service.getSubjectImage(this.selected_subject)
+  }
 
 }
