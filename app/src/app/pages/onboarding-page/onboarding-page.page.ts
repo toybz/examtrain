@@ -1,4 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import {Router} from "@angular/router";
+import {LocalStorage} from "@ngx-pwa/local-storage";
+import {LocalStorageService} from "../../services/local-storage/local-storage.service";
 
 @Component({
   selector: "app-onboarding-page",
@@ -15,7 +18,13 @@ export class OnboardingPagePage implements OnInit {
         pager: true,
 
     };
-  constructor() {}
+  constructor(private router: Router, private localStorage: LocalStorageService) {}
 
   ngOnInit() {}
+
+    start(){
+      console.log("Nav")
+       this.localStorage.saveOtherData({ first_time: false });
+        this.router.navigate(["tabs/quiz"]);
+    }
 }

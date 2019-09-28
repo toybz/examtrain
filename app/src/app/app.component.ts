@@ -37,8 +37,9 @@ export class AppComponent {
 
     this.localStorage.getOtherData().subscribe((other_data: any) => {
       let first_visit = other_data.first_time;
+       // this.router.navigate(["onboard"]);
       if (first_visit) {
-        this.localStorage.saveOtherData({ first_time: false });
+
         this.router.navigate(["onboard"]);
       }
     });
