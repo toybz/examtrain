@@ -18,10 +18,18 @@ export class QuizLandingPage implements OnInit {
     header: "Select Category  (Scroll Down For More)"
   };
 
+    yearActionSheetOptions: any = {
+        header: "2000 - 2013 (Scroll Down For More)"
+    };
+
+
+  exam_years = ['2000', '2001', '2002', '2003', '2004',  '2005',"2006" ,'2007', '2008', '2009', '2010', '2011', '2012', '2013'];
+
   quiz_config = {
-    type: "",
-    subject: "",
-    amount: 5
+    type: "jamb",
+    subject: "english",
+    amount: 5,
+      year: '2015'
   };
 
   exam_types = [];
@@ -38,44 +46,53 @@ export class QuizLandingPage implements OnInit {
     public quizService: QuizService
   ) {}
 
-  ngOnInit() {
-    this.localStorage.getPausedQuiz().subscribe((paused_quiz: any) => {
-      if (!this.util.isEmptyObject(paused_quiz)) {
-        this.paused_quiz = paused_quiz;
-        this.paused_quiz.type = paused_quiz.type;
-console.log(this.paused_quiz)
 
-      }
-      this.data_loaded = true;
-    });
 
-    this.quizService.getQuizConfig().subscribe((config_data: any) => {
-      console.log(config_data);
-      this.exam_types = config_data.exam_types;
-        this.subjects = config_data.subjects;
+  ngOnInit(){
 
-    });
+      this.localStorage.getPausedQuiz().subscribe((paused_quiz: any) => {
+
+        console.log('L Page new stream' ,paused_quiz)
+
+          if (!this.util.isEmptyObject(paused_quiz) && typeof paused_quiz.quiz_config.type === 'string') {
+            console.log('Pause quiz is not empty')
+
+              this.paused_quiz = paused_quiz;
+              this.paused_quiz.type = paused_quiz.type;
+          }
+          else{
+              console.log('Pause quiz is empty')
+              this.paused_quiz = null;
+          }
+
+
+
+          this.data_loaded = true;
+      });
+
+
+      this.quizService.getQuizConfig().subscribe((config_data: any) => {
+          console.log(config_data);
+          this.exam_types = config_data.exam_types;
+          this.subjects = config_data.subjects;
+
+      });
 
   }
 
-
-
-
-
-
-
-
   startNewQuiz() {
+    this.localStorage.deletePausedQuiz()
     this.paused_quiz = false;
   }
 
   resumePausedQuiz() {
-    this.quizService.setInstantStartWithPausedQuiz(false);
+
+      this.quizService.setInstantStartWithPausedQuiz(false);
 
     this.router.navigate([
       `/quiz-page/${this.paused_quiz.quiz_config.type}/${
         this.paused_quiz.quiz_config.subject
-      }/${this.paused_quiz.quiz_config.amount}?testes=` +
+      }/${this.paused_quiz.quiz_config.amount}/${this.quiz_config.year}?reload=` +
         Math.random() * 10
     ]);
   }
@@ -96,9 +113,7 @@ console.log(this.paused_quiz)
     this.localStorage.deletePausedQuiz();
 
     this.router.navigate([
-      `/quiz-page/${this.quiz_config.type}/${this.quiz_config.subject}/${
-        this.quiz_config.amount
-      }`
+      `/quiz-page/${this.quiz_config.type}/${this.quiz_config.subject}/${this.quiz_config.amount}/${this.quiz_config.year}`
     ]);
   }
 }

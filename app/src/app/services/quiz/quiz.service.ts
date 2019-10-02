@@ -114,7 +114,7 @@ export class QuizService {
 
   instant_start_with_paused_quiz = true;
 
-  fetchQuizQuestions(exam_type, subject, amount) {
+  fetchQuizQuestions(exam_type, subject, amount, year) {
     /*
     this.quiz_question = [
         {
@@ -156,7 +156,7 @@ export class QuizService {
     ] ;
 */
 
-    return this.http.get(url.get_question(exam_type, subject, amount))
+    return this.http.get(url.get_question(exam_type, subject, amount, year))
   }
 
   getQuizQuestions() {

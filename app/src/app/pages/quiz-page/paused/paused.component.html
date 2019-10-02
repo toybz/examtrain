@@ -15,22 +15,37 @@
         <ion-label>Subject :-  {{ quizService.getSubjectDisplayName( data.quiz_config.subject) }}</ion-label>
       </ion-item>
 
+
+      <ion-item no-padding="" no-margin="">
+        <ion-label>Year :-  {{ data.quiz_config.year}}</ion-label>
+      </ion-item>
+
+
+
       <ion-grid>
         <ion-row justify-content-center="">
-          <ion-col>
-            <p>Countdown</p>
-            <p>{{ data.countdown }} sec</p>
-          </ion-col>
 
           <ion-col>
-            <p>Page</p>
+            <p>Questions</p>
+            <p>{{ data.quiz_config.amount  }}</p>
+          </ion-col>
+
+
+
+          <ion-col>
+            <p>Current</p>
             <p>{{ data.current_index + 1 }}</p>
           </ion-col>
 
+
+
           <ion-col>
-            <p>Remaining</p>
-            <p>{{ data.quiz_config.amount - (data.current_index + 1) }}</p>
+            <p>Timer</p>
+            <p>{{ data.countdown }} sec</p>
           </ion-col>
+
+
+
         </ion-row>
       </ion-grid>
 
@@ -43,6 +58,11 @@
       <ion-button expand="block" margin-bottom="" (click)="restartQuiz()"
         >Restart Quiz</ion-button
       >
+
+      <ion-button expand="block" margin-bottom="" (click)="submitQuiz()"
+      >Submit Quiz</ion-button
+      >
+
 
       <ion-button expand="block" margin-bottom="" (click)="backToDashboard()"
         >Back To Dashboard</ion-button

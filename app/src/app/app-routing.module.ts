@@ -15,8 +15,14 @@ const routes: Routes = [
       "./pages/sign-up-page/sign-up-page.module#SignUpPagePageModule"
   },
 
+
+    {
+        path: "quiz-page/:exam_type/:subject/:amount",
+        loadChildren: "./pages/quiz-page/quiz-page.module#QuizPagePageModule",
+        runGuardsAndResolvers: "always"
+    },
   {
-    path: "quiz-page/:exam_type/:subject/:amount",
+    path: "quiz-page/:exam_type/:subject/:amount/:year",
     loadChildren: "./pages/quiz-page/quiz-page.module#QuizPagePageModule",
     runGuardsAndResolvers: "always"
   },

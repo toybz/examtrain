@@ -102,11 +102,15 @@ export class QuizPagePage implements OnInit {
               this.quiz_config.type = params.get("exam_type");
               this.quiz_config.subject = params.get("subject");
               this.quiz_config.amount = parseInt(params.get("amount"));
+                this.quiz_config.year = parseInt(params.get("year"));
+
+
 
               return this.quizService.fetchQuizQuestions(
                 this.quiz_config.type,
                 this.quiz_config.subject,
-                this.quiz_config.amount
+                this.quiz_config.amount,
+                  this.quiz_config.year,
               );
             })
           );
@@ -195,7 +199,7 @@ export class QuizPagePage implements OnInit {
           }
 
           if (!this.paused) {
-            this.countdown--;
+          //  this.countdown--;
           }
         }, 1000);
 
@@ -305,7 +309,11 @@ export class QuizPagePage implements OnInit {
         this.initialise();
       } else if (res.data.action == "resume") {
         this.paused = false;
-      } else if (res.data.action == "navigateToDashboard") {
+      }
+      else if (res.data.action == "submit") {
+          this.submitQuiz()
+      }
+      else if (res.data.action == "navigateToDashboard") {
         clearInterval(this.counter);
         this.counter = null;
 
@@ -337,13 +345,13 @@ export class QuizPagePage implements OnInit {
     if (current_question.selected_answer) {
       if (option == current_question.selected_answer) {
         if (option == current_question.correct_answer) {
-          return "secondary";
+          return "success";
         } else {
           return "danger";
         }
       }
       if (option == current_question.correct_answer) {
-        return "secondary";
+        return "success";
       }
     } else {
       return "";

@@ -1,13 +1,18 @@
 import { Injectable } from "@angular/core";
 import { LocalStorage } from "@ngx-pwa/local-storage";
-import { ReplaySubject } from "rxjs/index";
+import {BehaviorSubject, ReplaySubject} from "rxjs/index";
+import {log} from "util";
+import {map} from "rxjs/operators";
+
 @Injectable({
   providedIn: "root"
 })
 export class LocalStorageService {
   completedQuiz = new ReplaySubject(1);
-  pausedQuiz = new ReplaySubject(1);
+  pausedQuiz = new BehaviorSubject({})
   other_data = new ReplaySubject(1);
+
+
   constructor(private localStorage: LocalStorage) {
     this.localStorage.getItem("completed_quiz").subscribe((quiz: any) => {
       if (quiz) {
@@ -22,8 +27,8 @@ export class LocalStorageService {
       if (quiz) {
         this.pausedQuiz.next(quiz);
       } else {
-        this.pausedQuiz.next([]);
-        this.localStorage.setItemSubscribe("paused_quiz", []);
+        this.pausedQuiz.next({});
+        this.localStorage.setItemSubscribe("paused_quiz", {});
       }
     });
     // @ts-ignore
@@ -45,7 +50,7 @@ export class LocalStorageService {
   }
 
   saveCompletedQuiz(param) {
-    console.log(param);
+    //console.log(param);
 
     this.localStorage.getItem("completed_quiz").subscribe((quiz: any) => {
       let new_data = [...quiz, param];
@@ -59,10 +64,13 @@ export class LocalStorageService {
     return this.completedQuiz;
   }
 
+
   savePausedQuiz(param) {
-    this.localStorage.setItem("paused_quiz", param).subscribe(() => {
-      this.pausedQuiz.next(param);
-    });
+      this.pausedQuiz.next(param)
+    this.localStorage.setItemSubscribe("paused_quiz", param)
+
+      // @ts-ignore
+    //  log('pause quizData' , param)
   }
 
   getPausedQuiz() {
@@ -74,10 +82,11 @@ export class LocalStorageService {
   }
 
   deletePausedQuiz() {
-    // @ts-ignore
-    this.localStorage.setItem("paused_quiz", {}).subscribe(() => {
-      this.pausedQuiz.next({});
-    });
+      /*this.pausedQuiz.next({});
+    this.localStorage.setItemSubscribe("paused_quiz", {})*/
+
+
+      this.savePausedQuiz({})
   }
 
   getDashboardData() {

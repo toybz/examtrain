@@ -19,7 +19,10 @@ export class PausedComponent implements OnInit {
     public quizService: QuizService
   ) {}
 
+
+
   ngOnInit() {
+    console.log('Pause component init called')
     this.localStorage.savePausedQuiz(this.data);
   }
 
@@ -38,6 +41,17 @@ export class PausedComponent implements OnInit {
       action: "reload"
     });
   }
+
+    submitQuiz() {
+        this.localStorage.deletePausedQuiz();
+
+        this.modalController.dismiss({
+            action: "submit"
+        });
+    }
+
+
+
 
   backToDashboard() {
     this.modalController.dismiss({

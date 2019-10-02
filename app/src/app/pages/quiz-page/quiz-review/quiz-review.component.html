@@ -16,10 +16,10 @@
   <ion-card class="trophy_card" text-center="">
     <div>
       <img
-        *ngIf="!showMemes"
-        class="trophy_image"
-        margin-horizontal=""
-        src="assets/images/animated_trophy_5.gif"
+              *ngIf="!showMemes"
+              class="trophy_image"
+              margin-horizontal=""
+              src="assets/images/animated_trophy_5.gif"
       />
 
       <!-- <picture
@@ -34,13 +34,14 @@
 
       <video
         *ngIf="(showMemes && $memesUrl | async) as memes"
-        width="320"
-        height="240"
-        autoplay
-        loop
-        muted
-        playsinline
+              width="320"
+              height="240"
+              autoplay
+              loop
+              muted
+              playsinline
         [src]="memes"
+        #videoElement
       ></video>
 
       <ion-text *ngIf="(showMemes && !$memesUrl | async)">Loading... </ion-text>
@@ -57,8 +58,8 @@
   <ion-item>
     <ion-label>Always Show Memes Reaction? </ion-label>
     <ion-toggle
-      [(ngModel)]="showMemes"
-      (ionChange)="updateMemesSettings()"
+            [(ngModel)]="showMemes"
+            (ionChange)="updateMemesSettings()"
     ></ion-toggle>
   </ion-item>
 
@@ -80,8 +81,8 @@
       </ion-button>
 
       <ion-button
-        expand="block"
-        (click)="showCorrections('correction_section')"
+              expand="block"
+              (click)="showCorrections('correction_section')"
       >
         View Corrections
       </ion-button>
@@ -113,15 +114,15 @@
 
 
           <ion-item
-            margin=""
-            text-center=""
-            *ngIf="question.selected_answer != question.correct_answer"
-            color="danger"
-            class="options_item"
-            lines="none"
+                  margin=""
+                  text-center=""
+                  *ngIf="question.selected_answer != question.correct_answer"
+                  color="danger"
+                  class="options_item"
+                  lines="none"
           >
             <ion-label
-              [innerHTML]="
+                    [innerHTML]="
                 question.selected_answer
                   ? question.selected_answer
                   : 'No Option Selected'
@@ -131,13 +132,13 @@
           </ion-item>
 
 
-       <!--   <ion-item color="tertiary" (click)="showExplanation(question)">
-            <ion-label style="text-align: center;">
-             <span style="vertical-align: super;">See Explanation</span>
-              <ion-icon name="bulb" style="color: white"></ion-icon>
-            </ion-label>
+          <!--   <ion-item color="tertiary" (click)="showExplanation(question)">
+               <ion-label style="text-align: center;">
+                <span style="vertical-align: super;">See Explanation</span>
+                 <ion-icon name="bulb" style="color: white"></ion-icon>
+               </ion-label>
 
-          </ion-item>-->
+             </ion-item>-->
 
 
 
@@ -153,12 +154,12 @@
 
     <div class="fix-bottom">
       <ion-fab
-        (click)="showCorrections('top_section')"
-        vertical="bottom"
-        horizontal="end"
+              (click)="showCorrections('top_section')"
+              vertical="bottom"
+              horizontal="end"
       >
         <ion-fab-button
-          ><ion-icon name="arrow-round-up"></ion-icon
+        ><ion-icon name="arrow-round-up"></ion-icon
         ></ion-fab-button>
       </ion-fab>
     </div>
