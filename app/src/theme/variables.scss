@@ -115,25 +115,29 @@
     --border-radius : 35px;
     --border-width: 1.5px;
     --transition: ease-in-out ;
+    white-space: normal  !important;
+  }
+  .options_item > ion-label{
+    white-space: normal !important;
   }
 
-  .add_to_home_screen{
+.add_to_home_screen{
 
-      --border-style: solid;
-      --border-width: 1.5px;
-      --transition: ease-in-out ;
-    --border-color: red;
-    --background-color : wheat;
-    --margin-top :80vh;
+--border-style: solid;
+--border-width: 1.5px;
+--transition: ease-in-out ;
+--border-color: red;
+--background-color : wheat;
+--margin-top :80vh;
 
-  }
+}
 
-  //fix action-sheet not scrolling on ios
-  .action-sheet-group {
-    overflow: auto !important;
-  }
-  .primary-color{
-    color: var(--ion-color-primary);
-  }
+//fix action-sheet not scrolling on ios
+.action-sheet-group {
+overflow: auto !important;
+}
+.primary-color{
+color: var(--ion-color-primary);
+}
 
 }
