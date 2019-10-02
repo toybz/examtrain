@@ -331,7 +331,11 @@ export class QuizPagePage implements OnInit {
   }
 
   setAnswer(question_index, selected_option) {
-    this.questions[question_index].selected_answer = selected_option;
+
+      navigator.vibrate(2000);
+
+
+      this.questions[question_index].selected_answer = selected_option;
 
     setTimeout(() => {
       this.goNext();
