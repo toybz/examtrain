@@ -61,7 +61,12 @@ export class QuizPagePage implements OnInit {
 
     this.start_with_existing_data = false;
     this.existing_data = {};
+
     this.showPausedComponet = false;
+
+
+      this.showLoadingBar().then(data => {
+
 
     this.localStorage.getOnePausedQuiz().subscribe(paused_quiz => {
       //paused_quiz = quiz
@@ -84,20 +89,50 @@ export class QuizPagePage implements OnInit {
 
       this.paused = this.start_with_existing_data ? false : false;
 
-      this.showLoadingBar().then(data => {
+
         this.current_page = this.start_with_existing_data
-          ? this.existing_data.current_index
-          : 0;
+            ? this.existing_data.current_index
+            : 0;
+
         this.quiz_config = this.start_with_existing_data
-          ? this.existing_data.quiz_config
-          : {
-              type: "",
-              subject: "",
-              amount: 0
+            ? this.existing_data.quiz_config
+            : {
+                type: "",
+                subject: "",
+                amount: 0
             };
 
-        if (!this.start_with_existing_data) {
-          this.questions$ = this.route.paramMap.pipe(
+
+        this.quiz_time = this.start_with_existing_data
+            ? this.existing_data.quiz_config.amount * 10
+            : this.quiz_config.amount * 10;
+        this.countdown = this.start_with_existing_data
+            ? this.existing_data.countdown
+            : this.quiz_config.amount * 10;
+
+
+
+        let dismiss = ()=>{
+            this.page_ready = true;
+            data.dismiss().then(() => {
+                this.countdownController("start");
+                this.showPausedComponet = this.quizService.getInstantStartWithPausedQuiz();
+                if (this.showPausedComponet && this.start_with_existing_data) {
+                    this.pauseQuiz();
+                }
+            });
+        }
+
+
+
+
+        if (this.start_with_existing_data) {
+            dismiss()
+        }
+
+        else{
+
+     this.questions$ = this.route.paramMap.pipe(
             switchMap((params: any) => {
               this.quiz_config.type = params.get("exam_type");
               this.quiz_config.subject = params.get("subject");
@@ -105,8 +140,12 @@ export class QuizPagePage implements OnInit {
                 this.quiz_config.year = parseInt(params.get("year"));
 
 
+              this.quiz_time = this.quiz_config.amount * 10;
+                this.countdown = this.quiz_config.amount * 10;
 
-              return this.quizService.fetchQuizQuestions(
+
+
+                return this.quizService.fetchQuizQuestions(
                 this.quiz_config.type,
                 this.quiz_config.subject,
                 this.quiz_config.amount,
@@ -140,28 +179,19 @@ export class QuizPagePage implements OnInit {
            question.type = '' , question.category = '' , question.difficulty = '';
 
 
-
               question.options = this.reArrangeOptions(options);
             });
+
+            dismiss()
           });
         }
 
-        this.quiz_time = this.start_with_existing_data
-          ? this.existing_data.quiz_config.amount * 10
-          : this.quiz_config.amount * 10;
-        this.countdown = this.start_with_existing_data
-          ? this.existing_data.countdown
-          : this.quiz_config.amount * 10;
 
-        this.page_ready = true;
-        data.dismiss().then(() => {
-          this.countdownController("start");
-          this.showPausedComponet = this.quizService.getInstantStartWithPausedQuiz();
-          if (this.showPausedComponet && this.start_with_existing_data) {
-            this.pauseQuiz();
-          }
-        });
+
+
       });
+
+
     });
   }
 
@@ -199,7 +229,7 @@ export class QuizPagePage implements OnInit {
           }
 
           if (!this.paused) {
-          //  this.countdown--;
+            this.countdown--;
           }
         }, 1000);
 
@@ -330,10 +360,19 @@ export class QuizPagePage implements OnInit {
     return re_arranged_options;
   }
 
+
+
+
   setAnswer(question_index, selected_option) {
 
-      navigator.vibrate(2000);
+  /*
+  // @ts-ignore
+     navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+// @ts-ignore
+     let vibrate = navigator.vibrate([1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500]);
 
+   console.log('vibrate', vibrate)
+     */
 
       this.questions[question_index].selected_answer = selected_option;
 
