@@ -12,7 +12,8 @@
     "e2e": "ng e2e",
     "git": "git add . && git commit -m",
     "postgit": "git push --all",
-    "remote-serve": ""
+    "remote-serve": "" ,
+    "copy_files": "cp src/_redirects docs/_redirects"
   },
   "private": true,
   "dependencies": {
