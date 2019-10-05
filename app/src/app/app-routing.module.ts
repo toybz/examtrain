@@ -37,10 +37,10 @@ const routes: Routes = [
     path: "view-tutorial-page/:subject/:topic_id",
     loadChildren:
       "./pages/study-page/view-tutorial/view-tutorial.module#ViewTutorialModule"
-  }
+  },
 
 
-  // { path: '**', component: PageNotFoundComponent }
+   { path: '**', redirectTo: '' }
 ];
 @NgModule({
   imports: [
