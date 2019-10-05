@@ -45,6 +45,7 @@ export class AppComponent {
     });
   }
 
+
   addToHome() {
     this.pwa.installPwa();
     this.show_add_to_home = false;

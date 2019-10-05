@@ -7,6 +7,10 @@
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0   --port 9300 --disable-host-check --open",
     "build": "ng build --prod",
+    "local_build": "ng build --prod",
+
+    "local_serve": "http-server -p 9900 -c-1  docs/",
+
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -14,6 +18,7 @@
     "postgit": "git push --all",
     "remote-serve": "" ,
     "copy_files": "cp src/_redirects docs/_redirects"
+
   },
   "private": true,
   "dependencies": {
