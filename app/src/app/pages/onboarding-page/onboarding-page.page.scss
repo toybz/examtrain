@@ -6,14 +6,16 @@
 .swiper-slide {
   display: block;
 }
-ion-slide > h2 {
+
+
+/*ion-slide > h2 {
   margin-top: 2rem;
 }
 ion-slide > img {
   max-height: 40vh;
-  max-width: 80%;
+  max-width: 80vw;
   margin: 20vh 0 12vh;
-}
+}*/
 .swiper-pagination-bullet {
   width: 11px !important;
   height: 11px !important;
@@ -24,3 +26,179 @@ ion-slide > img {
   bottom: 1px !important;
 }
 
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+  //CSS
+
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  //CSS
+
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  //CSS
+  ion-slide > h2 {
+    margin-top: 2rem;
+  }
+  ion-slide > p {
+    padding-bottom: 5vh;
+  }
+  ion-slide > img {
+    max-height: 50vh;
+    max-width: 80vw;
+    margin: 20vh 0 5vh;
+  }
+  .swiper-pagination-bullet {
+    width: 11px !important;
+    height: 11px !important;
+  }
+
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  //CSS
+
+  ion-slide > h2 {
+    margin-top: 2rem;
+  }
+  ion-slide > p {
+    padding-bottom: 5vh;
+  }
+  ion-slide > img {
+    max-height: 50vh;
+    max-width: 80vw;
+    margin: 20vh 0 5vh;
+  }
+  .swiper-pagination-bullet {
+    width: 11px !important;
+    height: 11px !important;
+  }
+
+
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  //CSS
+  ion-slide > h2 {
+    margin-top: 2rem;
+  }
+  ion-slide > p {
+    padding-bottom: 8vh;
+  }
+
+  ion-slide > img {
+    max-height: 40vh;
+    max-width: 80vw;
+    margin: 20vh 0 12vh;
+  }
+
+  .swiper-pagination-bullet {
+    width: 11px !important;
+    height: 11px !important;
+  }
+
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  //CSS
+  ion-slide > h2 {
+   // margin-top: 2rem;
+  }
+  ion-slide > p {
+    padding-bottom: 5vh;
+  }
+  ion-slide > img {
+    max-height: 30vh;
+    max-width: 80vw;
+    margin: 10vh 0 5vh;
+  }
+  .swiper-pagination-bullet {
+    width: 11px !important;
+    height: 11px !important;
+  }
+
+}
+
+@media (min-width: 360px) and (max-width: 700px) {
+
+  //CSS
+  ion-slide > h2 {
+     margin-top: 2rem;
+  }
+  ion-slide > p {
+    padding-bottom: 5vh;
+  }
+  ion-slide > img {
+    max-height: 35vh;
+    max-width: 80vw;
+    margin: 15vh 0 5vh;
+  }
+  .swiper-pagination-bullet {
+    width: 11px !important;
+    height: 11px !important;
+  }
+
+}
+
+@media (min-width: 375px) and (max-width: 830px) {
+
+  //CSS
+  ion-slide > h2 {
+     margin-top: 2rem;
+  }
+  ion-slide > p {
+    padding-bottom: 5vh;
+  }
+  ion-slide > img {
+    max-height: 50vh;
+    max-width: 80vw;
+    margin: 20vh 0 5vh;
+  }
+  .swiper-pagination-bullet {
+    width: 11px !important;
+    height: 11px !important;
+  }
+
+}
