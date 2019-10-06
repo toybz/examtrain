@@ -5,27 +5,48 @@
   <ion-slides pager="true" [options]="slideOpts">
 
     <ion-slide>
-      <img src="assets/svg/welcome.svg"/>
-      <h2>Welcome to <b>ExamTrain</b></h2>
-      <p>The exam preparation app that yields success</p>
+
+      <div class="img_div" >
+        <img src="assets/svg/welcome.svg"/>
+      </div>
+
+      <div class="text_div">
+        <h2>Welcome to <b>ExamTrain</b></h2>
+        <p>The exam preparation app that yields success</p>
+      </div >
+
+
     </ion-slide>
 
     <ion-slide>
+      <div class="img_div">
       <img src="assets/svg/1.svg"/>
+      </div>
+
+      <div class="text_div">
       <h2>Practice Past Questions</h2>
       <p>Practice JAMB CBT on your phone for free . With 16 years of JAMB Past-Questions and Answers</p>
+      </div>
     </ion-slide>
 
     <ion-slide>
+      <div class="img_div">
       <img src="assets/svg/tutorial1.svg"/>
+      </div>
+      <div class="text_div">
       <h2>Free Tutorials</h2>
       <p>View  curated tutorials that explains each topic comprehensively</p>
+      </div>
     </ion-slide>
 
     <ion-slide>
+      <div class="img_div">
       <img src="assets/svg/4.svg"/>
+      </div>
+      <div class="start">
       <h2>Ready to Start?</h2>
       <ion-button fill="clear" (click)="start()">Continue <ion-icon slot="end" name="arrow-forward" ></ion-icon></ion-button>
+      </div>
     </ion-slide>
 
 

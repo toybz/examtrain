@@ -3,33 +3,52 @@
 
 }
 
+.img_div{
+  height: 50vh;
+  max-height: 50vh;
+  padding-bottom: 5vh;
+}
+
+.text_div{
+  /*  height: 40vh;
+    max-height: 40vh;*/
+  margin-top: 10vh;
+}
+.start{
+  margin-top: 10vh;
+}
+
+.img_div > img {
+  max-height: 100vh;
+  max-width: 80vw;
+  margin: 15vh 0 5vh;
+}
+
 .swiper-slide {
   display: block;
 }
 
-
-/*ion-slide > h2 {
+ion-slide > h2 {
   margin-top: 2rem;
 }
-ion-slide > img {
-  max-height: 40vh;
-  max-width: 80vw;
-  margin: 20vh 0 12vh;
-}*/
+ion-slide > p {
+  padding-bottom: 5vh;
+}
+
+
 .swiper-pagination-bullet {
   width: 11px !important;
   height: 11px !important;
 }
 
 
-.swiper-pagination {
-  bottom: 1px !important;
-}
 
 /*
+
+!*
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
-*/
+*!
 
 @media (min-width: 1281px) {
 
@@ -37,10 +56,10 @@ ion-slide > img {
 
 }
 
-/*
+!*
   ##Device = Laptops, Desktops
   ##Screen = B/w 1025px to 1280px
-*/
+*!
 
 @media (min-width: 1025px) and (max-width: 1280px) {
 
@@ -48,10 +67,10 @@ ion-slide > img {
 
 }
 
-/*
+!*
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
-*/
+*!
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
@@ -74,10 +93,10 @@ ion-slide > img {
 
 }
 
-/*
+!*
   ##Device = Tablets, Ipads (landscape)
   ##Screen = B/w 768px to 1024px
-*/
+*!
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
@@ -102,10 +121,10 @@ ion-slide > img {
 
 }
 
-/*
+!*
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
-*/
+*!
 
 @media (min-width: 481px) and (max-width: 767px) {
 
@@ -130,10 +149,10 @@ ion-slide > img {
 
 }
 
-/*
+!*
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
-*/
+*!
 
 
 
@@ -202,3 +221,6 @@ ion-slide > img {
   }
 
 }
+
+
+*/

@@ -26,7 +26,7 @@ export class QuizReviewComponent implements OnInit {
     review;
     whatsapp_share_url;
     app_url = app_url;
-
+    share_text;
     constructor(
         private modalController: ModalController,
         public actionSheetController: ActionSheetController,
@@ -44,9 +44,45 @@ export class QuizReviewComponent implements OnInit {
     }
 
 
+     custom_navigator: any = window.navigator;
+
 
     ngOnInit() {
         console.log("ng ini called");
+
+
+
+      /*  const shareBtn = document.querySelector('.share_button');
+
+        shareBtn.addEventListener('click', () => {
+
+            console.log("share listener triggerd")
+
+
+            if (this.custom_navigator.share ) {
+
+                this.custom_navigator.share({
+                    title: 'Examtrain.NG',
+                    text: this.share_text,
+                    url: 'https://app.examtrain.ng'
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                })
+                    .catch(err => {
+                        console.log(`Couldn't share because of`, err.message);
+                    });
+            } else {
+                var win = window.open(this.whatsapp_share_url, "_blank");
+
+            }
+
+        });*/
+
+
+
+
+
+
 
         let score_in_percent =
             (this.correct_answers_count / this.quiz_config.amount) * 100;
@@ -73,13 +109,13 @@ export class QuizReviewComponent implements OnInit {
 
         this.$memesUrl = this.memesService.generateMemes(score_in_percent);
 
-        let share_text = encodeURIComponent(
+        this.share_text = encodeURIComponent(
             `Hi I Scored ${this.correct_answers_count} / ${
                 this.quiz_config.amount
-                } In A  Test On ExamTrain. You Can Also Play On ${this.app_url}`
+                } In A  Test On ExamTrain.NG . You Can Also Play On ${this.app_url}`
         );
 
-        this.whatsapp_share_url = `https://wa.me/?text=${share_text}`;
+        this.whatsapp_share_url = `https://wa.me/?text=${this.share_text}`;
     }
 
     updateMemesSettings() {
@@ -145,8 +181,31 @@ export class QuizReviewComponent implements OnInit {
     }
 
     share() {
-        var win = window.open(this.whatsapp_share_url, "_blank");
+
+
+        if (this.custom_navigator.share ) {
+            this.custom_navigator.share({
+                title: 'Examtrain.NG',
+                text: this.share_text,
+                url: 'https://app.examtrain.ng'
+            }).then(() => {
+                console.log('Thanks for sharing!');
+            })
+                .catch(err => {
+                    console.log(`Couldn't share because of`, err.message);
+                });
+        } else {
+            var win = window.open(this.whatsapp_share_url, "_blank");
+
+        }
+
+
     }
+
+
+
+
+
 
     showCorrections(id) {
         this.show_corrections = !this.show_corrections;
