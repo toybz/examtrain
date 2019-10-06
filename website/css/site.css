@@ -73,6 +73,9 @@ body , *{
 }
 
 
+.social_icon{
+  width: 5vw !important;
+}
 
 
 
@@ -82,7 +85,7 @@ body , *{
 
 
 [data-icon]:before {
-  font-family: "notis" !important;
+  font-family: "CW BR Firma" !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -95,7 +98,7 @@ body , *{
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  font-family: "notis" !important;
+  font-family: "CW BR Firma" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -129,20 +132,7 @@ body , *{
 .icon-star:before {
   content: "\68"; }
 
-@font-face {
-  font-family: 'AvenirNext';
-  src: url("../fonts/AvenirNext-Regular.woff") format("woff");
-  font-weight: 400; }
 
-@font-face {
-  font-family: 'AvenirNext';
-  src: url("../fonts/AvenirNext-Medium.woff") format("woff");
-  font-weight: 500; }
-
-@font-face {
-  font-family: 'AvenirNext';
-  src: url("../fonts/AvenirNext-Bold.woff") format("woff");
-  font-weight: 700; }
 
 .section {
   height: 100vh; }
@@ -225,7 +215,7 @@ body , *{
         margin-left: 0.1em;
         margin-top: 0.1em;
         transform: translate(-50%, -50%);
-        font-family: "notis" !important;
+        font-family: "CW BR Firma" !important;
         font-style: normal !important;
         font-weight: normal !important;
         font-variant: normal !important;
@@ -2006,13 +1996,8 @@ footer {
         margin-left: 1.78571em;
         color: #000; }
         footer .footer-left ul a:before {
-          font-family: "notis"; }
-      footer .footer-left ul a[href*="facebook"]:before {
-        content: "\61"; }
-      footer .footer-left ul a[href*="linkedin"]:before {
-        content: "\62"; }
-      footer .footer-left ul a[href*="instagram"]:before {
-        content: "\63"; }
+          font-family: "CW BR Firma"; }
+
   footer .footer-right {
     float: right;
     font-weight: 700;
@@ -2483,7 +2468,7 @@ footer {
           left: 25%;
           margin-left: -0.07143em;
           transform: translate(-50%, -50%);
-          font-family: "notis" !important;
+          font-family: "CW BR Firma" !important;
           font-style: normal !important;
           font-weight: normal !important;
           font-variant: normal !important;
@@ -2642,7 +2627,7 @@ footer {
         left: 25%;
         margin-left: -0.07143em;
         transform: translate(-50%, -50%);
-        font-family: "notis" !important;
+        font-family: "CW BR Firma" !important;
         font-style: normal !important;
         font-weight: normal !important;
         font-variant: normal !important;
@@ -2715,7 +2700,7 @@ footer {
 html, body {
   font-size: 14px;
   background: #fff;
-  font-family: 'AvenirNext', sans-serif;
+  font-family: "CW BR Firma" !important;
   background: var(--main-color); }
 
 @media screen and (min-width: 1700px) {

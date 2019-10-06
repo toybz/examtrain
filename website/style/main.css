@@ -44,3 +44,6 @@
 body , *{
     font-family: "CW BR Firma" !important;
 }
+.social_icon{
+    width: 5vw;
+}
