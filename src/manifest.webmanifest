@@ -5,7 +5,7 @@
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
-  "start_url": "https://toybz.github.io/quizo/",
+  "start_url": "https://quizo.netlify.com/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
