@@ -191,6 +191,8 @@ body , *{
   text-transform: uppercase;
   position: relative;
   cursor: pointer; }
+
+
   .explore-button .arrow-wrapper {
     position: absolute;
     left: 0;
@@ -207,6 +209,8 @@ body , *{
       height: 200%;
       transition: 0.5s;
       transform: traslateY(0); }
+
+
       .explore-button .arrow-wrapper div:before, .explore-button .arrow-wrapper div:after {
         content: "\64";
         position: absolute;
@@ -224,6 +228,7 @@ body , *{
         line-height: 1;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
+
       .explore-button .arrow-wrapper div:after {
         top: 75%; }
   .explore-button:hover .arrow-wrapper div {

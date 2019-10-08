@@ -350,7 +350,7 @@ $('.prop-wrapper').on('mouseover', function(){
 });
 
 
-$('.explore-button').on('click', function(){
+$('.explore-button2').on('click', function(){
   if( !isMobile ){
     $.fn.fullpage.moveSectionDown();    
   }else{
