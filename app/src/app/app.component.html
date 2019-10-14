@@ -1,5 +1,36 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+
+
+
+  <ion-menu type="overlay">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+
+      <ion-list>
+        <div  *ngFor="let p of appPages">
+          <ion-menu-toggle auto-hide="false" *ngIf="p.should_display"  >
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" (click)="p.click_handler()">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </div>
+
+
+      </ion-list>
+
+    </ion-content>
+  </ion-menu>
+
+
+
+  <ion-router-outlet main></ion-router-outlet>
 
   <ion-item class="add_to_home_screen" *ngIf="show_add_to_home">
     <ion-label>Add To Home screen</ion-label>
@@ -12,4 +43,6 @@
       NO
     </ion-button>
   </ion-item>
+
+
 </ion-app>

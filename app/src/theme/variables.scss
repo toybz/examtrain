@@ -109,6 +109,12 @@
   ion-header ion-toolbar:first-child {
     padding-top: 0px !important;
   }
+  ion-header ion-toolbar ion-title:not(.no-centralize) {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    position: fixed;
+  }
+
 
   .options_item {
     --border-style: solid;
@@ -150,7 +156,9 @@ color: var(--ion-color-primary);
   bottom: 10vh;
 }
 
-
+.menu-button{
+  display: block;
+}
 
 
 

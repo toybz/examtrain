@@ -11,6 +11,7 @@ export class LocalStorageService {
   completedQuiz = new ReplaySubject(1);
   pausedQuiz = new BehaviorSubject({})
   other_data = new ReplaySubject(1);
+  user = new ReplaySubject(1);
 
 
   constructor(private localStorage: LocalStorage) {
@@ -47,6 +48,26 @@ export class LocalStorageService {
         });
       }
     });
+
+
+      this.localStorage.getItem("user").subscribe((user: any) => {
+          if (user) {
+              this.user.next(user);
+          }
+          else {
+              this.user.next({
+                  signed_in: false
+              });
+              // @ts-ignore
+              this.localStorage.setItemSubscribe("others", {
+                  signed_in: false
+              });
+          }
+      });
+
+
+
+
   }
 
   saveCompletedQuiz(param) {
@@ -105,4 +126,19 @@ export class LocalStorageService {
   getOtherData() {
     return this.other_data;
   }
+
+
+    saveUser(value) {
+    this.localStorage.setItem("user", value).subscribe(() => {
+                this.user.next(value);
+            });
+        }
+
+
+    getUser() {
+        return this.user;
+    }
+
+
+
 }

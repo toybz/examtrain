@@ -157,6 +157,8 @@ export class QuizService {
 */
 
     return this.http.get(url.get_question(exam_type, subject, amount, year))
+
+
   }
 
   getQuizQuestions() {

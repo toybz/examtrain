@@ -1,9 +1,30 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login_page</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content padding>
+<ion-content padding class="page_body">
+
+  <div style="margin: 20px">
+
+    <h2>Login</h2>
+  </div>
+
+
+  <ion-card class="card">
+    <ion-card-content>
+      <form #quizConfigForm="ngForm">
+
+       <!-- <ion-input [(ngModel)]="user.username"  name="username"  placeholder="username" ></ion-input>-->
+
+        <ion-input [(ngModel)]="user.email"   name="email" placeholder="email" required></ion-input>
+
+        <ion-input [(ngModel)]="user.password" name="password"  placeholder="password" type="password" required></ion-input>
+
+      </form>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-button (click)="login()" class="success">Submit</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+
+
 
 </ion-content>

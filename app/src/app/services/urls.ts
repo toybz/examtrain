@@ -12,4 +12,12 @@ export const get_question = function(exam_type, subject, amount, year='') {
   return `https://questions.aloc.ng/api/q/${amount}?type=${exam_type}&subject=${subject}&year=${year}`;
 };
 
+export const api_url = "http://localhost:9955/";
+export const register = `${api_url}users/`;
+export const login = `${api_url}users/login/`;
+export const logout = `${api_url}users/login/`;
+
+
+
+
 
