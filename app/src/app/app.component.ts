@@ -7,6 +7,7 @@ import { PwaService } from "./services/pwa/pwa.service";
 import { ActivatedRoute, Router } from "@angular/router";
 import { LocalStorageService } from "./services/local-storage/local-storage.service";
 import {UserService} from "./services/user/user.service";
+import {AuthTokenInterceptorService} from "./auth-token-interceptor.service";
 
 @Component({
   selector: "app-root",
@@ -53,9 +54,13 @@ user: any
                  should_display:  this.is_user_signed_in ,
                  click_handler: ()=>{
 
-                     this.userService.logOut().subscribe(()=>{
+                     this.userService.logOut()
+                     this.router.navigate(['login'])
+
+
+                  /*   this.userService.logOut().subscribe(()=>{
                          this.router.navigate(['login'])
-                     })
+                     })*/
 
                  }
              } ,

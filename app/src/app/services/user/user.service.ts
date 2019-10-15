@@ -32,9 +32,7 @@ export class UserService {
             signed_in: false
         });
 
-
-
-        return  this.http.post(url.logout,{user:{}} )
+     //   return  this.http.post(url.logout,{user:{}} )
     }
 
 }

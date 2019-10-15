@@ -25,6 +25,6 @@ export class OnboardingPagePage implements OnInit {
     start(){
       console.log("Nav")
        this.localStorage.saveOtherData({ first_time: false });
-        this.router.navigate(["tabs/quiz"]);
+        this.router.navigate(["register"]);
     }
 }

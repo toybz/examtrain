@@ -128,14 +128,13 @@ export class LocalStorageService {
   }
 
 
-    saveUser(value) {
+  saveUser(value) {
     this.localStorage.setItem("user", value).subscribe(() => {
                 this.user.next(value);
             });
         }
 
-
-    getUser() {
+        getUser() {
         return this.user;
     }
 

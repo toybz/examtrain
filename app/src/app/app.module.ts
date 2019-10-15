@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouteReuseStrategy } from "@angular/router";
 import { FormsModule } from "@angular/forms";
-import { HttpClientModule } from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { RoundProgressModule } from "angular-svg-round-progressbar";
 import { IonicModule, IonicRouteStrategy } from "@ionic/angular";
 import { SplashScreen } from "@ionic-native/splash-screen/ngx";
@@ -14,6 +14,7 @@ import { ServiceWorkerModule } from "@angular/service-worker";
 import { environment } from "../environments/environment";
 import {SharedComponentsModule} from "./shared-components/shared-components.module";
 import { SafeUrlPipe } from './pipes/safe-url/safe-url.pipe';
+import {AuthTokenInterceptorService} from "./auth-token-interceptor.service";
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,6 +34,7 @@ import { SafeUrlPipe } from './pipes/safe-url/safe-url.pipe';
   providers: [
     StatusBar,
     SplashScreen,
+    //  { provide: HTTP_INTERCEPTORS, useClass: AuthTokenInterceptorService, multi: true },
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

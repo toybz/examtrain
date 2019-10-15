@@ -8,18 +8,33 @@ import {LocalStorage} from "@ngx-pwa/local-storage";
   providedIn: 'root'
 })
 export class AuthTokenInterceptorService  implements HttpInterceptor {
+
+
+
     constructor(private localStorage: LocalStorage) {}
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        const user = localStorage.getItem('user');
-        const token = JSON.parse(user).token;
-        req = req.clone({
-            setHeaders: {
-                'Authorization': `Bearer ${token}`
-            },
-        });
-        console.log('new url clone' , req)
 
-        return next.handle(req);
+
+         this.localStorage.getItem('user').subscribe((u:any)=>{
+             const user:any = u
+            console.log(user)
+
+            if (typeof user.token === "undefined" ){
+                return next.handle(req);
+            }
+
+            const token = user.token
+            console.log(token)
+
+            req = req.clone({
+                setHeaders: {
+                    'Authorization': `Bearer ${token}`
+                },
+            });
+            console.log('new url clone' , req)
+
+            return next.handle(req);
+        })
     }
 }
