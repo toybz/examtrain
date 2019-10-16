@@ -1,0 +1,46 @@
+
+
+.top_div{
+  height: 21vh !important;
+  text-align: center;
+  padding: 5vh 10vw;
+}
+
+.page_body{
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/assets/images/bg1.jpg")  ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: white !important;
+  text-align: center;
+  padding: 0 10vw;
+
+}
+
+ion-input{
+  --color: white;
+  border: #f17b7b solid 1px;
+  border-radius: 10px;
+  // padding: 1vh !important;
+  margin-bottom: 3vh;
+}
+
+.login_form{
+
+}
+
+.login_button{
+  --color: white !important;
+  --background: #9c0808;
+  --background-activated:#9c0808;
+  --background-hover: #9c0808;
+  --background-focused: #9c0808;
+
+}
+
+.button{
+  --color: var(--ion-color-primary)
+}

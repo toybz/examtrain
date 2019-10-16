@@ -15,15 +15,36 @@ import {AlertController, LoadingController} from "@ionic/angular";
 export class SignUpPagePage implements OnInit {
   test_user = 'user'+ Math.floor(Math.random()*999)
   user = {
-    username:this.test_user ,
-      password:'12345',
-      email: this.test_user+'@gmail.com'
+    username: '' ,
+      password:'',
+      email: ''
   }
+ // email
   constructor(private userService: UserService, private route: Router, private localStorage:LocalStorageService ,  public loadingController: LoadingController, public alertController: AlertController) {}
 
   ngOnInit() {}
 
+  validate():boolean{
+     let val = this.user.username  && this.user.password  && this.user.email  ? true : false;
+
+      return val;
+
+  }
+
     async  registerUser(){
+
+      if(!this.validate()){
+
+          const message = await this.alertController.create({
+              message: 'Please Fill all Field Correctly'
+          });
+          await message.present();
+          return
+      }
+
+
+
+
 
       const loading = await this.loadingController.create({
             message: 'Please Wait...' ,

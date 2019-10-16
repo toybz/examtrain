@@ -1,42 +1,85 @@
 
 
+<ion-content no-padding="">
 
-<ion-content padding class="page_body">
+  <div   class="page_body" padding="">
 
 
 
-  <div style="margin: 20px">
+    <div style="" class="top_div">
+      <img src="assets/images/logo_white.png">
 
-    <h2>Register</h2>
+    </div>
+
+    <ion-row>
+      <ion-col>
+        <h2>Register</h2>
+      </ion-col>
+    </ion-row>
+
+        <form #registerForm="ngForm" class="login_form">
+
+
+
+          <ion-input [(ngModel)]="user.username"  name="username"  placeholder="Username" required="" ></ion-input>
+
+          <ion-input [(ngModel)]="user.email"   name="email" placeholder="Email" type="email" id="email" required="" #email="ngModel"></ion-input>
+
+          <ion-input [(ngModel)]="user.password" name="password"  placeholder="Password" type="password" required=""></ion-input>
+
+        </form>
+
+
+    <ion-row>
+
+
+
+      <ion-col>
+        <ion-button  expand="block"  shape="round" fill="" size="large" class="login_button" (click)="registerUser()"  >Sign Up</ion-button>
+      </ion-col>
+
+
+    </ion-row>
+
+    <br>
+
+    <ion-row>
+
+      <ion-col>
+
+        <ion-button router-direction="forward" expand="block"  shape="round" fill="outline" size="" class="button" routerLink="/login" >Login</ion-button>
+
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block"  shape="round" fill="outline" size="" class="button" router-direction="forward"  routerLink="/tabs/quiz" >Skip</ion-button>
+
+      </ion-col>
+    </ion-row>
+
+
+
+
+
+
+ <!--   <ion-button (click)="registerUser()" class="success">Submit</ion-button>
+
+
+        <ion-button routerLink="/login" class="success">Login</ion-button>
+
+
+        <ion-button routerLink="/tabs/quiz" class="success">Skip</ion-button>
+-->
+
+
+
+
+
+
+
+
   </div>
-
-
-  <ion-card class="card">
-    <ion-card-content>
-      <form  (ngSubmit)="submitQuizConfiguration()"
-             #quizConfigForm="ngForm">
-
-      <ion-input [(ngModel)]="user.username"  name="username"  placeholder="username" ></ion-input>
-
-      <ion-input [(ngModel)]="user.email"   name="email" placeholder="email"></ion-input>
-
-      <ion-input [(ngModel)]="user.password" name="password"  placeholder="password" type="password"></ion-input>
-
-      </form>
-    </ion-card-content>
-    <ion-card-content>
-      <ion-button (click)="registerUser()" class="success">Submit</ion-button>
-
-
-      <ion-button routerLink="/login" class="success">Login</ion-button>
-
-
-      <ion-button routerLink="/tabs/quiz" class="success">Skip</ion-button>
-
-    </ion-card-content>
-  </ion-card>
-
 
 
 
 </ion-content>
+

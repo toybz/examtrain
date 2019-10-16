@@ -13,15 +13,37 @@ export class LoginPagePage implements OnInit {
 
 
     user = {
-        username: 'toybz' ,
-        password:'12345',
-        email: 't@mail.com'
+        username: '' ,
+        password:'',
+        email: ''
     }
     constructor(private userService: UserService, private route: Router, private localStorage:LocalStorageService ,  public loadingController: LoadingController, public alertController: AlertController) {}
 
+
+
+
+
+
     ngOnInit() {}
 
+    validate():boolean{
+        let val =  this.user.password  && this.user.email  ? true : false;
+
+        return val;
+
+    }
+
+
     async  login(){
+
+        if(!this.validate()){
+
+            const message = await this.alertController.create({
+                message: 'Please Fill all Field Correctly'
+            });
+            await message.present();
+            return
+        }
 
         const loading = await this.loadingController.create({
             message: 'Please Wait...' ,
