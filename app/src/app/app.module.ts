@@ -34,7 +34,7 @@ import {AuthTokenInterceptorService} from "./auth-token-interceptor.service";
   providers: [
     StatusBar,
     SplashScreen,
-    //  { provide: HTTP_INTERCEPTORS, useClass: AuthTokenInterceptorService, multi: true },
+     { provide: HTTP_INTERCEPTORS, useClass: AuthTokenInterceptorService, multi: true },
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

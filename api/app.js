@@ -25,28 +25,35 @@ app.use(bodyParser.json());
 app.use(require('method-override')());
 app.use(express.static(__dirname + '/public'));
 
-app.use(session({ secret: config.app_name, cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false  }));
+app.use(session({ secret: 'examTrain', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false  }));
 
 if (!isProduction) {
   app.use(errorhandler());
 }
 
+
+
+let connection_str = `mongodb+srv://examtrain:1qaz2wsx3edc@cluster0-l1wy2.mongodb.net/examtrain?retryWrites=true&w=majority`;
+
+//let connection_str = `mongodb://localhost/examtrain`
+
+
 if(isProduction){
-  mongoose.connect(process.env.MONGODB_URI);
+ // mongoose.connect(process.env.MONGODB_URI);
+    mongoose.connect(connection_str)
 } else {
-  mongoose.connect('mongodb://localhost/'+config.db_name);
-  mongoose.set('debug', true);
+
+  mongoose.connect(connection_str)
+    mongoose.set('debug', true);
 }
+mongoose.set('minimize', false);
 
-require('./models/SubTopic');
-require('./models/Topic');
-//require('./models/Tutorial');
-//require('./models/ExamType');
+
+
+
 require('./models/User');
-
-
-
-
+require('./models/Article');
+require('./models/Comment');
 require('./config/passport');
 
 app.use(require('./routes'));
@@ -86,6 +93,6 @@ app.use(function(err, req, res, next) {
 });
 
 // finally, let's start our server...
-var server = app.listen( process.env.PORT || 9999, function(){
+var server = app.listen( process.env.PORT || 9955, function(){
   console.log('Listening on port ' + server.address().port);
 });

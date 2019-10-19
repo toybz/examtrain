@@ -5,9 +5,10 @@ import { Observable } from "rxjs";
 import { switchMap } from "rxjs/operators";
 
 import {
-  LoadingController,
-  ModalController,
-  PopoverController
+    AlertController,
+    LoadingController,
+    ModalController,
+    PopoverController
 } from "@ionic/angular";
 import { QuizReviewComponent } from "./quiz-review/quiz-review.component";
 import { LocalStorageService } from "../../services/local-storage/local-storage.service";
@@ -49,7 +50,8 @@ export class QuizPagePage implements OnInit {
     private localStorage: LocalStorageService,
     private util: UtilsService,
     public popoverController: PopoverController,
-    public memesService: MemesService
+    public memesService: MemesService,
+    private alertController: AlertController
   ) {}
 
   ngOnInit() {
@@ -154,7 +156,8 @@ export class QuizPagePage implements OnInit {
             })
           );
 
-          this.questions$.subscribe(response => {
+          this.questions$.subscribe(
+              response => {
               this.questions = response.data;
             console.log( this.questions );
 
@@ -183,7 +186,22 @@ export class QuizPagePage implements OnInit {
             });
 
             dismiss()
-          });
+          } ,
+              async ()=>{
+                   this.loading .dismiss();
+
+                  const alert = await this.alertController.create({
+                      message: 'Something went wrong.Please try again',
+                      backdropDismiss: false
+                  });
+                  await alert.present();
+
+                  setTimeout( ()=> {
+                      alert.dismiss()
+this.router.navigate(['tabs/quiz'])
+
+                  } , 2000)
+              });
         }
 
 
@@ -195,14 +213,15 @@ export class QuizPagePage implements OnInit {
     });
   }
 
+  loading
   async showLoadingBar() {
-    const loading = await this.loadingController.create({
+     this.loading = await this.loadingController.create({
       message: "Loading",
       animated: true,
       showBackdrop: true
     });
-    await loading.present();
-    return loading;
+    await this.loading .present();
+    return this.loading ;
   }
 
   countdownController(operation) {

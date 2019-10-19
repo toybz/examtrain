@@ -83,6 +83,20 @@ export class LoginPagePage implements OnInit {
 
 
 
+            } ,
+            async ()=>{
+                loading.dismiss();
+                const alert = await this.alertController.create({
+                    message: 'Login Failed.Please try again'
+                });
+                await alert.present();
+
+                setTimeout( ()=> {
+                    alert.dismiss()
+
+
+                } , 2000)
+
             }
         )
 

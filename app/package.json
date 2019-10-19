@@ -8,17 +8,14 @@
     "start": "ng serve --host 0.0.0.0   --port 9300 --disable-host-check --open",
     "build": "ng build --prod",
     "local_build": "ng build --prod",
-
     "local_serve": "http-server -p 9900 -c-1  docs/",
-
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "git": "git add . && git commit -m",
     "postgit": "git push --all",
-    "remote-serve": "" ,
+    "remote-serve": "",
     "copy_files": "cp src/_redirects docs/_redirects"
-
   },
   "private": true,
   "dependencies": {
@@ -37,6 +34,7 @@
     "@ionic/angular": "^4.8.1",
     "@ionic/lab": "^1.0.24",
     "@ngx-pwa/local-storage": "^7.4.2",
+    "@ngx-pwa/offline": "^6.2.0",
     "angular-svg-round-progressbar": "^2.0.0",
     "chart.js": "^2.8.0",
     "core-js": "^2.6.9",

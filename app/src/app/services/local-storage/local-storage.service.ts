@@ -3,6 +3,8 @@ import { LocalStorage } from "@ngx-pwa/local-storage";
 import {BehaviorSubject, ReplaySubject} from "rxjs/index";
 import {log} from "util";
 import {map} from "rxjs/operators";
+import {HttpClient} from "@angular/common/http";
+import {save_quiz}  from "../urls";
 
 @Injectable({
   providedIn: "root"
@@ -11,10 +13,10 @@ export class LocalStorageService {
   completedQuiz = new ReplaySubject(1);
   pausedQuiz = new BehaviorSubject({})
   other_data = new ReplaySubject(1);
-  user = new ReplaySubject(1);
+  user = new  BehaviorSubject({})
 
 
-  constructor(private localStorage: LocalStorage) {
+  constructor(private localStorage: LocalStorage, private http: HttpClient) {
     this.localStorage.getItem("completed_quiz").subscribe((quiz: any) => {
       if (quiz) {
         this.completedQuiz.next(quiz);
@@ -30,6 +32,11 @@ export class LocalStorageService {
       } else {
         this.pausedQuiz.next({});
         this.localStorage.setItemSubscribe("paused_quiz", {});
+
+
+
+
+
       }
     });
     // @ts-ignore
@@ -71,7 +78,36 @@ export class LocalStorageService {
   }
 
   saveCompletedQuiz(param) {
-    //console.log(param);
+    console.log(param);
+
+
+     /* {"quiz": {
+          "subject_id" : "1",
+              "exam_id" : "3",
+              "year" : "2019",
+              "questions": [],
+              "correct_answers_count" : "9",
+              "question_count" : "10",
+              "quiz_config" : {
+              "subject_id" : 1,
+                  "subject_name": "Maths",
+                  "exam_id" : 3,
+                  "exam_name": "Jamb",
+                  "year" : 2016,
+                  "question_count": 20
+
+          }
+      }
+      }
+*/
+
+
+     this.http.post(save_quiz , {quiz :param }).subscribe();
+
+
+
+
+
 
     this.localStorage.getItem("completed_quiz").subscribe((quiz: any) => {
       let new_data = [...quiz, param];

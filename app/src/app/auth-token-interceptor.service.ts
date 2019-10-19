@@ -3,6 +3,8 @@ import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from "@angular/com
 import {Observable} from "rxjs";
 import {LocalStorageService} from "./services/local-storage/local-storage.service";
 import {LocalStorage} from "@ngx-pwa/local-storage";
+import {forEach} from "@angular-devkit/schematics";
+import {Network} from "@ngx-pwa/offline";
 
 @Injectable({
   providedIn: 'root'
@@ -10,31 +12,57 @@ import {LocalStorage} from "@ngx-pwa/local-storage";
 export class AuthTokenInterceptorService  implements HttpInterceptor {
 
 
+    exclude_url = [
+        'https://api.gfycat.com'
 
-    constructor(private localStorage: LocalStorage) {}
+    ];
+
+    constructor(private localStorage: LocalStorageService ) {}
+
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
 
-         this.localStorage.getItem('user').subscribe((u:any)=>{
-             const user:any = u
-            console.log(user)
-
-            if (typeof user.token === "undefined" ){
-                return next.handle(req);
+let skip = false
+        this.exclude_url.forEach((url)=>{
+            //console.log('checking' + url)
+            if(req.url.indexOf(url) !== -1){
+                console.log('skipping' + url)
+               skip = true
             }
-
-            const token = user.token
-            console.log(token)
-
-            req = req.clone({
-                setHeaders: {
-                    'Authorization': `Bearer ${token}`
-                },
-            });
-            console.log('new url clone' , req)
-
-            return next.handle(req);
         })
+        if(skip){
+            return next.handle(req);
+        }
+
+        console.log('intercept still running')
+
+
+
+
+
+
+
+       const user_details: any = this.localStorage.getUser().getValue()
+
+        if (typeof user_details.token === "undefined" ){
+            console.log('new url clone' , req)
+            return next.handle(req);
+        }
+
+        const token = user_details.token
+
+        req = req.clone({
+            setHeaders: {
+                'Authorization': `Bearer ${token}`
+            },
+        });
+        console.log('new url clone' , req)
+
+        return next.handle(req);
+
+
+
+
     }
 }

@@ -11,6 +11,27 @@ var UserSchema = new mongoose.Schema({
   image: String,
   favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Article' }],
   following: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
+
+    quiz_history: {
+    type: [{
+
+        correct_answers_count: Number,
+        questions: [{}],
+        quiz_config: {
+
+
+        },
+        date_time: {
+            "type": Date,
+            "default": Date.now()
+        }
+    }],
+        default: []
+    }
+
+    ,
+
+
   hash: String,
   salt: String
 }, {timestamps: true});
@@ -58,11 +79,29 @@ UserSchema.methods.toProfileJSONFor = function(user){
   };
 };
 
+
+UserSchema.methods.addToQuizHistory = function(quiz){
+
+    this.quiz_history = this.quiz_history.concat(quiz);
+  return this.save();
+};
+
+UserSchema.methods.toQuizHistoryJson = function(){
+  console.log(this.quiz_history)
+    return {
+        quiz_history: this.quiz_history
+    };
+};
+
+
+
+
+
+
 UserSchema.methods.favorite = function(id){
   if(this.favorites.indexOf(id) === -1){
     this.favorites.push(id);
   }
-
   return this.save();
 };
 

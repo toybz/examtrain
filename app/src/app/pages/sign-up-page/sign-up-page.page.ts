@@ -84,7 +84,53 @@ export class SignUpPagePage implements OnInit {
 
 
 
-          }
+          } ,
+            async (response:any )=>{
+                loading.dismiss();
+                console.log(response)
+
+
+                let error_msg = 'Registration Failed.Please try again<br>'
+
+                let alert = async  ()=>{
+                    const alert = await this.alertController.create({
+                        message: error_msg
+                    });
+                    await alert.present();
+                    return
+
+                    /* setTimeout( ()=> {
+                         alert.dismiss()
+
+
+                     } , 2000)*/
+                }
+
+
+
+
+
+                try {
+                    let err = response.error
+                    if(typeof err['errors']['email'] === 'string' || typeof err.errors.username === 'string'){
+
+                        if(typeof err.errors.email === 'string' ){
+                            error_msg = error_msg + 'This email exist, please use another one <br>'
+                        }
+                        if(typeof err.errors.username === 'string' ){
+                            error_msg = error_msg + 'This username exist, please use another one'
+                        }
+
+
+                    }
+                }
+                finally {
+                    alert()
+                }
+
+
+
+            }
       )
 
 
