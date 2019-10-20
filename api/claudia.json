@@ -1,0 +1,10 @@
+{
+  "lambda": {
+    "role": "ExamTrain-executor",
+    "name": "ExamTrain",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "qhn4en82m6"
+  }
+}

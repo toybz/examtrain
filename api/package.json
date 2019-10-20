@@ -9,7 +9,10 @@
     "dev": "nodemon ./app.js",
     "test": "newman run ./tests/api-tests.postman.json -e ./tests/env-api-tests.postman.json",
     "stop": "lsof -ti :3000 | xargs kill",
-    "mongo:stop": "docker stop realworld-mongo && docker rm realworld-mongo"
+    "mongo:stop": "docker stop realworld-mongo && docker rm realworld-mongo",
+    "deploy:create": "claudia create --handler lambda.handler --deploy-proxy-api --region us-east-1",
+    "deploy:prod": "claudia update --handler lambda.handler --deploy-proxy-api --region us-east-2",
+    "deploy:test": "claudia update --handler lambda.handler --deploy-proxy-api --region us-east-1"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "aws-serverless-express": "^3.3.6",
     "body-parser": "1.15.0",
     "cors": "2.7.1",
     "ejs": "2.4.1",
@@ -28,8 +32,8 @@
     "method-override": "2.3.5",
     "methods": "1.1.2",
     "mongodb": "^3.3.3",
-    "mongoose": "",
-    "mongoose-unique-validator": "",
+    "mongoose": "^5.7.5",
+    "mongoose-unique-validator": "^2.0.3",
     "morgan": "1.7.0",
     "passport": "0.3.2",
     "passport-local": "1.0.0",
@@ -38,6 +42,7 @@
     "underscore": "1.8.3"
   },
   "devDependencies": {
+    "claudia": "^5.9.0",
     "newman": "^3.8.2",
     "nodemon": "^1.11.0"
   }

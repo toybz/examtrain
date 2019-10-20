@@ -112,7 +112,7 @@ export class QuizReviewComponent implements OnInit {
         this.share_text = encodeURIComponent(
             `Hi I Scored ${this.correct_answers_count} / ${
                 this.quiz_config.amount
-                } In A  Test On ExamTrain.NG . You Can Also Play On ${this.app_url}`
+                } In A  Test On ExamTrain.NG For Free . You Can Also Practice Past Questions And  Tutorials  For All Exams   On ${this.app_url} `
         );
 
         this.whatsapp_share_url = `https://wa.me/?text=${this.share_text}`;
@@ -180,13 +180,13 @@ export class QuizReviewComponent implements OnInit {
         await actionSheet.present();
     }
 
-    share() {
+        share() {
 
 
         if (this.custom_navigator.share ) {
             this.custom_navigator.share({
                 title: 'Examtrain.NG',
-                text: this.share_text,
+                text: decodeURI(this.share_text) ,
                 url: 'https://app.examtrain.ng'
             }).then(() => {
                 console.log('Thanks for sharing!');

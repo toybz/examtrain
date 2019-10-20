@@ -13,7 +13,7 @@ export const get_question = function(exam_type, subject, amount, year='') {
 };
 
 //export const api_url = "http://localhost:9955/";
-export const api_url = "http://examtrain.us-east-1.elasticbeanstalk.com/";
+export const api_url = "https://qhn4en82m6.execute-api.us-east-1.amazonaws.com/latest/";
 
 
 

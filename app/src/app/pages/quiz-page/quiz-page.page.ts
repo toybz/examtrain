@@ -379,19 +379,16 @@ this.router.navigate(['tabs/quiz'])
     return re_arranged_options;
   }
 
-
+    custom_navigator: any = window.navigator;
 
 
   setAnswer(question_index, selected_option) {
 
-  /*
-  // @ts-ignore
-     navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
-// @ts-ignore
-     let vibrate = navigator.vibrate([1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500]);
+      if (this.custom_navigator.vibrate ) {
+         let vibrate = this.custom_navigator.vibrate([1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500]);
+          console.log('vibrate', vibrate)
+      }
 
-   console.log('vibrate', vibrate)
-     */
 
       this.questions[question_index].selected_answer = selected_option;
 
