@@ -110,9 +110,7 @@ export class QuizReviewComponent implements OnInit {
         this.$memesUrl = this.memesService.generateMemes(score_in_percent);
 
         this.share_text = encodeURIComponent(
-            `Hi I Scored ${this.correct_answers_count} / ${
-                this.quiz_config.amount
-                } In A  Test On ExamTrain.NG For Free . You Can Also Practice Past Questions And  Tutorials  For All Exams   On ${this.app_url} `
+            `Hi I scored ${this.correct_answers_count} out of ${this.quiz_config.amount} in a test on ExamTrain.NG. Join me to prepare for all exams with past questions and video tutorials for free on ${this.app_url}`
         );
 
         this.whatsapp_share_url = `https://wa.me/?text=${this.share_text}`;

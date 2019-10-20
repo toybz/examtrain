@@ -1,6 +1,6 @@
 "use strict";
 
-export const app_url = "https://app.examtrain.ng/";
+export const app_url = "app.examtrain.ng/";
 
 export const get_categories = "https://opentdb.com/api_category.php";
 
