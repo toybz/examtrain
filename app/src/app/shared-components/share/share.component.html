@@ -1,0 +1,104 @@
+
+ <ion-header id="top_section">
+       <ion-toolbar>
+           <ion-title text-center>
+               Share With Friends
+           </ion-title>
+
+
+           <ion-buttons color="white" slot="start" (click)="dismiss()">
+               <ion-button style="color: #f4f5f8">
+
+
+                   <ion-icon  slot="start"  name="close-circle-outline"></ion-icon>
+
+
+
+               </ion-button>
+           </ion-buttons>
+
+
+
+       </ion-toolbar>
+   </ion-header>
+
+
+<ion-content>
+
+
+
+
+<ion-card>
+    <ion-card-content>
+
+
+
+
+
+        <div>
+
+
+            <img
+                    src="assets/images/share_img1.png"
+            />
+
+
+
+
+            <div class="text-container">
+                <h2 class="primary-color"  style="font-size: 20px">Thank you for using ExamTrain</h2>
+
+                <p>Please Share with your family and  friends so they can know about ExamTrain
+                </p>
+
+
+                <p  class="primary-color" style="font-size: 15px">This will only take some seconds  <span *ngIf="!user_has_shared"> and  will upgrade your quiz question count from 5 to 15</span></p>
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+<br>
+            <br>
+
+            <ion-button  class="share_button" (click)="share('facebook')"  expand="block" >
+                Facebook
+                <ion-icon slot="end" name="logo-facebook"></ion-icon>
+            </ion-button>
+
+
+        <ion-button  class="share_button" (click)="share('whatsapp')"  expand="block" >
+            Whatsapp
+            <ion-icon slot="end" name="logo-whatsapp"></ion-icon>
+        </ion-button>
+
+
+        <ion-button  class="share_button" (click)="share('twitter')"  expand="block" >
+            Twitter
+            <ion-icon slot="end" name="logo-twitter"></ion-icon>
+        </ion-button>
+
+
+
+
+        <ion-button  class="share_button" (click)="share('others')"  expand="block" >
+            Others
+            <ion-icon slot="end" name="share"></ion-icon>
+        </ion-button>
+
+
+    </ion-card-content>
+</ion-card>
+
+
+
+
+
+</ion-content>

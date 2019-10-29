@@ -1,7 +1,9 @@
-import { Component, OnInit } from "@angular/core";
+import {AfterContentInit, AfterViewInit, Component, OnInit, ViewChild} from "@angular/core";
 import {Router} from "@angular/router";
 import {LocalStorage} from "@ngx-pwa/local-storage";
 import {LocalStorageService} from "../../services/local-storage/local-storage.service";
+import {IonSlides} from "@ionic/angular";
+
 
 @Component({
   selector: "app-onboarding-page",
@@ -10,15 +12,13 @@ import {LocalStorageService} from "../../services/local-storage/local-storage.se
 })
 export class OnboardingPagePage implements OnInit {
 
-
-    slideOpts = {
+    slideOpts =  {
         initialSlide: 0,
-        slidesPerView : 1,
-      //  speed: 400,
-        pager: true,
-
+        slidesPerView : 1
     };
-  constructor(private router: Router, private localStorage: LocalStorageService) {}
+    @ViewChild(IonSlides) slider: IonSlides;
+
+    constructor(private router: Router, private localStorage: LocalStorageService) {}
 
   ngOnInit() {}
 
@@ -27,4 +27,17 @@ export class OnboardingPagePage implements OnInit {
        this.localStorage.saveOtherData({ first_time: false });
         this.router.navigate(["register"]);
     }
+
+
+
+
+    slide(direction){
+        if(direction == 'next'){
+            this.slider.slideNext()
+        }
+        else{
+            this.slider.slidePrev()
+        }
+    }
+
 }

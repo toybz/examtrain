@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { StudyService } from "../../../services/study/study.service";
 import Swal from 'sweetalert2'
+import {IonSlides} from "@ionic/angular";
 
 @Component({
   selector: 'app-explore',
@@ -16,6 +17,7 @@ export class ExploreComponent implements OnInit {
    // loop: true,
 
   };
+    @ViewChild(IonSlides) slider: IonSlides;
 
 /*  subjects = [
     {
@@ -100,7 +102,7 @@ subjects = [];
       this.study_service.getSubjects().subscribe((subjects)=>{
 
         this.subjects = subjects
-        this.showTopicsFor(this.subjects[0])
+        this.showTopicsFor(this.subjects[1])
       })
 
       Swal.fire({
@@ -148,5 +150,17 @@ subjects = [];
   getSubjectImage(){
    return this.study_service.getSubjectImage(this.selected_subject)
   }
+
+
+    slide(direction){
+        if(direction == 'next'){
+            this.slider.slideNext()
+        }
+        else{
+            this.slider.slidePrev()
+        }
+    }
+
+
 
 }

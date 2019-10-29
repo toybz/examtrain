@@ -1,0 +1,39 @@
+
+
+
+
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons color="white" slot="start" (click)="goBack()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="arrow-back" style="color: #f4f5f8"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>  </ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+
+    <ion-card-header style="font-size: x-large;color: red;text-align: center">
+      {{feed.title}}
+    </ion-card-header>
+
+
+
+    <ion-card-content style="font-size: large" [innerHTML]="feed.content" >
+
+
+
+
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>

@@ -1,11 +1,35 @@
 
-  <ion-slides  [options]="slideOpts">
 
-    <ion-slide *ngFor="let subject of subjects"  (click)="showTopicsFor(subject)">
-      <ion-button color="primary" class="subject-slide" style=" letter-spacing : 0.0em !important;padding-start: 2.1em !important;max-width: 30vw !important;width: 30vw !important;">{{subject}}</ion-button>
-    </ion-slide>
+<ion-row>
+  <ion-col size="11" >
+    <ion-slides  [options]="slideOpts">
 
-  </ion-slides>
+      <ion-slide *ngFor="let subject of subjects"  (click)="showTopicsFor(subject)">
+        <ion-button color="primary" class="subject-slide" style=" letter-spacing : 0.0em !important;padding-start: 2.1em !important;max-width: 30vw !important;width: 30vw !important;">{{subject}}</ion-button>
+      </ion-slide>
+
+
+
+
+
+
+    </ion-slides>
+
+  </ion-col>
+
+  <ion-col size="1" no-padding>
+    <div class="next_button" (click)="slide('next')">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 44"><path d="M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z"></path></svg>
+
+
+    </div>
+
+  </ion-col>
+
+</ion-row>
+
+
 
 
 

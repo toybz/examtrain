@@ -10,6 +10,8 @@ import { Observable, ReplaySubject } from "rxjs/index";
 import { LocalStorageService } from "../../../services/local-storage/local-storage.service";
 import { app_url } from "../../../services/urls";
 import {AnswerExplanationComponent} from "../answer-explanation/answer-explanation.component";
+import {ShareMonitorService} from "../../../services/app-monitor/share-monitor.service";
+import {first} from "rxjs/operators";
 
 @Component({
     selector: "app-quiz-review",
@@ -31,7 +33,8 @@ export class QuizReviewComponent implements OnInit {
         private modalController: ModalController,
         public actionSheetController: ActionSheetController,
         public memesService: MemesService,
-        public localStorage: LocalStorageService
+        public localStorage: LocalStorageService,
+        public shareService: ShareMonitorService
     ) {}
 
     @ViewChild('videoElement') someInput: ElementRef;
@@ -104,16 +107,16 @@ export class QuizReviewComponent implements OnInit {
         }
 
         this.localStorage.getOtherData().subscribe((other_data: any) => {
-            this.showMemes = other_data.show_memes;
+            this.showMemes.next(other_data.show_memes);
         });
 
         this.$memesUrl = this.memesService.generateMemes(score_in_percent);
 
         this.share_text = encodeURIComponent(
-            `Hi I scored ${this.correct_answers_count} out of ${this.quiz_config.amount} in a test on ExamTrain.NG. Join me to prepare for all exams with past questions and video tutorials for free`
+            `Hi I scored ${this.correct_answers_count} out of ${this.quiz_config.amount} in a test on ExamTrain.NG .Join me to prepare for all exams with past questions and video tutorials for free`
         );
 
-        this.whatsapp_share_url = `https://wa.me/?text=${this.share_text}`;
+        this.whatsapp_share_url = `https://api.whatsapp.com/send?text=${this.share_text}`;
     }
 
     updateMemesSettings() {
@@ -122,7 +125,51 @@ export class QuizReviewComponent implements OnInit {
     }
 
     dismissModal(data: {}) {
-        this.modalController.dismiss(data);
+
+     //show share after first quiz for now
+
+     this.localStorage.getOtherData()
+         .pipe(first())
+         .subscribe((other_data: any)=>{
+
+             console.log("QUIZREVIEW PAGE" , other_data)
+
+         let user_has_shared = other_data.has_shared
+         if(user_has_shared){
+             this.modalController.dismiss(data);
+         }
+         else{
+             let shareModal
+             console.log('dismissed modal called')
+
+
+             this.shareService.showShare().then((modal)=>{
+                 shareModal = modal
+                 console.log(shareModal)
+
+                 shareModal.onDidDismiss().then(res => {
+                     console.log('ShareModalDismissed' , res);
+                     this.modalController.dismiss(data);
+
+
+                     /* if (res.data.action == "reload") {
+
+                      } else if (res.data.action == "new_quiz") {
+                          //   this.router.navigate(["/tabs/quiz/"]);
+                      } else if (res.data.action == "dashboard") {
+                          //    this.router.navigate(["/tabs/dashboard/"]);
+                      }*/
+                 });
+
+             })
+         }
+
+     })
+
+
+
+
+
     }
 
     async showOptions() {

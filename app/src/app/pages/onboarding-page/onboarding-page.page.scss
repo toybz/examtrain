@@ -46,6 +46,23 @@ ion-slide > p {
 
 
 
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev,
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next{
+  background-image: none;
+}
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-prev,
+.swiper-container-rtl .swiper-button-next{
+  fill: #a90808;
+}
+
+
+
+
+
 /*
 
 !*

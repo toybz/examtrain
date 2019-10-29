@@ -191,7 +191,7 @@ export class QuizPagePage implements OnInit {
                    this.loading .dismiss();
 
                   const alert = await this.alertController.create({
-                      message: 'Something went wrong.Please try again',
+                      message: 'Something went wrong.Please check your internet connection and  try again',
                       backdropDismiss: false
                   });
                   await alert.present();

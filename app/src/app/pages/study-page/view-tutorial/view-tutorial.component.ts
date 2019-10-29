@@ -6,6 +6,7 @@ import { StudyService } from "../../../services/study/study.service";
 import { Observable } from "rxjs";
 import { DomSanitizer } from "@angular/platform-browser";
 import { LoadingController } from "@ionic/angular";
+import {SafeUrlPipe} from "../../../pipes/safe-url/safe-url.pipe";
 
 @Component({
   selector: 'app-view-tutorial',
@@ -51,16 +52,16 @@ export class ViewTutorialComponent implements OnInit {
 
   }
 
+
   setSelectedTopic(sub_topic) {
 
-    sub_topic.url =  this.sanitizer.bypassSecurityTrustResourceUrl(sub_topic.url || 'https://www.youtube.com/embed/5TbUxGZtwGI');
+    // sub_topic.url =  this.sanitizer.bypassSecurityTrustResourceUrl(sub_topic.url);
+
     this.selected_sub_topic = sub_topic
+    this.presentLoading()
 
 
-this.presentLoading()
-
-
-    console.log(this.selected_sub_topic)
+ //   console.log('The SubTopic URL' , this.selected_sub_topic)
 
   }
 

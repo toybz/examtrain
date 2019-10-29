@@ -203,7 +203,7 @@ export const Study = {
 
       4 : {
         topic_id: 4 ,
-        topic : "Sets",
+        topic : "Sets Theory",
         logo_path: "",
         description: "This math video tutorial provides a basic introduction into the intersection of sets and union of sets as it relates to venn diagrams.",
         sub_topics: {
@@ -230,8 +230,224 @@ export const Study = {
         }
       } ,
 
+        5 : {
+            topic_id: 4 ,
+            topic : "Simple Interest ",
+            logo_path: "",
+            description: "",
+            sub_topics: {
+                1:  {
+                    sub_topic_id: 1,
+                    sub_topic : 'Simple Interest ',
+                    logo_path: "",
+                    description: "",
+                    url: "https://www.youtube.com/embed/NCYNXkbTTUo"} ,
+
+
+            }
+        } ,
+
+
+
+
+
     }
   },
+
+    Biology: {
+        subject_id: 3,
+        logo_path: "assets/images/biology.jpg",
+        topics: {
+            1: {
+                topic_id: 1,
+                topic : 'Cell structure and function',
+                logo_path: "",
+                description: "In this lesson you are going to learn  all about Cells",
+                sub_topics: {
+
+                    1:  {
+                        sub_topic_id: 1,
+                        sub_topic : 'Cells Structure and function  ',
+                        logo_path: "",
+                        description: "In this lesson you are going to learn  all about Cells",
+                        url: "https://www.youtube.com/embed/8IlzKri08kk"} ,
+
+                }
+            } ,
+
+            2: {
+                topic_id: 1,
+                topic : 'Level of organisation',
+                logo_path: "",
+                description: "This lesson covers the levels of organization of living organisms",
+                sub_topics: {
+                    1:  {
+                        sub_topic_id: 1,
+                        sub_topic : 'Level of organisation',
+                        logo_path: "",
+                        description: "This lesson covers the levels of organization of living organisms",
+                        url: "https://www.youtube.com/embed/mQ26klraKvU"} ,
+                    2:  {
+                        sub_topic_id: 2,
+                        sub_topic : '-- organisms',
+                        logo_path: "",
+                        description: "",
+                        url: "https://www.youtube.com/embed/lnvlMlopu2A"} ,
+                    3:  {
+                        sub_topic_id: 3,
+                        sub_topic : 'Invertebrates',
+                        logo_path: "",
+                        description: "",
+                        url: "https://www.youtube.com/embed/_602scxEUJY"} ,
+                    4:  {
+                        sub_topic_id: 4,
+                        sub_topic : 'Multicellular animals (Vertebrates)',
+                        logo_path: "",
+                        description: "",
+                        url: "https://www.youtube.com/embed/v4Hwtf2NYH4"} ,
+                    5:  {
+                        sub_topic_id: 5,
+                        sub_topic : 'What you need to know about the origin of multicellular life',
+                        logo_path: "",
+                        description: "" ,
+                        url: "https://www.youtube.com/embed/hAWrxKHY_7I"} ,
+                }
+            } ,
+
+
+            3: {
+                topic_id: 3,
+                topic : 'Photosynthesis',
+                logo_path: "",
+                description: "In this lesson you are going to learn  all about Photosynthesis in Plants",
+                sub_topics: {
+
+                    1:  {
+                        sub_topic_id: 1,
+                        sub_topic : 'Photosynthesis ',
+                        logo_path: "",
+                        description: "In this lesson you are going to learn  all about Photosynthesis in Plants",
+                        url: "https://www.youtube.com/embed/1Dn_zdAZN0I"} ,
+
+                }
+            } ,
+
+
+        }
+    } ,
+
+
+    Geography: {
+        subject_id: 4,
+        logo_path: "assets/images/geography.jpg",
+        topics: {
+            1: {
+                topic_id: 1,
+                topic : 'Maps',
+                logo_path: "",
+                description: "In this lesson you are going to learn about Maps and how to read them",
+                sub_topics: {
+                    1:  {
+                        sub_topic_id: 1,
+                        sub_topic : 'Introduction to Maps',
+                        logo_path: "",
+                        description: "In this lesson you are going to learn about Maps and how to read them.",
+                        url: "https://youtube.com/embed/0z9_t8DMk5k"} ,
+                    2:  {
+                        sub_topic_id: 2,
+                        sub_topic : 'Measurement and scale',
+                        logo_path: "",
+                        description: "",
+                        url: "https://youtube.com/embed/ZEWH58yMsAQ"} ,
+                    3:  {
+                        sub_topic_id: 3,
+                        sub_topic : 'Map reading: how to read maps, scale and distance',
+                        logo_path: "",
+                        description: "",
+                        url: "https://www.youtube.com/embed/kZtsWt4QGUs"} ,
+
+                }
+            } ,
+
+
+
+
+
+
+
+        }
+    },
+
+    Physics: {
+        subject_id: 5,
+        logo_path: "assets/images/physics.jpg",
+        topics: {
+            1: {
+                topic_id: 1,
+                topic : 'Measurements and Units',
+                logo_path: "",
+                description: "This video focuses on converting units of measurement with conversion factors. It explains how to convert units of length, time, capacity, volume, area, mass, speed / velocity, and density",
+                sub_topics: {
+                    1:  {
+                        sub_topic_id: 1,
+                        sub_topic : 'Introduction',
+                        logo_path: "",
+                        description: "In this lesson you are going to learn about Maps and how to read them.",
+                        url: "https://youtube.com/embed/jqmIbcId3B0"} ,
+                    2:  {
+                        sub_topic_id: 2,
+                        sub_topic : 'Standard Form',
+                        logo_path: "",
+                        description: "",
+                        url: "https://youtube.com/embed/Sn2xb"} ,
+                    3:  {
+                        sub_topic_id: 3,
+                        sub_topic : 'Scalars and vectors',
+                        logo_path: "",
+                        description: "",
+                        url: "https://www.youtube.com/embed/rcDXQ-5H8mk"} ,
+
+                }
+            } ,
+
+
+            2: {
+                topic_id: 2,
+                topic : 'Motion',
+                logo_path: "",
+                description: "",
+                sub_topics: {
+                    1:  {
+                        sub_topic_id: 1,
+                        sub_topic : 'Motion',
+                        logo_path: "",
+                        description: "",
+                        url: "https://www.youtube.com/embed/8qh--3X6E5w"} ,
+                    2:  {
+                        sub_topic_id: 2,
+                        sub_topic : 'Projectiles',
+                        logo_path: "",
+                        description: "",
+                        url: "https://www.youtube.com/embed/7J_Pi4Xuk7Y"} ,
+
+
+                }
+            } ,
+
+
+
+
+        }
+    },
+
+
+
+}
+
+
+
+
+
 
  /* Biology: {
     subject_id: 1,
@@ -537,23 +753,26 @@ export const Study = {
 
 
 
-};
-
 /*
 const Study_interface = {
  English: {
    subject_id: 1,
    logo_path: "",
    topics: {
-     Verbs: {
+     1: {
        topic_id: 1,
-       logo_path: "",
+      topic : '',
+
+    logo_path: "",
        description: "jkjnb",
        sub_topic: {
+       1 : {
          sub_topic_id: 1,
+          sub_topic : '',
          logo_path: "",
          description: "ddd",
          url: ""
+       }
        }
      }
    }

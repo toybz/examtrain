@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FeedsService} from "../../../services/feeds.service";
 
 @Component({
   selector: 'app-feeds',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedsComponent implements OnInit {
 
-  constructor() { }
+
+
+  feeds
+
+  constructor(private feedService: FeedsService) { }
+
 
   ngOnInit() {
+
+    this.feeds = Object.values(this.feedService.getAllFeeds())
+
   }
 
 }

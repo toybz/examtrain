@@ -17,7 +17,7 @@
 
     <ion-card-content no-margin no-padding style="background-color: black"  >
 
-      <iframe width="" height="200"  [src]="selected_sub_topic.url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%" id="video_frame"></iframe>
+      <iframe width="" height="200"  [src]="selected_sub_topic.url | safeUrl" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%" id="video_frame"></iframe>
 
     </ion-card-content>
   </ion-card>

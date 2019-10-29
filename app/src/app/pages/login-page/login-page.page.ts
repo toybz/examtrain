@@ -87,7 +87,7 @@ export class LoginPagePage implements OnInit {
             async ()=>{
                 loading.dismiss();
                 const alert = await this.alertController.create({
-                    message: 'Login Failed.Please try again'
+                    message: 'Login Failed.Please  check your internet connection and try again'
                 });
                 await alert.present();
 

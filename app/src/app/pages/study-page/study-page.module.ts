@@ -11,6 +11,7 @@ import { CompletedComponent } from './completed/completed.component';
 import { InProgressComponent } from './in-progress/in-progress.component';
 import { SafeUrl } from "@angular/platform-browser";
 import { SafeUrlPipe } from "../../pipes/safe-url/safe-url.pipe";
+import {SharedComponentsModule} from "../../shared-components/shared-components.module";
 
 const routes: Routes = [
 
@@ -33,9 +34,10 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+      SharedComponentsModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [StudyPagePage, ExploreComponent, CompletedComponent, InProgressComponent, SafeUrlPipe] ,
+  declarations: [StudyPagePage, ExploreComponent, CompletedComponent, InProgressComponent] ,
   entryComponents: [StudyPagePage, ExploreComponent, CompletedComponent, InProgressComponent ]
 })
 export class StudyPagePageModule {}

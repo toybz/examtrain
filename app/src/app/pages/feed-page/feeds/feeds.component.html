@@ -13,29 +13,19 @@
 
   <ion-list class=''>
 
-    <ion-card>
-      <ion-card-header >
+    <ion-card *ngFor="let feed of feeds" routerLink="./{{feed.id}}" >
+      <ion-card-header>
 
-        <h3 class="feed-title">  JAMB 2020 Registration</h3>
+        <h3 class="feed-title"> {{feed.title}}</h3>
       </ion-card-header>
 
       <ion-card-content>
-        Registration Fee is Three Thousand Five Hundred (N3, 500) Naira Additional Five Hundred (N500) Naira only, is paid to obtain the reading text Sweet Sixteen by Bolaji Abdullahi and The Last Days at Forcados High School by A. H. Mohammed for DE Candidates
+        {{feed.highlight}} <span style="font-style: italic;color: red">Click To Read More</span>
       </ion-card-content>
 
     </ion-card>
 
-    <ion-card>
-      <ion-card-header >
-      <h3 class="feed-title">JAMB 2020 Exam Date</h3>
-      </ion-card-header>
 
-      <ion-card-content>
-        The 2019 CBT EXAMINATION will commence on
-        Saturday, 10 March and end on Saturday, 17th March, 2020
-      </ion-card-content>
-
-    </ion-card>
 
   </ion-list>
 

@@ -33,10 +33,6 @@ export class LocalStorageService {
         this.pausedQuiz.next({});
         this.localStorage.setItemSubscribe("paused_quiz", {});
 
-
-
-
-
       }
     });
     // @ts-ignore
@@ -46,12 +42,16 @@ export class LocalStorageService {
       } else {
         this.other_data.next({
           first_time: true,
-          show_memes: true
+          show_memes: true,
+            has_shared: false,
+            max_question_count: 5
         });
         // @ts-ignore
         this.localStorage.setItemSubscribe("others", {
           first_time: true,
-          show_memes: true
+          show_memes: true,
+            has_shared: false,
+            max_question_count: 5
         });
       }
     });
@@ -65,10 +65,9 @@ export class LocalStorageService {
               this.user.next({
                   signed_in: false
               });
-              // @ts-ignore
-              this.localStorage.setItemSubscribe("others", {
-                  signed_in: false
-              });
+
+              this.saveOtherData({signed_in: false})
+
           }
       });
 
@@ -103,10 +102,6 @@ export class LocalStorageService {
 
 
      this.http.post(save_quiz , {quiz :param }).subscribe();
-
-
-
-
 
 
     this.localStorage.getItem("completed_quiz").subscribe((quiz: any) => {

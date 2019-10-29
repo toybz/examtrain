@@ -3,6 +3,7 @@ import { LocalStorageService } from "../../services/local-storage/local-storage.
 import { UtilsService } from "../../services/utils/utils.service";
 import { ActivatedRoute, Router } from "@angular/router";
 import { QuizService } from "../../services/quiz/quiz.service";
+import {first} from "rxjs/operators";
 
 @Component({
   selector: "app-quiz-landing",
@@ -13,8 +14,9 @@ export class QuizLandingPage implements OnInit {
   paused_quiz;
   data_loaded = false;
   quiz_journey_data = false;
+    max_question_count = 5
 
-  customActionSheetOptions: any = {
+    customActionSheetOptions: any = {
     header: "Select Category  (Scroll Down For More)"
   };
 
@@ -22,13 +24,20 @@ export class QuizLandingPage implements OnInit {
         header: "2000 - 2013 (Scroll Down For More)"
     };
 
+    questionNumberActionSheetOptions: any = {
+        header: `Scroll Down For More`
+    };
 
   exam_years = ['2000', '2001', '2002', '2003', '2004',  '2005',"2006" ,'2007', '2008', '2009', '2010', '2011', '2012', '2013'];
+
+
+
+
 
   quiz_config = {
     type: "jamb",
     subject: "english",
-    amount: 5,
+    amount: this.max_question_count,
       year: '2015'
   };
 
@@ -49,6 +58,12 @@ export class QuizLandingPage implements OnInit {
 
 
   ngOnInit(){
+
+
+      this.localStorage.getOtherData().subscribe((other_data: any)=>{
+          this.max_question_count = other_data.max_question_count
+      })
+
 
       this.localStorage.getPausedQuiz().subscribe((paused_quiz: any) => {
 
