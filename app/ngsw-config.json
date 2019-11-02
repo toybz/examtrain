@@ -14,21 +14,11 @@
           "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
         ] ,
         "urls": [
-          "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+
         ]
       }
     }
-  /*  {
-      "name": "assets",
-      "installMode": "lazy",
-      "updateMode": "prefetch",
-      "resources": {
-        "files": [
-          "/assets*//**",
-          "*//*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
-        ]
-      }
-    }*/
+
   ],
 
   "dataGroups" : [
