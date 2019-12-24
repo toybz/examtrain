@@ -19,8 +19,10 @@ export class AppComponent {
   public show_add_to_home = false;
 
     is_user_signed_in:any
+    user_details
 
-     appPages = [];
+
+    appPages = [];
 
 user: any
 
@@ -44,7 +46,9 @@ user: any
         this.user.subscribe((user: any) => {
 
             this.is_user_signed_in = user.signed_in
-            console.log(this.is_user_signed_in)
+            this.user_details = user
+
+            console.log(user)
             this.appPages = [
                 {
                     title: 'Home',
@@ -52,16 +56,7 @@ user: any
                     icon: 'home',
                     should_display: true
                 },
-                {
-                    title: 'Share App',
-                    url: '#',
-                    icon: 'share',
-                    should_display: true,
-                    click_handler: () => {
-  this.showShare()
 
-                    }
-                },
                 {
                     title: 'Logout',
                     url: '#',
@@ -86,7 +81,16 @@ user: any
                     icon: 'log-in',
                     should_display: !this.is_user_signed_in
                 },
+                {
+                    title: 'Share App',
+                    url: '#',
+                    icon: 'share',
+                    should_display: true,
+                    click_handler: () => {
+                        this.showShare()
 
+                    }
+                },
 
             ];
         })
