@@ -39,6 +39,9 @@ user: any
     ) {
 
 
+
+
+
         this.initializeApp();
 
         this.user = localStorage.getUser()

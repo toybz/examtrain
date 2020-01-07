@@ -1,0 +1,438 @@
+{
+    "subject": "englishlit",
+    "status": 200,
+    "data": [
+        {
+            "id": 62,
+            "question": "The following line from a poem:  Western wind, when will thou blow? Is an example of: ",
+            "option": {
+                "a": "rhetorical question  ",
+                "b": "caesura  ",
+                "c": "alliteration  ",
+                "d": "nature imagery."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 66,
+            "question": "\"The man dies in him who keeps silent in the face of tyranny.\" This statement can be described as: ",
+            "option": {
+                "a": "Metaphoric ",
+                "b": "Literal ",
+                "c": "Tragic ",
+                "d": "A smile."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 59,
+            "question": "Theme is best defined as:  ",
+            "option": {
+                "a": "the subject \u2013 matter of a novel or play ",
+                "b": "the central idea in a play or novel  ",
+                "c": "the point of view in that novel  ",
+                "d": "the sum-total of all the characters\u2019 experiences"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 68,
+            "question": "One rhyme scheme typical of the English sonnet is ",
+            "option": {
+                "a": "abba abba cde dce ",
+                "b": "abba abba cde cde ",
+                "c": "abab cdcd efef gg ",
+                "d": "abcd babb cde cc."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 64,
+            "question": "When a poet uses mainly soft vowel sounds in a poem, the texture of the poem is ",
+            "option": {
+                "a": "mellifluous ",
+                "b": "harsh ",
+                "c": "assonantal ",
+                "d": "neutral "
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 71,
+            "question": "Farce thrives on ",
+            "option": {
+                "a": "big events ",
+                "b": "promotion ",
+                "c": "absurdity ",
+                "d": "incidents."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 49,
+            "question": "Which of the following statement is most true about poetry? ",
+            "option": {
+                "a": "the meanings of words are more important than their sounds ",
+                "b": "the sounds of words are more important than their meanings ",
+                "c": "the sounds of words are often more important than their meanings ",
+                "d": "sounds and meanings of words are of little consequence"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 63,
+            "question": "Identify the odd one out of these types of imagery  ",
+            "option": {
+                "a": "visual imagery  ",
+                "b": "tactile imagery  ",
+                "c": "synesthesia  ",
+                "d": "literal imagery."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 51,
+            "question": "When the speaker in a poem cannot be identified with poet, that speaker is called: ",
+            "option": {
+                "a": "a persona ",
+                "b": "a dramatic persona ",
+                "c": "a soliloquist",
+                "d": "a ventriloquist."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 67,
+            "question": "The literary technique in which a reader is taken to the past of a current action in known as:",
+            "option": {
+                "a": "rewinding ",
+                "b": "fast forward ",
+                "c": "flashback ",
+                "d": "repetition."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 74,
+            "question": "Literary device that creates a mental picture of   a situation is ",
+            "option": {
+                "a": "imagery ",
+                "b": "symbolism ",
+                "c": "flashback ",
+                "d": "epilogue"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 52,
+            "question": "Which of these definitions best described a lyric? ",
+            "option": {
+                "a": "a short poem",
+                "b": "a short poem in which the poet is speaking",
+                "c": "a poem expressing a personal idea, feeling or mood",
+                "d": "a poem divided into stanza."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 73,
+            "question": "In a narration, the first person is ",
+            "option": {
+                "a": "the author ",
+                "b": "a participant ",
+                "c": "the publisher ",
+                "d": "an observer."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 65,
+            "question": "The sounds in the following lines may be described as an example of: The moan of doves in immemorial elms, and murmuring of innumerable bees ",
+            "option": {
+                "a": "alliteration ",
+                "b": "euphony ",
+                "c": "cacophony ",
+                "d": "a mixture of all the above."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 48,
+            "question": "What figure of speech does the following quotation contain? A life's but a walking shadow (Macbeth)",
+            "option": {
+                "a": "a metaphor ",
+                "b": "an image ",
+                "c": "a synecdoche ",
+                "d": "an allusion"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 70,
+            "question": "In Gbemisola Adeoti's \"Naked Soles\", the expression \"red milk of grief' means ",
+            "option": {
+                "a": "wine ",
+                "b": "sea ",
+                "c": "ink ",
+                "d": "blood."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 55,
+            "question": "Which of these is not true about unity of action in a novel? ",
+            "option": {
+                "a": "action may be unified through a single main character  ",
+                "b": "action may be unified by being set in one place  ",
+                "c": "action may be unified by many characters  ",
+                "d": "action may be unified by using set in one consistent point of view."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 58,
+            "question": "A realistic novel is one in which the characters are:  ",
+            "option": {
+                "a": "real   ",
+                "b": "historical ",
+                "c": "just of above average intelligence  ",
+                "d": "the types that we meet in everyday life."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 53,
+            "question": "An autobiographical novel is: ",
+            "option": {
+                "a": "a novel written about another novelist ",
+                "b": "a true account of a novelist's life by himself ",
+                "c": "a novel in which h the novel 1st draws mainly on materials from his own life ",
+                "d": "a novel using the' I' pronoun."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 54,
+            "question": "Plot in prose fiction is best defined as:  ",
+            "option": {
+                "a": "the cause and effect sequence of events  ",
+                "b": "the brief summary of events  ",
+                "c": "the central event  ",
+                "d": "the subject-matter of a novel."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 56,
+            "question": "Action in a novel is best defined as:  ",
+            "option": {
+                "a": "the summary of the novel\u2019s story  ",
+                "b": "what the characters do or say in the novel  ",
+                "c": "the numerous sub-plots of the novel put together ",
+                "d": "the totality of all the episodes in a novel leading to the conclusion"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 72,
+            "question": "A short witty statement is an ",
+            "option": {
+                "a": "epistle ",
+                "b": "eulogy ",
+                "c": "epigram ",
+                "d": "anecdote."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 60,
+            "question": "What kind of repetition is used in the extract?  ",
+            "option": {
+                "a": "anaphora ",
+                "b": "single word repetition  ",
+                "c": "line repetition  ",
+                "d": "phrase repetition."
+            },
+            "section": "Read the following extract from a poem to answer questions \nAmong rocks, I am the loose one,\nAmong arrows, I am the heart\nAmong daughters, I am the recluse,\nAmong sons, the one who dies young\n",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 61,
+            "question": "A part from emphasis, what other effect does the repetition have?  ",
+            "option": {
+                "a": "makes the poem rhythmical  ",
+                "b": "makes the poem tedious  ",
+                "c": "makes the poem -notonous  ",
+                "d": "makes the poem exhilarating."
+            },
+            "section": "Read the following extract from a poem to answer questions \nAmong rocks, I am the loose one,\nAmong arrows, I am the heart\nAmong daughters, I am the recluse,\nAmong sons, the one who dies young\n",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 69,
+            "question": "The speaker of the above except is a ",
+            "option": {
+                "a": "son of Lord Montague ",
+                "b": " nephew to Lady Capulet ",
+                "c": "kinsman to the Prince ",
+                "d": " servant to Paris."
+            },
+            "section": "\" ... This is a Montague, our foe; A villain, that is hither come in spit. To scorn at out solemnity this night. William Shakespeare: Romeo and Juliet I:V,61-63. ",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 57,
+            "question": "Suspense in a novel means:  ",
+            "option": {
+                "a": "the postponement of the hero\u2019s death till the last possible moment ",
+                "b": "the intense emotions that the author conveys  ",
+                "c": "the inconclusive end of a novel  ",
+                "d": "when we are curious about what happens next in a novel."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 50,
+            "question": "Which of these best define exposition in drama?",
+            "option": {
+                "a": "the author's own general introduction to the play ",
+                "b": "the author's early exposure of his dramatis personae to conflict ",
+                "c": "introduction to the characters and the general problem with which the play deals",
+                "d": "the first performance of the play on stage."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        }
+    ]
+}

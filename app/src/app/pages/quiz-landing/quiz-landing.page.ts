@@ -4,6 +4,7 @@ import { UtilsService } from "../../services/utils/utils.service";
 import { ActivatedRoute, Router } from "@angular/router";
 import { QuizService } from "../../services/quiz/quiz.service";
 import {first} from "rxjs/operators";
+import {LocalQuizService} from "../../services/local-quiz.service";
 
 @Component({
   selector: "app-quiz-landing",
@@ -38,7 +39,7 @@ export class QuizLandingPage implements OnInit {
     type: "jamb",
     subject: "english",
     amount: this.max_question_count,
-      year: '2015'
+      year: '2013'
   };
 
   exam_types = [];
@@ -52,7 +53,8 @@ export class QuizLandingPage implements OnInit {
     private util: UtilsService,
     private router: Router,
     private route: ActivatedRoute,
-    public quizService: QuizService
+    public quizService: QuizService,
+    public  localQuiz: LocalQuizService
   ) {}
 
 
@@ -127,8 +129,18 @@ export class QuizLandingPage implements OnInit {
 
     this.localStorage.deletePausedQuiz();
 
-    this.router.navigate([
+    this.localQuiz.getQuestions(this.quiz_config.type ,
+        this.quiz_config.subject ,
+        this.quiz_config.year,
+        10
+
+    )
+
+
+
+   /* this.router.navigate([
       `/quiz-page/${this.quiz_config.type}/${this.quiz_config.subject}/${this.quiz_config.amount}/${this.quiz_config.year}`
-    ]);
+    ]);*/
+
   }
 }
