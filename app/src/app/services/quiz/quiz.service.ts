@@ -1,29 +1,39 @@
-import { Injectable } from "@angular/core";
+import {Injectable} from "@angular/core";
 import * as url from "../urls";
-import { HttpClient } from "@angular/common/http";
-import {BehaviorSubject, Observable, of} from "rxjs/index";
+import {HttpClient} from "@angular/common/http";
+import {of} from "rxjs/index";
+import {ConfigService} from "../config.service";
+import {map} from "rxjs/operators";
 
 @Injectable({
-  providedIn: "root"
+    providedIn: "root"
 })
 export class QuizService {
-  quiz_question = [];
-  exam_types = [
-      {
-          name: 'utme',
-          title: 'Jamb(UTME)'
+    quiz_question = [];
+    questions_folder = 'assets/questions/'
 
-      },
-      {
-          name: 'wassce',
-          title: 'Waec'
+    exam_types = [
+        {
+            name: 'utme',
+            title: 'Jamb(UTME)',
+            data_path: `${this.questions_folder}utme/`,
 
-      },
-      {
-          name: 'post-utme',
-          title: 'Post Jamb'
 
-      },
+        },
+        {
+            name: 'wassce',
+            title: 'Waec',
+            data_path: `${this.questions_folder}wassce/`,
+
+
+        },
+        {
+            name: 'post-utme',
+            title: 'Post Jamb',
+            data_path: `${this.questions_folder}post-utme/`,
+
+
+        },
   ];
   subjects = [
       {
@@ -89,87 +99,182 @@ export class QuizService {
       {
           name: 'currentaffairs',
           title: 'Current Affairs'
-      } ,
+      },
       {
           name: 'history',
           title: 'History'
-      } ,
+      },
   ];
 
-  /*
- {
-            "category": "General Knowledge",
-            "type": "multiple",
-            "difficulty": "medium",
-            "question": "A doctor with a PhD is a doctor of what?",
-            "correct_answer": "Philosophy",
-            "incorrect_answers": [
-                "Psychology",
-                "Phrenology",
-                "Physical Therapy"
-            ]
-        },
-   */
-  constructor(private http: HttpClient) {}
 
-  instant_start_with_paused_quiz = true;
-
-  fetchQuizQuestions(exam_type, subject, amount, year) {
     /*
-    this.quiz_question = [
-        {
-          'question' : "How Are you",
-            'option' : ['Good' , 'Bad' ],
-            'correct_option' : 'Happy' ,
-            'question_id' : 1
-        } ,
-        {
-            'question' : "How Are you",
-            'option' : ['Good' , 'Bad' ],
-            'correct_option' : 'Happy' ,
-            'question_id' : 1
-        } ,
-        {
-            'question' : "How Are you",
-            'option' : ['Good' , 'Bad' ],
-            'correct_option' : 'Happy' ,
-            'question_id' : 1
-        } ,
-        {
-            'question' : "How Are you",
-            'option' : ['Good' , 'Bad' ],
-            'correct_option' : 'Happy' ,
-            'question_id' : 1
-        } ,
-        {
-            'question' : "How Are you",
-            'option' : ['Good' , 'Bad' ],
-            'correct_option' : 'Happy' ,
-            'question_id' : 1
-        } ,
-        {
-            'question' : "How Are you",
-            'option' : ['Good' , 'Bad' ],
-            'correct_option' : 'Happy' ,
-            'question_id' : 1
-        }
-    ] ;
-*/
-
-    return this.http.get(url.get_question(exam_type, subject, amount, year))
-
-
-  }
-
-  getQuizQuestions() {
-    console.log(this.quiz_question);
-
-    if (this.quiz_question) {
-      return this.quiz_question;
+   {
+              "category": "General Knowledge",
+              "type": "multiple",
+              "difficulty": "medium",
+              "question": "A doctor with a PhD is a doctor of what?",
+              "correct_answer": "Philosophy",
+              "incorrect_answers": [
+                  "Psychology",
+                  "Phrenology",
+                  "Physical Therapy"
+              ]
+          },
+     */
+    constructor(private http: HttpClient, private configService: ConfigService) {
     }
-  }
 
-  getCategories() {
+    instant_start_with_paused_quiz = true;
+
+    fetchQuizQuestions(exam_type, subject, amount, year) {
+        /*
+        this.quiz_question = [
+            {
+              'question' : "How Are you",
+                'option' : ['Good' , 'Bad' ],
+                'correct_option' : 'Happy' ,
+                'question_id' : 1
+            } ,
+            {
+                'question' : "How Are you",
+                'option' : ['Good' , 'Bad' ],
+                'correct_option' : 'Happy' ,
+                'question_id' : 1
+            } ,
+            {
+                'question' : "How Are you",
+                'option' : ['Good' , 'Bad' ],
+                'correct_option' : 'Happy' ,
+                'question_id' : 1
+            } ,
+            {
+                'question' : "How Are you",
+                'option' : ['Good' , 'Bad' ],
+                'correct_option' : 'Happy' ,
+                'question_id' : 1
+            } ,
+            {
+                'question' : "How Are you",
+                'option' : ['Good' , 'Bad' ],
+                'correct_option' : 'Happy' ,
+                'question_id' : 1
+            } ,
+            {
+                'question' : "How Are you",
+                'option' : ['Good' , 'Bad' ],
+                'correct_option' : 'Happy' ,
+                'question_id' : 1
+            }
+        ] ;
+    */
+
+        //  return this.getLocalQuestions(exam_type, subject, year, amount)
+
+        if (this.configService.config.USE_LOCAL_QUESTIONS) {
+
+            return this.getLocalQuestions(exam_type, subject, year, amount)
+        } else {
+            return this.http.get(url.get_question(exam_type, subject, amount, year))
+        }
+
+
+    }
+
+    getLocalQuestions(exam_type: any,
+                      subject: any,
+                      year: any,
+                      questions_no: any) {
+
+        // for testing
+        /*  exam_type = 'utme'
+          subject = 'biology'
+          year = '2003'
+          questions_no = 4;*/
+
+        let file_name = `${exam_type}-${subject}-${year}.json`
+
+
+        let selected_exam: any = this.exam_types.find((e) => {
+            return e.name == exam_type
+        })
+
+        let question_path = `${selected_exam.data_path}${subject}/${file_name}`
+
+        return this.http.get(question_path).pipe(
+            map(
+                (res: any) => {
+                    res.data = this.randomQuestions(res.data, questions_no)
+                    return res
+                }
+            )
+        )
+
+
+        /*  fetch(question_path)
+              .then(response => {
+                  if (!response.ok) {
+                      throw new Error("HTTP error " + response.status);
+                  }
+                  return response.json();
+              })
+              .then(json => {
+                  console.log('Real response is ' , json.data);
+                let randoms = {
+                    data:    this.randomQuestions(json.data , questions_no)
+                }
+
+            console.log('Random response is ' , randoms);
+
+                  return  randoms
+
+
+              })
+              .catch(function () {
+                  //  this.dataError = true;
+              })*/
+
+
+    }
+
+    randomQuestions(questions, count: number) {
+
+
+        let random_data = []
+
+        for (let i = 1; i <= count; i++) {
+            let randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+
+            //check if the question id exist and dont use if it does
+
+
+            let exist = random_data.find((q) => {
+                if (q.id == randomQuestion.id) {
+                    console.info('Same Id found', q.id)
+                    i = i - 1;
+                    return true
+
+                }
+            })
+
+            if (exist) continue
+            random_data.push(randomQuestion)
+        }
+
+        return random_data
+
+
+    }
+
+
+    getQuizQuestions() {
+        console.log(this.quiz_question);
+
+        if (this.quiz_question) {
+            return this.quiz_question;
+        }
+    }
+
+    getCategories() {
     return this.http.get(url.get_categories);
   }
 

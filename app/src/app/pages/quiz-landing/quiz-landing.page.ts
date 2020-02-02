@@ -1,20 +1,18 @@
-import { Component, OnInit } from "@angular/core";
-import { LocalStorageService } from "../../services/local-storage/local-storage.service";
-import { UtilsService } from "../../services/utils/utils.service";
-import { ActivatedRoute, Router } from "@angular/router";
-import { QuizService } from "../../services/quiz/quiz.service";
-import {first} from "rxjs/operators";
-import {LocalQuizService} from "../../services/local-quiz.service";
+import {Component, OnInit} from "@angular/core";
+import {LocalStorageService} from "../../services/local-storage/local-storage.service";
+import {UtilsService} from "../../services/utils/utils.service";
+import {ActivatedRoute, Router} from "@angular/router";
+import {QuizService} from "../../services/quiz/quiz.service";
 
 @Component({
-  selector: "app-quiz-landing",
-  templateUrl: "./quiz-landing.page.html",
-  styleUrls: ["./quiz-landing.page.scss"]
+    selector: "app-quiz-landing",
+    templateUrl: "./quiz-landing.page.html",
+    styleUrls: ["./quiz-landing.page.scss"]
 })
 export class QuizLandingPage implements OnInit {
-  paused_quiz;
-  data_loaded = false;
-  quiz_journey_data = false;
+    paused_quiz;
+    data_loaded = false;
+    quiz_journey_data = false;
     max_question_count = 5
 
     customActionSheetOptions: any = {
@@ -49,18 +47,16 @@ export class QuizLandingPage implements OnInit {
     getSubjectDisplayName = this.quizService.getSubjectDisplayName*/
 
   constructor(
-    private localStorage: LocalStorageService,
-    private util: UtilsService,
-    private router: Router,
-    private route: ActivatedRoute,
-    public quizService: QuizService,
-    public  localQuiz: LocalQuizService
+      private localStorage: LocalStorageService,
+      private util: UtilsService,
+      private router: Router,
+      private route: ActivatedRoute,
+      public quizService: QuizService
   ) {}
 
 
 
   ngOnInit(){
-
 
       this.localStorage.getOtherData().subscribe((other_data: any)=>{
           this.max_question_count = other_data.max_question_count
@@ -129,18 +125,9 @@ export class QuizLandingPage implements OnInit {
 
     this.localStorage.deletePausedQuiz();
 
-    this.localQuiz.getQuestions(this.quiz_config.type ,
-        this.quiz_config.subject ,
-        this.quiz_config.year,
-        10
-
-    )
-
-
-
-   /* this.router.navigate([
-      `/quiz-page/${this.quiz_config.type}/${this.quiz_config.subject}/${this.quiz_config.amount}/${this.quiz_config.year}`
-    ]);*/
+      this.router.navigate([
+          `/quiz-page/${this.quiz_config.type}/${this.quiz_config.subject}/${this.quiz_config.amount}/${this.quiz_config.year}`
+      ]);
 
   }
 }

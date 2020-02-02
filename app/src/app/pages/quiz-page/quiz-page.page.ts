@@ -1,30 +1,25 @@
-import { Component, OnInit } from "@angular/core";
-import { QuizService } from "../../services/quiz/quiz.service";
-import { ActivatedRoute, Router } from "@angular/router";
-import { Observable } from "rxjs";
-import { switchMap } from "rxjs/operators";
+import {Component, OnInit} from "@angular/core";
+import {QuizService} from "../../services/quiz/quiz.service";
+import {ActivatedRoute, Router} from "@angular/router";
+import {Observable} from "rxjs";
+import {switchMap} from "rxjs/operators";
 
-import {
-    AlertController,
-    LoadingController,
-    ModalController,
-    PopoverController
-} from "@ionic/angular";
-import { QuizReviewComponent } from "./quiz-review/quiz-review.component";
-import { LocalStorageService } from "../../services/local-storage/local-storage.service";
-import { PausedComponent } from "./paused/paused.component";
-import { UtilsService } from "../../services/utils/utils.service";
-import { MemesService } from "./memes.service";
+import {AlertController, LoadingController, ModalController, PopoverController} from "@ionic/angular";
+import {QuizReviewComponent} from "./quiz-review/quiz-review.component";
+import {LocalStorageService} from "../../services/local-storage/local-storage.service";
+import {PausedComponent} from "./paused/paused.component";
+import {UtilsService} from "../../services/utils/utils.service";
+import {MemesService} from "./memes.service";
 
 @Component({
-  selector: "app-quiz-page",
-  templateUrl: "./quiz-page.page.html",
-  styleUrls: ["./quiz-page.page.scss"]
+    selector: "app-quiz-page",
+    templateUrl: "./quiz-page.page.html",
+    styleUrls: ["./quiz-page.page.scss"]
 })
 export class QuizPagePage implements OnInit {
-  current_page;
-  quiz_config;
-  questions$: Observable<any>;
+    current_page;
+    quiz_config;
+    questions$: Observable<any>;
   questions: any;
   navigationSubscription;
   countdown: number;
@@ -126,8 +121,6 @@ export class QuizPagePage implements OnInit {
         }
 
 
-
-
         if (this.start_with_existing_data) {
             dismiss()
         }
@@ -158,8 +151,8 @@ export class QuizPagePage implements OnInit {
 
           this.questions$.subscribe(
               response => {
-              this.questions = response.data;
-            console.log( this.questions );
+                  this.questions = response.data;
+                  console.log('Service return questions', this.questions);
 
             /*  data_example = {answer: "c"
                   examtype: "utme"
