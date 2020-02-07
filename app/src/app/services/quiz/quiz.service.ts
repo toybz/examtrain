@@ -10,7 +10,115 @@ import {map} from "rxjs/operators";
 })
 export class QuizService {
     quiz_question = [];
-    questions_folder = 'assets/questions/'
+    questions_folder = 'assets/questions/';
+
+    past_questions = {
+        utme: {
+            name: 'utme',
+            title: 'Jamb(UTME)',
+            data_path: `${this.questions_folder}utme/`,
+
+            subjects: {
+                english: {
+                    name: 'english',
+                    title: 'English',
+                    questions: {
+                        2001: {
+                            year: '2001',
+                            data_path: `${this.questions_folder}utme/english/utme-english-2001-empty.json`,
+
+                        }
+
+
+                    }
+                },
+                mathematics:
+                    {
+                        name: 'mathematics',
+                        title: 'Mathematics'
+                    }, commerce:
+                    {
+                        name: 'commerce',
+                        title: 'Commerce'
+                    }, accounting:
+                    {
+                        name: 'accounting',
+                        title: 'Accounting'
+                    }, biology:
+                    {
+                        name: 'biology',
+                        title: 'Biology'
+                    }, physics:
+                    {
+                        name: 'physics',
+                        title: 'Physics'
+                    }, chemistry:
+                    {
+                        name: 'chemistry',
+                        title: 'Chemistry'
+                    }, englishlit:
+                    {
+                        name: 'englishlit',
+                        title: 'English Literature'
+                    }, government:
+                    {
+                        name: 'government',
+                        title: 'Government'
+                    }, crk:
+                    {
+                        name: 'crk',
+                        title: 'CRK'
+                    }, geography:
+                    {
+                        name: 'geography',
+                        title: 'Geography'
+                    }, economics:
+                    {
+                        name: 'economics',
+                        title: 'Economics'
+                    }, irk:
+                    {
+                        name: 'irk',
+                        title: 'IRK'
+                    }, civiledu:
+                    {
+                        name: 'civiledu',
+                        title: 'Civil Education'
+                    }, insurance:
+                    {
+                        name: 'insurance',
+                        title: 'Insurance'
+                    }, currentaffairs:
+                    {
+                        name: 'currentaffairs',
+                        title: 'Current Affairs'
+                    }, history:
+                    {
+                        name: 'history',
+                        title: 'History'
+                    },
+
+                /* maths: {
+                     name: ' maths',
+                     title: 'Mathematics',
+                     questions: {
+                         2000: {
+                             year: '2000',
+                             path: '',
+
+                         }
+
+
+                     }
+
+
+                 }*/
+
+
+            }
+        }
+    }
+
 
     exam_types = [
         {
@@ -34,81 +142,83 @@ export class QuizService {
 
 
         },
-  ];
-  subjects = [
-      {
-          name: 'english',
-          title: 'English'
-      } ,
-      {
-          name: 'mathematics',
-          title: 'Mathematics'
-      } ,
-      {
-          name: 'commerce',
-          title: 'Commerce'
-      } ,
-      {
-          name: 'accounting',
-          title: 'Accounting'
-      } ,
-      {
-          name: 'biology',
-          title: 'Biology'
-      } ,
-      {
-          name: 'physics',
-          title: 'Physics'
-      } ,
-      {
-          name: 'chemistry',
-          title: 'Chemistry'
-      } ,
-      {
-          name: 'englishlit',
-          title: 'English Literature'
-      } ,
-      {
-          name: 'government',
-          title: 'Government'
-      } ,
-      {
-          name: 'crk',
-          title: 'CRK'
-      } ,
-      {
-          name: 'geography',
-          title: 'Geography'
-      } ,
-      {
-          name: 'economics',
-          title: 'Economics'
-      } ,
-      {
-          name: 'irk',
-          title: 'IRK'
-      } ,
-      {
-          name: 'civiledu',
-          title: 'Civil Education'
-      } ,
-      {
-          name: 'insurance',
-          title: 'Insurance'
-      } ,
-      {
-          name: 'currentaffairs',
-          title: 'Current Affairs'
-      },
-      {
-          name: 'history',
-          title: 'History'
-      },
-  ];
+    ];
+    subjects =
+
+        [
+            {
+                name: 'english',
+                title: 'English'
+            },
+            {
+                name: 'mathematics',
+                title: 'Mathematics'
+            },
+            {
+                name: 'commerce',
+                title: 'Commerce'
+            },
+            {
+                name: 'accounting',
+                title: 'Accounting'
+            },
+            {
+                name: 'biology',
+                title: 'Biology'
+            },
+            {
+                name: 'physics',
+                title: 'Physics'
+            },
+            {
+                name: 'chemistry',
+                title: 'Chemistry'
+            },
+            {
+                name: 'englishlit',
+                title: 'English Literature'
+            },
+            {
+                name: 'government',
+                title: 'Government'
+            },
+            {
+                name: 'crk',
+                title: 'CRK'
+            },
+            {
+                name: 'geography',
+                title: 'Geography'
+            },
+            {
+                name: 'economics',
+                title: 'Economics'
+            },
+            {
+                name: 'irk',
+                title: 'IRK'
+            },
+            {
+                name: 'civiledu',
+                title: 'Civil Education'
+            },
+            {
+                name: 'insurance',
+                title: 'Insurance'
+            },
+            {
+                name: 'currentaffairs',
+                title: 'Current Affairs'
+            },
+            {
+                name: 'history',
+                title: 'History'
+            },
+        ];
 
 
     /*
-   {
+{
               "category": "General Knowledge",
               "type": "multiple",
               "difficulty": "medium",
@@ -185,25 +295,26 @@ export class QuizService {
                       year: any,
                       questions_no: any) {
 
+
         // for testing
         /*  exam_type = 'utme'
           subject = 'biology'
           year = '2003'
           questions_no = 4;*/
 
-        let file_name = `${exam_type}-${subject}-${year}.json`
+        let file_name = `${exam_type}-${subject}-${year}.json`;
 
 
         let selected_exam: any = this.exam_types.find((e) => {
             return e.name == exam_type
-        })
+        });
 
-        let question_path = `${selected_exam.data_path}${subject}/${file_name}`
+        let question_path = `${selected_exam.data_path}${subject}/${file_name}`;
 
         return this.http.get(question_path).pipe(
             map(
                 (res: any) => {
-                    res.data = this.randomQuestions(res.data, questions_no)
+                    res.data = this.randomQuestions(res.data, questions_no);
                     return res
                 }
             )
@@ -239,7 +350,7 @@ export class QuizService {
     randomQuestions(questions, count: number) {
 
 
-        let random_data = []
+        let random_data = [];
 
         for (let i = 1; i <= count; i++) {
             let randomQuestion = questions[Math.floor(Math.random() * questions.length)];
@@ -249,14 +360,14 @@ export class QuizService {
 
             let exist = random_data.find((q) => {
                 if (q.id == randomQuestion.id) {
-                    console.info('Same Id found', q.id)
+                    console.info('Same Id found', q.id);
                     i = i - 1;
                     return true
 
                 }
-            })
+            });
 
-            if (exist) continue
+            if (exist) continue;
             random_data.push(randomQuestion)
         }
 
@@ -276,10 +387,10 @@ export class QuizService {
 
     getCategories() {
     return this.http.get(url.get_categories);
-  }
+    }
 
     getExamTypes() {
-       return this.exam_types
+        return this.exam_types
     }
 
     getSubjects() {
@@ -287,23 +398,21 @@ export class QuizService {
     return this.subjects
 
 
-
-
     }
-    getQuizConfig(){
-     let exam_types = this.getExamTypes()
+    getQuizConfig() {
+        let exam_types = this.getExamTypes()
         let subjects = this.getSubjects()
 
-        return  of({
+        return of({
             exam_types,
             subjects
         })
     }
 
-    getExamTypeDisplayName(exam){
+    getExamTypeDisplayName(exam) {
         let exam_title
-        this.exam_types.forEach((item)=>{
-            if(item.name == exam){
+        this.exam_types.forEach((item) => {
+            if (item.name == exam) {
                 exam_title = item.title
             }
 
@@ -311,10 +420,10 @@ export class QuizService {
         return exam_title
     }
 
-    getSubjectDisplayName(subject){
+    getSubjectDisplayName(subject) {
         let subject_title
-        this.subjects.forEach((item)=>{
-            if(item.name == subject){
+        this.subjects.forEach((item) => {
+            if (item.name == subject) {
                 subject_title = item.title
             }
 

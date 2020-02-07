@@ -1,10 +1,15 @@
 import {Component, OnInit} from "@angular/core";
 import {QuizService} from "../../services/quiz/quiz.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {Observable} from "rxjs";
+import {Observable, Subject} from "rxjs";
 import {switchMap} from "rxjs/operators";
 
-import {AlertController, LoadingController, ModalController, PopoverController} from "@ionic/angular";
+import {
+    AlertController,
+    LoadingController,
+    ModalController,
+    PopoverController
+} from "@ionic/angular";
 import {QuizReviewComponent} from "./quiz-review/quiz-review.component";
 import {LocalStorageService} from "../../services/local-storage/local-storage.service";
 import {PausedComponent} from "./paused/paused.component";
@@ -19,16 +24,16 @@ import {MemesService} from "./memes.service";
 export class QuizPagePage implements OnInit {
     current_page;
     quiz_config;
-    questions$: Observable<any>;
-  questions: any;
-  navigationSubscription;
-  countdown: number;
-  // source = interval(1000);
-  counter;
-  quiz_time;
-  progress_color;
-  page_ready = false;
-  paused = false;
+    questions$: Subject<any> | Observable<any>;
+    questions: any;
+    navigationSubscription;
+    countdown: number;
+    // source = interval(1000);
+    counter;
+    quiz_time;
+    progress_color;
+    page_ready = false;
+    paused = false;
 
   start_with_existing_data;
   existing_data;
@@ -37,29 +42,41 @@ export class QuizPagePage implements OnInit {
   //initialize all in init
 
   constructor(
-    private quizService: QuizService,
-    private router: Router,
-    private route: ActivatedRoute,
-    private modalController: ModalController,
-    public loadingController: LoadingController,
-    private localStorage: LocalStorageService,
-    private util: UtilsService,
-    public popoverController: PopoverController,
-    public memesService: MemesService,
-    private alertController: AlertController
-  ) {}
-
-  ngOnInit() {
-    this.initialise();
+      private quizService: QuizService,
+      private router: Router,
+      private route: ActivatedRoute,
+      private modalController: ModalController,
+      public loadingController: LoadingController,
+      private localStorage: LocalStorageService,
+      private util: UtilsService,
+      public popoverController: PopoverController,
+      public memesService: MemesService,
+      private alertController: AlertController
+  ) {
   }
 
-  initialise() {
-    console.log("ngIni Called");
+    ngOnInit() {
+        this.initialise();
+    }
 
-    this.start_with_existing_data = false;
-    this.existing_data = {};
+    dismissTest
 
-    this.showPausedComponet = false;
+
+    //  local quix logic
+
+    exams = {}
+
+
+    // demo quiz logic ends here
+
+
+    initialise() {
+        console.log("ngIni Called");
+
+        this.start_with_existing_data = false;
+        this.existing_data = {};
+
+        this.showPausedComponet = false;
 
 
       this.showLoadingBar().then(data => {
@@ -120,91 +137,122 @@ export class QuizPagePage implements OnInit {
             });
         }
 
+        this.dismissTest = dismiss
 
         if (this.start_with_existing_data) {
             dismiss()
+        } else {
+            this.pullQuestions()
+
         }
-
-        else{
-
-     this.questions$ = this.route.paramMap.pipe(
-            switchMap((params: any) => {
-              this.quiz_config.type = params.get("exam_type");
-              this.quiz_config.subject = params.get("subject");
-              this.quiz_config.amount = parseInt(params.get("amount"));
-                this.quiz_config.year = parseInt(params.get("year"));
-
-
-              this.quiz_time = this.quiz_config.amount * 10;
-                this.countdown = this.quiz_config.amount * 10;
-
-
-
-                return this.quizService.fetchQuizQuestions(
-                this.quiz_config.type,
-                this.quiz_config.subject,
-                this.quiz_config.amount,
-                  this.quiz_config.year,
-              );
-            })
-          );
-
-          this.questions$.subscribe(
-              response => {
-                  this.questions = response.data;
-                  console.log('Service return questions', this.questions);
-
-            /*  data_example = {answer: "c"
-                  examtype: "utme"
-                  examyear: "2002"
-                  id: 45
-                  image: ""
-                  option: {a: "4 moles of chlorine", b: "3 moles of ozone", c: "1 mole of butane", d: "7 moles of argon"}
-                  question: "Which of the following gases contains the least number of atoms at s.t.p"
-                  section: ""
-                  solution: ""}*/
-
-            this.questions.map(question => {
-
-            let  options = Object.values(question.option) ;
-          question.correct_answer = question.option[question.answer]
-
-                question.question = question.section ? `(${  question.section[0].toUpperCase() + question.section.substring(1)    })  <br/>  ${question.question}` : question.question
-
-
-           question.type = '' , question.category = '' , question.difficulty = '';
-
-
-              question.options = this.reArrangeOptions(options);
-            });
-
-            dismiss()
-          } ,
-              async ()=>{
-                   this.loading .dismiss();
-
-                  const alert = await this.alertController.create({
-                      message: 'Something went wrong.Please check your internet connection and  try again',
-                      backdropDismiss: false
-                  });
-                  await alert.present();
-
-                  setTimeout( ()=> {
-                      alert.dismiss()
-this.router.navigate(['tabs/quiz'])
-
-                  } , 2000)
-              });
-        }
-
-
-
-
-      });
 
 
     });
-  }
+
+
+      });
+    }
+
+
+    pullFail = 0
+    alert
+    maxYear = 2013
+
+    pullQuestions() {
+        this.questions$ = null
+        this.questions$ = this.route.paramMap.pipe(
+            switchMap((params: any) => {
+                this.quiz_config.type = params.get("exam_type");
+                this.quiz_config.subject = params.get("subject");
+                this.quiz_config.amount = parseInt(params.get("amount"));
+                this.quiz_config.year = parseInt(params.get("year"));
+
+
+                this.quiz_time = this.quiz_config.amount * 10;
+                this.countdown = this.quiz_config.amount * 10;
+
+                this.quiz_config.year = parseInt(this.quiz_config.year) + this.pullFail
+
+                return this.quizService.fetchQuizQuestions(
+                    this.quiz_config.type,
+                    this.quiz_config.subject,
+                    this.quiz_config.amount,
+                    this.quiz_config.year,
+                );
+
+            })
+        );
+
+        this.questions$.subscribe(
+            response => {
+                this.questions = response.data;
+                console.log('Service return questions', this.questions);
+
+                /*  data_example = {answer: "c"
+                      examtype: "utme"
+                      examyear: "2002"
+                      id: 45
+                      image: ""
+                      option: {a: "4 moles of chlorine", b: "3 moles of ozone", c: "1 mole of butane", d: "7 moles of argon"}
+                      question: "Which of the following gases contains the least number of atoms at s.t.p"
+                      section: ""
+                      solution: ""}*/
+
+                this.questions.map(question => {
+
+                    let options = Object.values(question.option);
+                    question.correct_answer = question.option[question.answer]
+
+                    question.question = question.section ? `(${question.section[0].toUpperCase() + question.section.substring(1)})  <br/>  ${question.question}` : question.question
+
+
+                    question.type = '' , question.category = '' , question.difficulty = '';
+
+
+                    question.options = this.reArrangeOptions(options);
+                });
+
+                this.loading.dismiss();
+                this.alert.dismiss()
+
+            },
+            async () => {
+
+                //fetch from aavilable queation files
+
+
+                let error_message = 'Quiz File For ' + this.quiz_config.year + 'is Unavailable. Now getting Quiz File  for ' + this.quiz_config.year
+
+                console.error(error_message)
+
+
+                if (this.quiz_config.year >= 2014) return;
+
+                this.pullFail = this.pullFail + 1;
+
+                //  this.pullQuestions()
+
+                this.loading.dismiss();
+
+                this.alert = await this.alertController.create({
+                    message: 'Something went wrong.Please check your internet connection and  try again',
+                    backdropDismiss: false
+                });
+                await this.alert.present();
+
+                setTimeout(() => {
+                    this.alert.dismiss()
+                    //  this.router.navigate(['tabs/quiz'])
+
+                }, 2000)
+            });
+
+    }
+
+
+
+
+
 
   loading
   async showLoadingBar() {
