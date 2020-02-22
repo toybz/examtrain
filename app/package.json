@@ -5,7 +5,7 @@
   "homepage": "http://ionicframework.com/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host 0.0.0.0   --port 9300 --disable-host-check --open",
+    "start": "ng serve --host 0.0.0.0   --port 9330 --disable-host-check --open",
     "build": "ng build --prod",
     "local_build": "ng build --prod",
     "local_serve": "http-server -p 9900 -c-1  docs/",

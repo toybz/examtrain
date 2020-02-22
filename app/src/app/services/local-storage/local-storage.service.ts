@@ -4,7 +4,8 @@ import {BehaviorSubject, ReplaySubject} from "rxjs/index";
 import {log} from "util";
 import {map} from "rxjs/operators";
 import {HttpClient} from "@angular/common/http";
-import {save_quiz}  from "../urls";
+import {save_quiz} from "../urls";
+import {ConfigService} from "../config.service";
 
 @Injectable({
   providedIn: "root"
@@ -16,7 +17,7 @@ export class LocalStorageService {
   user = new  BehaviorSubject({})
 
 
-  constructor(private localStorage: LocalStorage, private http: HttpClient) {
+  constructor(private localStorage: LocalStorage, private http: HttpClient, private configService: ConfigService) {
     this.localStorage.getItem("completed_quiz").subscribe((quiz: any) => {
       if (quiz) {
         this.completedQuiz.next(quiz);
@@ -44,14 +45,14 @@ export class LocalStorageService {
           first_time: true,
           show_memes: true,
             has_shared: false,
-            max_question_count: 5
+          max_question_count: this.configService.DEFAULT_MAX_QUESTION
         });
         // @ts-ignore
         this.localStorage.setItemSubscribe("others", {
           first_time: true,
           show_memes: true,
             has_shared: false,
-            max_question_count: 5
+          max_question_count: this.configService.DEFAULT_MAX_QUESTION
         });
       }
     });

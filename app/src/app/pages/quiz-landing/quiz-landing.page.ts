@@ -3,6 +3,9 @@ import {LocalStorageService} from "../../services/local-storage/local-storage.se
 import {UtilsService} from "../../services/utils/utils.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {QuizService} from "../../services/quiz/quiz.service";
+import {first} from "rxjs/operators";
+import {LocalQuizService} from "../../services/local-quiz.service";
+import {ConfigService} from "../../services/config.service";
 
 @Component({
     selector: "app-quiz-landing",
@@ -13,11 +16,12 @@ export class QuizLandingPage implements OnInit {
     paused_quiz;
     data_loaded = false;
     quiz_journey_data = false;
-    max_question_count = 5
+
+    max_question_count = this.configService.DEFAULT_MAX_QUESTION
 
     customActionSheetOptions: any = {
-    header: "Select Category  (Scroll Down For More)"
-  };
+        header: "Select Category  (Scroll Down For More)"
+    };
 
     yearActionSheetOptions: any = {
         header: "2000 - 2013 (Scroll Down For More)"
@@ -34,9 +38,9 @@ export class QuizLandingPage implements OnInit {
 
 
   quiz_config = {
-    type: "jamb",
-    subject: "english",
-    amount: this.max_question_count,
+      type: "utme",
+      subject: "english",
+      amount: this.max_question_count,
       year: '2013'
   };
 
@@ -51,12 +55,14 @@ export class QuizLandingPage implements OnInit {
       private util: UtilsService,
       private router: Router,
       private route: ActivatedRoute,
-      public quizService: QuizService
+      public quizService: QuizService,
+      private configService: ConfigService
   ) {}
 
 
 
   ngOnInit(){
+
 
       this.localStorage.getOtherData().subscribe((other_data: any)=>{
           this.max_question_count = other_data.max_question_count

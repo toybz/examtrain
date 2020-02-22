@@ -16,7 +16,8 @@ import {ShareMonitorService} from "./services/app-monitor/share-monitor.service"
   templateUrl: "app.component.html"
 })
 export class AppComponent {
-  public show_add_to_home = false;
+
+    public show_add_to_home = false;
 
     is_user_signed_in:any
     user_details
