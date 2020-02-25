@@ -6,17 +6,21 @@ import {Injectable} from '@angular/core';
 export class ConfigService {
 
   public config = {
-    DEFAULT_MAX_QUESTION: 10,
-    SUBSCRIBE_USER_MAX_QUESTION: 50,
+    DEFAULT_MAX_QUESTION: 5,
+    SUBSCRIBE_USER_MAX_QUESTION: 60,
     USE_LOCAL_QUESTIONS: true
-
   }
 
-  DEFAULT_MAX_QUESTION = 10;
-  SUBSCRIBE_USER_MAX_QUESTION = 50;
+  DEFAULT_MAX_QUESTION = 5;
+  SUBSCRIBE_USER_MAX_QUESTION = 60;
   USE_LOCAL_QUESTIONS = true;
 
 
   constructor() {
+
   }
+
+
+
+
 }

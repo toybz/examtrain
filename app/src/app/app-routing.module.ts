@@ -16,7 +16,12 @@ const routes: Routes = [
   },
 
 
-    {
+  {
+    path: "subscribe",
+    loadChildren:
+        "./pages/payment/payment.module#PaymentPageModule"
+  },
+  {
         path: "quiz-page/:exam_type/:subject/:amount",
         loadChildren: "./pages/quiz-page/quiz-page.module#QuizPagePageModule",
         runGuardsAndResolvers: "always"
@@ -40,7 +45,8 @@ const routes: Routes = [
   },
 
 
-   { path: '**', redirectTo: '' }
+   { path: '**', redirectTo: '' },
+  { path: 'payment', loadChildren: './pages/payment/payment.module#PaymentPageModule' }
 ];
 @NgModule({
   imports: [

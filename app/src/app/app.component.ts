@@ -85,6 +85,18 @@ user: any
                     icon: 'log-in',
                     should_display: !this.is_user_signed_in
                 },
+
+
+                {
+                    title: 'Subscribe',
+                    url: '/subscribe',
+                    icon: 'log-in',
+                    should_display: true
+                },
+
+
+
+
                 {
                     title: 'Share App',
                     url: '#',

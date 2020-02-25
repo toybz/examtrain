@@ -6,6 +6,7 @@ import {QuizService} from "../../services/quiz/quiz.service";
 import {first} from "rxjs/operators";
 import {LocalQuizService} from "../../services/local-quiz.service";
 import {ConfigService} from "../../services/config.service";
+import {UserService} from "../../services/user/user.service";
 
 @Component({
     selector: "app-quiz-landing",
@@ -28,16 +29,13 @@ export class QuizLandingPage implements OnInit {
     };
 
     questionNumberActionSheetOptions: any = {
-        header: `Scroll Down For More`
+        header: `Scroll Down For More (Subscribe To Increase To ${this.configService.SUBSCRIBE_USER_MAX_QUESTION})`
     };
 
   exam_years = ['2000', '2001', '2002', '2003', '2004',  '2005',"2006" ,'2007', '2008', '2009', '2010', '2011', '2012', '2013'];
 
 
-
-
-
-  quiz_config = {
+    quiz_config = {
       type: "utme",
       subject: "english",
       amount: this.max_question_count,
@@ -56,13 +54,31 @@ export class QuizLandingPage implements OnInit {
       private router: Router,
       private route: ActivatedRoute,
       public quizService: QuizService,
-      private configService: ConfigService
+      public configService: ConfigService
   ) {}
 
-
+user
+isSignedIn
+    isSubscribedUser = false
 
   ngOnInit(){
 
+      const storedUser = this.localStorage.getUser()
+      storedUser.subscribe((user: any) => {
+
+          this.user = user
+          this.isSignedIn = user.signed_in
+      this.isSubscribedUser = user.subscription && user.subscription.status || false
+          console.log(this.user)
+          if(this.isSubscribedUser){
+
+              this.max_question_count = this.configService.SUBSCRIBE_USER_MAX_QUESTION
+
+              this.questionNumberActionSheetOptions = {
+                  header: `Scroll Down For More`
+              };
+          }
+      } )
 
       this.localStorage.getOtherData().subscribe((other_data: any)=>{
           this.max_question_count = other_data.max_question_count

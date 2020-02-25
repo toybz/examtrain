@@ -15,6 +15,7 @@ import { environment } from "../environments/environment";
 import {SharedComponentsModule} from "./shared-components/shared-components.module";
 import { SafeUrlPipe } from './pipes/safe-url/safe-url.pipe';
 import {AuthTokenInterceptorService} from "./auth-token-interceptor.service";
+import { Angular4PaystackModule } from 'angular4-paystack';
 
 @NgModule({
   declarations: [AppComponent],

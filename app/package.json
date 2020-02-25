@@ -36,6 +36,7 @@
     "@ngx-pwa/local-storage": "^7.4.2",
     "@ngx-pwa/offline": "^6.2.0",
     "angular-svg-round-progressbar": "^2.0.0",
+    "angular4-paystack": "^3.0.0",
     "chart.js": "^2.8.0",
     "core-js": "^2.6.9",
     "ng2-charts": "^1.6.0",

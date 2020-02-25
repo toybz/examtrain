@@ -12,111 +12,75 @@ export class QuizService {
     quiz_question = [];
     questions_folder = 'assets/questions/';
 
-    past_questions = {
+    changed_year
+
+    available_data = {
         utme: {
-            name: 'utme',
-            title: 'Jamb(UTME)',
-            data_path: `${this.questions_folder}utme/`,
+            accounting:  [2004 , 2007 ,  2009,  ] ,
+            biology: [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012   ] ,
+            chemistry: [2001, 2002, 2003, 2004, 2005, 2006, 2010 ] ,
+           civiledu: [],
+            commerce: [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013 ],
+            currentaffairs: [],
+            crk: [2009, 2010, 2011, 2013],
+            economics: [2009, 2010],
+            english: [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010  ],
+            englishlit:[2008, 2009, 2010] ,
+            geography: [] ,
+            government: [2010, 2012, 2013] ,
+            history: [],
+            insurance: [],
+            irk: [],
+            mathematics: [] ,
+            physics: [] ,
 
-            subjects: {
-                english: {
-                    name: 'english',
-                    title: 'English',
-                    questions: {
-                        2001: {
-                            year: '2001',
-                            data_path: `${this.questions_folder}utme/english/utme-english-2001-empty.json`,
+        } ,
+        'post-utme' : {
+            accounting:  [2010 , 2011 ,  2012, 2013  ] ,
+            biology: [ ] ,
+            chemistry: [] ,
+            civiledu: [],
+            commerce: [],
+            currentaffairs: [],
+            crk: [],
+            economics: [2006, 2007, 2008, 2009, 2010, 2011, 2013],
+            english: [],
+            englishlit:[2006, 2007, 2008, 2009, 2010, 2012, 2013],
+            geography: [2006, 2007, 2008, 2009, 2010, 2011, 2012,  2013] ,
+            government: [2006, 2007, 2008, 2009, 2010, 2011, 2012,  2013],
+           history: [],
+            insurance: [],
+            irk: [],
+            mathematics: [2006, 2007, 2008, 2009,  2013] ,
+            physics: [2006, 2007, 2009, 2010, 2011, 2012],
 
-                        }
+        } ,
 
+        'wassce' : {
+            accounting:  [2006  ,  2012, 2013  ] ,
+            biology: [ ] ,
+            chemistry: [] ,
+            civiledu: [2011, 2012, 2013],
+            commerce: [],
+            currentaffairs: [],
+            crk: [2005, 2008, 2009, 2010, 2011],
+            economics: [2001, 2003, 2004, 2005, 2006, 2007, 2010, 2012],
+            english: [],
+            englishlit:[],
+            geography: [] ,
+            government: [],
+            history: [],
+            insurance: [],
+            irk: [],
+            mathematics: [] ,
+            physics: [],
 
-                    }
-                },
-                mathematics:
-                    {
-                        name: 'mathematics',
-                        title: 'Mathematics'
-                    }, commerce:
-                    {
-                        name: 'commerce',
-                        title: 'Commerce'
-                    }, accounting:
-                    {
-                        name: 'accounting',
-                        title: 'Accounting'
-                    }, biology:
-                    {
-                        name: 'biology',
-                        title: 'Biology'
-                    }, physics:
-                    {
-                        name: 'physics',
-                        title: 'Physics'
-                    }, chemistry:
-                    {
-                        name: 'chemistry',
-                        title: 'Chemistry'
-                    }, englishlit:
-                    {
-                        name: 'englishlit',
-                        title: 'English Literature'
-                    }, government:
-                    {
-                        name: 'government',
-                        title: 'Government'
-                    }, crk:
-                    {
-                        name: 'crk',
-                        title: 'CRK'
-                    }, geography:
-                    {
-                        name: 'geography',
-                        title: 'Geography'
-                    }, economics:
-                    {
-                        name: 'economics',
-                        title: 'Economics'
-                    }, irk:
-                    {
-                        name: 'irk',
-                        title: 'IRK'
-                    }, civiledu:
-                    {
-                        name: 'civiledu',
-                        title: 'Civil Education'
-                    }, insurance:
-                    {
-                        name: 'insurance',
-                        title: 'Insurance'
-                    }, currentaffairs:
-                    {
-                        name: 'currentaffairs',
-                        title: 'Current Affairs'
-                    }, history:
-                    {
-                        name: 'history',
-                        title: 'History'
-                    },
-
-                /* maths: {
-                     name: ' maths',
-                     title: 'Mathematics',
-                     questions: {
-                         2000: {
-                             year: '2000',
-                             path: '',
-
-                         }
+        } ,
 
 
-                     }
 
 
-                 }*/
 
-
-            }
-        }
     }
 
 
@@ -143,9 +107,7 @@ export class QuizService {
 
         },
     ];
-    subjects =
-
-        [
+    subjects = [
             {
                 name: 'english',
                 title: 'English'
@@ -280,7 +242,7 @@ export class QuizService {
 
         //  return this.getLocalQuestions(exam_type, subject, year, amount)
 
-        if (this.configService.config.USE_LOCAL_QUESTIONS) {
+        if (this.configService.USE_LOCAL_QUESTIONS) {
 
             return this.getLocalQuestions(exam_type, subject, year, amount)
         } else {
@@ -290,17 +252,42 @@ export class QuizService {
 
     }
 
+    isDataExist(exam_type: any,
+                subject: any,
+                year: any,){
+
+       const isExist =  this.available_data[exam_type] &&  this.available_data[exam_type][subject] && this.available_data[exam_type][subject].includes(year)  || false  ;
+
+        console.log('Question Check ' , isExist)
+
+        return !!isExist
+    }
+
     getLocalQuestions(exam_type: any,
                       subject: any,
                       year: any,
                       questions_no: any) {
 
-
+       this.changed_year = false
         // for testing
         /*  exam_type = 'utme'
           subject = 'biology'
           year = '2003'
           questions_no = 4;*/
+
+
+        //check if this exam data exist
+        if(!this.isDataExist(exam_type, subject, year)){
+            //if data doesnt exust, change the year to an available one in the available data array by random. add a key to the response to let the user know thhat data doesnt exist but new datat wa sselected for them.
+            this.changed_year = true;
+            let a = this.available_data[exam_type][subject];
+         let new_year =   a[Math.floor(Math.random() * a.length)];
+
+         year = new_year;
+            console.log('Updated the exam year to : ' , new_year)
+
+        }
+
 
         let file_name = `${exam_type}-${subject}-${year}.json`;
 
@@ -314,7 +301,12 @@ export class QuizService {
         return this.http.get(question_path).pipe(
             map(
                 (res: any) => {
+
+
                     res.data = this.randomQuestions(res.data, questions_no);
+                    res.changed_year =  this.changed_year
+
+                    console.log("Local Fetch Response " , res)
                     return res
                 }
             )
