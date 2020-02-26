@@ -313,6 +313,9 @@ export class QuizPagePage implements OnInit {
             } else if (res.data.action == "dashboard") {
                 this.router.navigate(["/tabs/dashboard/"]);
             }
+            else if (res.data.action == "subscribe") {
+                this.router.navigate(["/subscribe"]);
+            }
         });
 
         return await review_modal.present();

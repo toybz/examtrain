@@ -247,18 +247,30 @@
 
             <br/>
             <div *ngIf="!isSubscribedUser">
-             <h3 text-center=""><ion-icon name="information-circle-outline"></ion-icon>Note</h3>
-   <p>You are in demo mode and can only attempt 5 quiz questions 3 times daily.</p>
-                <p>
-                    <span routerLink="/subscribe" class="primary-color">Subscribe</span> to  enable unlimited usage and access to all features
-                </p>
-                <ion-button
-                        padding-horizontal=""
-                        expand="block"
-                       routerLink="/subscribe"
-                >SUBSCRIBE
-                </ion-button>
 
+                <ion-card>
+                    <ion-card-header text-center="">
+
+                          <ion-icon name="information-circle-outline"></ion-icon>Note
+
+                      </ion-card-header>
+                    <ion-card-content>
+                        <p>You are in demo mode and can only attempt 5 quiz questions 3 times daily.</p>
+
+                        <p>
+                            <span routerLink="/subscribe" class="primary-color">Subscribe</span> to  enable unlimited usage and access to all features
+                        </p>
+
+
+                        <ion-button
+                                padding-horizontal=""
+                                expand="block"
+                                routerLink="/subscribe"
+                        >SUBSCRIBE
+                        </ion-button>
+
+                    </ion-card-content>
+                </ion-card>
 
 
 

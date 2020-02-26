@@ -12,6 +12,7 @@ import { app_url } from "../../../services/urls";
 import {AnswerExplanationComponent} from "../answer-explanation/answer-explanation.component";
 import {ShareMonitorService} from "../../../services/app-monitor/share-monitor.service";
 import {first} from "rxjs/operators";
+import {UserService} from "../../../services/user/user.service";
 
 @Component({
     selector: "app-quiz-review",
@@ -29,12 +30,18 @@ export class QuizReviewComponent implements OnInit {
     whatsapp_share_url;
     app_url = app_url;
     share_text;
+
+    user
+    isSubscribedUser = false
+
+
     constructor(
         private modalController: ModalController,
         public actionSheetController: ActionSheetController,
         public memesService: MemesService,
         public localStorage: LocalStorageService,
-        public shareService: ShareMonitorService
+        public shareService: ShareMonitorService,
+        private userService: UserService
     ) {}
 
     @ViewChild('videoElement') someInput: ElementRef;
@@ -117,6 +124,20 @@ export class QuizReviewComponent implements OnInit {
         );
 
         this.whatsapp_share_url = `https://api.whatsapp.com/send?text=${this.share_text}`;
+
+
+        const storedUser = this.userService.getUser()
+        storedUser.subscribe((user: any) => {
+
+            this.user = user
+            this.isSubscribedUser = user.subscription && user.subscription.status || false
+
+        } )
+
+
+
+
+
     }
 
     updateMemesSettings() {
@@ -124,7 +145,7 @@ export class QuizReviewComponent implements OnInit {
         this.localStorage.saveOtherData({ show_memes: this.showMemes });
     }
 
-    dismissModal(data: {}) {
+    dismissModal(data: any) {
 
      //show share after first quiz for now
 
@@ -132,10 +153,10 @@ export class QuizReviewComponent implements OnInit {
          .pipe(first())
          .subscribe((other_data: any)=>{
 
-             console.log("QUIZREVIEW PAGE" , other_data)
+         console.log("QUIZREVIEW PAGE" , other_data)
 
          let user_has_shared = other_data.has_shared
-         if(user_has_shared){
+         if(user_has_shared || data.action == 'subscribe' ){
              this.modalController.dismiss(data);
          }
          else{

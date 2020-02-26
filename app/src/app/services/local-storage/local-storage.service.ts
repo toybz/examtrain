@@ -64,10 +64,16 @@ export class LocalStorageService {
           }
           else {
               this.user.next({
-                  signed_in: false
+                  signed_in: false,
+                subscription: {
+                  status: false,
+                  start_date: null,
+                  end_date: null,
+                  package_id: 0
+                },
               });
 
-              this.saveOtherData({signed_in: false})
+        this.saveOtherData({signed_in: false})
 
           }
       });
@@ -162,7 +168,9 @@ export class LocalStorageService {
 
   saveUser(value) {
     this.localStorage.setItem("user", value).subscribe(() => {
-                this.user.next(value);
+      let curUserValue = this.user.value
+      let updatedUserValue = {...curUserValue , ...value}
+                this.user.next(updatedUserValue);
             });
         }
 

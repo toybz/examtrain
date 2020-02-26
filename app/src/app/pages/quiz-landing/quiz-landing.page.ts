@@ -45,6 +45,9 @@ export class QuizLandingPage implements OnInit {
   exam_types = [];
   subjects = [];
 
+    user
+    isSignedIn
+    isSubscribedUser = false
     /*getExamTypeDisplayName = this.quizService.getExamTypeDisplayName
     getSubjectDisplayName = this.quizService.getSubjectDisplayName*/
 
@@ -54,21 +57,21 @@ export class QuizLandingPage implements OnInit {
       private router: Router,
       private route: ActivatedRoute,
       public quizService: QuizService,
-      public configService: ConfigService
+      public configService: ConfigService,
+      private userService: UserService
   ) {}
 
-user
-isSignedIn
-    isSubscribedUser = false
+
 
   ngOnInit(){
 
-      const storedUser = this.localStorage.getUser()
+      const storedUser = this.userService.getUser()
       storedUser.subscribe((user: any) => {
 
           this.user = user
           this.isSignedIn = user.signed_in
       this.isSubscribedUser = user.subscription && user.subscription.status || false
+
           console.log(this.user)
           if(this.isSubscribedUser){
 
