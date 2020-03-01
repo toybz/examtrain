@@ -90,7 +90,7 @@ user: any
                 {
                     title: 'Subscribe',
                     url: '/subscribe',
-                    icon: 'log-in',
+                    icon: 'key',
                     should_display: true
                 },
 

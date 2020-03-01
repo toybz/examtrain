@@ -7,6 +7,7 @@ import {first} from "rxjs/operators";
 import {LocalQuizService} from "../../services/local-quiz.service";
 import {ConfigService} from "../../services/config.service";
 import {UserService} from "../../services/user/user.service";
+import {DemoQuizCounterService} from "../../services/app-monitor/demo-quiz-counter.service";
 
 @Component({
     selector: "app-quiz-landing",
@@ -38,57 +39,68 @@ export class QuizLandingPage implements OnInit {
     quiz_config = {
       type: "utme",
       subject: "english",
-      amount: this.max_question_count,
-      year: '2013'
-  };
+        amount: this.max_question_count,
+        year: '2013'
+    };
 
-  exam_types = [];
-  subjects = [];
+    exam_types = [];
+    subjects = [];
 
     user
     isSignedIn
     isSubscribedUser = false
+    demoQuizCounter = 0;
+    canDemoUserPlay;
+    maxDemoQuizPlay = this.configService.DEMO_QUIZ_COUNT
+
     /*getExamTypeDisplayName = this.quizService.getExamTypeDisplayName
     getSubjectDisplayName = this.quizService.getSubjectDisplayName*/
 
-  constructor(
-      private localStorage: LocalStorageService,
-      private util: UtilsService,
-      private router: Router,
-      private route: ActivatedRoute,
-      public quizService: QuizService,
-      public configService: ConfigService,
-      private userService: UserService
-  ) {}
+    constructor(
+        private localStorage: LocalStorageService,
+        private util: UtilsService,
+        private router: Router,
+        private route: ActivatedRoute,
+        public quizService: QuizService,
+        public configService: ConfigService,
+        private userService: UserService,
+        private demoQuizCounterService: DemoQuizCounterService
+    ) {
+    }
 
 
+    ngDoCheck() {
+        this.demoQuizCounter = this.demoQuizCounterService.getUserPlayedQuizCount();
 
-  ngOnInit(){
+        this.canDemoUserPlay = this.demoQuizCounterService.canUserPlay();
 
-      const storedUser = this.userService.getUser()
-      storedUser.subscribe((user: any) => {
 
-          this.user = user
-          this.isSignedIn = user.signed_in
-      this.isSubscribedUser = user.subscription && user.subscription.status || false
+    }
 
-          console.log(this.user)
-          if(this.isSubscribedUser){
 
-              this.max_question_count = this.configService.SUBSCRIBE_USER_MAX_QUESTION
+    ngOnInit() {
 
-              this.questionNumberActionSheetOptions = {
-                  header: `Scroll Down For More`
-              };
-          }
+        this.userService.getUser().subscribe((user: any) => {
+
+            this.user = user
+            this.isSignedIn = user.signed_in
+            this.isSubscribedUser = user.subscription.status
+
+            console.log(this.user)
+            if (this.isSubscribedUser) {
+
+                this.max_question_count = this.configService.SUBSCRIBE_USER_MAX_QUESTION
+                this.quiz_config.amount = this.max_question_count
+
+
+                this.questionNumberActionSheetOptions = {
+                    header: `Scroll Down For More`
+                };
+            }
       } )
 
-      this.localStorage.getOtherData().subscribe((other_data: any)=>{
-          this.max_question_count = other_data.max_question_count
-      })
 
-
-      this.localStorage.getPausedQuiz().subscribe((paused_quiz: any) => {
+        this.localStorage.getPausedQuiz().subscribe((paused_quiz: any) => {
 
         console.log('L Page new stream' ,paused_quiz)
 
@@ -102,8 +114,6 @@ export class QuizLandingPage implements OnInit {
               console.log('Pause quiz is empty')
               this.paused_quiz = null;
           }
-
-
 
           this.data_loaded = true;
       });

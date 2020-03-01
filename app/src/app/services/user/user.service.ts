@@ -17,7 +17,7 @@ export class UserService {
 
     //   user.signed_in = true //for testing purpose
      console.log(user)
-  //    user.subscription.status = true ;
+
           this.user.next(user)
 
       } )

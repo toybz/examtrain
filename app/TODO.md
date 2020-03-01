@@ -2,13 +2,13 @@
 
 
 
-Add sub info card to neccessary pages
+Add sub info card to neccessary pages - DONE
  - Quiz landing page
  - In View Answers modal
  - In view video Tutorials page
- - 
+ 
 
-Add demo quiz counter to ensure a demo   user cant play more than set times a day.
+Add demo quiz counter to ensure a demo  user cant play more than set times a day.
 
 In Quiz page check count, before playing to ensure user has not reached maxed allowed count.
 

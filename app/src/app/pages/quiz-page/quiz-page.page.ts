@@ -10,6 +10,9 @@ import {LocalStorageService} from "../../services/local-storage/local-storage.se
 import {PausedComponent} from "./paused/paused.component";
 import {UtilsService} from "../../services/utils/utils.service";
 import {MemesService} from "./memes.service";
+import {DemoQuizCounterService} from "../../services/app-monitor/demo-quiz-counter.service";
+import {SubscribeModalComponent} from "../../shared-components/subscribe-modal/subscribe-modal.component";
+import {UserService} from "../../services/user/user.service";
 
 @Component({
     selector: "app-quiz-page",
@@ -35,6 +38,9 @@ export class QuizPagePage implements OnInit {
     showPausedComponet;
 
     //initialize all in init
+    loading
+    custom_navigator: any = window.navigator;
+    user
 
     constructor(
         private quizService: QuizService,
@@ -46,21 +52,65 @@ export class QuizPagePage implements OnInit {
         private util: UtilsService,
         public popoverController: PopoverController,
         public memesService: MemesService,
-        private alertController: AlertController
-    ) {}
+        private alertController: AlertController,
+        private demoQuizCounterService: DemoQuizCounterService,
+        private userService: UserService
+    ) {
+        this.userService.getUser().subscribe(
+            (user: any) => {
+                this.user = user
+            }
+        )
+
+
+    }
 
     ngOnInit() {
         this.initialise();
     }
 
+    async invokeDemoCheck() {
+        //    if user is demoUser
+        if (!this.demoQuizCounterService.canUserPlay()) {
+            //show cant play dialog
+            const cantPlayModal = await this.popoverController.create({
+                component: SubscribeModalComponent,
+                componentProps: {
+                    data: {}
+                },
+                animated: true,
+                translucent: true,
+                backdropDismiss: false,
+                showBackdrop: true
+            });
+
+            cantPlayModal.onDidDismiss().then(res => {
+                console.log(res);
+
+                if (res.data.action == "subscribe") {
+                    this.router.navigate(['/subscribe'])
+                } else if (res.data.action == "cancel") {
+                    this.router.navigate(['/dashboard'])
+                }
+
+            });
+            this.paused = true;
+            return await cantPlayModal.present();
+
+        } else {
+            this.demoQuizCounterService.increaseUserPlayedQuizCount();
+
+        }
+
+
+    }
+
     initialise() {
         console.log("ngIni Called");
-
         this.start_with_existing_data = false;
         this.existing_data = {};
 
         this.showPausedComponet = false;
-
 
         this.showLoadingBar().then(data => {
 
@@ -108,24 +158,31 @@ export class QuizPagePage implements OnInit {
                     : this.quiz_config.amount * 10;
 
 
-
-                let dismiss = ()=>{
+                let dismiss = () => {
                     this.page_ready = true;
                     data.dismiss().then(() => {
+
                         this.countdownController("start");
                         this.showPausedComponet = this.quizService.getInstantStartWithPausedQuiz();
                         if (this.showPausedComponet && this.start_with_existing_data) {
                             this.pauseQuiz();
+
+                        } else {
+
+                            let subStatus = this.user.subscription.status
+                            if (!subStatus) {
+                                this.invokeDemoCheck()
+                            }
+
                         }
+
                     });
                 }
 
 
                 if (this.start_with_existing_data) {
                     dismiss()
-                }
-
-                else{
+                } else {
 
                     this.questions$ = this.route.paramMap.pipe(
                         switchMap((params: any) => {
@@ -138,7 +195,7 @@ export class QuizPagePage implements OnInit {
                             this.quiz_time = this.quiz_config.amount * 10;
                             this.countdown = this.quiz_config.amount * 10;
 
-                       return this.quizService.fetchQuizQuestions(
+                            return this.quizService.fetchQuizQuestions(
                                 this.quiz_config.type,
                                 this.quiz_config.subject,
                                 this.quiz_config.amount,
@@ -148,7 +205,7 @@ export class QuizPagePage implements OnInit {
                     );
 
                     this.questions$.subscribe(
-                         async (response)=> {
+                        async (response) => {
                             this.questions = response.data;
                             console.log('Service return questions', this.questions);
 
@@ -164,43 +221,40 @@ export class QuizPagePage implements OnInit {
 
                             this.questions.map(question => {
 
-                                let  options = Object.values(question.option) ;
+                                let options = Object.values(question.option);
                                 question.correct_answer = question.option[question.answer]
 
-                                question.question = question.section ? `(${  question.section[0].toUpperCase() + question.section.substring(1)    })  <br/>  ${question.question}` : question.question
+                                question.question = question.section ? `(${question.section[0].toUpperCase() + question.section.substring(1)})  <br/>  ${question.question}` : question.question
 
 
                                 question.type = '' , question.category = '' , question.difficulty = '';
 
 
-    question.options = this.reArrangeOptions(options);
+                                question.options = this.reArrangeOptions(options);
                             });
-
                             console.log(response)
 
-
                             if (response.changed_year) {
-                          this.loading.dismiss();
-                          const alert = await this.alertController.create({
-                                  message: `No Data For ${this.quiz_config.year}, Quizo Responded with these exciting Quiz instead`,
-                                  backdropDismiss: false
-                              });
-                              await alert.present();
+                                this.loading.dismiss();
+                                const alert = await this.alertController.create({
+                                    message: `No Data For ${this.quiz_config.year}, Quizo Responded with these exciting Quiz instead`,
+                                    backdropDismiss: false
+                                });
+                                await alert.present();
 
-                              setTimeout( ()=> {
-                                  alert.dismiss()
-                                 dismiss()
+                                setTimeout(() => {
+                                    alert.dismiss()
+                                    dismiss()
 
-                              } , 3000)
+                                }, 3000)
 
-                          }
-                else{
+                            } else {
                                 dismiss()
                             }
 
 
-                        } ,
-                        async ()=>{
+                        },
+                        async () => {
                             this.loading.dismiss();
 
                             const alert = await this.alertController.create({
@@ -209,15 +263,13 @@ export class QuizPagePage implements OnInit {
                             });
                             await alert.present();
 
-                            setTimeout( ()=> {
+                            setTimeout(() => {
                                 alert.dismiss()
                                 this.router.navigate(['tabs/quiz'])
 
-                            } , 2000)
+                            }, 2000)
                         });
                 }
-
-
 
 
             });
@@ -226,15 +278,14 @@ export class QuizPagePage implements OnInit {
         });
     }
 
-    loading
     async showLoadingBar() {
         this.loading = await this.loadingController.create({
             message: "Loading",
             animated: true,
             showBackdrop: true
         });
-        await this.loading .present();
-        return this.loading ;
+        await this.loading.present();
+        return this.loading;
     }
 
     countdownController(operation) {
@@ -275,6 +326,7 @@ export class QuizPagePage implements OnInit {
     }
 
     async submitQuiz() {
+
         this.localStorage.deletePausedQuiz();
         clearInterval(this.counter);
         this.counter = null;
@@ -312,8 +364,7 @@ export class QuizPagePage implements OnInit {
                 this.router.navigate(["/tabs/quiz/"]);
             } else if (res.data.action == "dashboard") {
                 this.router.navigate(["/tabs/dashboard/"]);
-            }
-            else if (res.data.action == "subscribe") {
+            } else if (res.data.action == "subscribe") {
                 this.router.navigate(["/subscribe"]);
             }
         });
@@ -374,11 +425,9 @@ export class QuizPagePage implements OnInit {
                 this.initialise();
             } else if (res.data.action == "resume") {
                 this.paused = false;
-            }
-            else if (res.data.action == "submit") {
+            } else if (res.data.action == "submit") {
                 this.submitQuiz()
-            }
-            else if (res.data.action == "navigateToDashboard") {
+            } else if (res.data.action == "navigateToDashboard") {
                 clearInterval(this.counter);
                 this.counter = null;
 
@@ -395,12 +444,9 @@ export class QuizPagePage implements OnInit {
         return re_arranged_options;
     }
 
-    custom_navigator: any = window.navigator;
-
-
     setAnswer(question_index, selected_option) {
 
-        if (this.custom_navigator.vibrate ) {
+        if (this.custom_navigator.vibrate) {
             let vibrate = this.custom_navigator.vibrate([1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500]);
             console.log('vibrate', vibrate)
         }

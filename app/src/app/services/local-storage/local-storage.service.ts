@@ -14,7 +14,8 @@ export class LocalStorageService {
   completedQuiz = new ReplaySubject(1);
   pausedQuiz = new BehaviorSubject({})
   other_data = new ReplaySubject(1);
-  user = new  BehaviorSubject({})
+  user = new BehaviorSubject({})
+  demoQuizCounter = new BehaviorSubject({});
 
 
   constructor(private localStorage: LocalStorage, private http: HttpClient, private configService: ConfigService) {
@@ -60,25 +61,50 @@ export class LocalStorageService {
 
       this.localStorage.getItem("user").subscribe((user: any) => {
           if (user) {
-              this.user.next(user);
+            user.subscription.status = true;
+            this.user.next(user);
           }
           else {
-              this.user.next({
-                  signed_in: false,
-                subscription: {
-                  status: false,
-                  start_date: null,
-                  end_date: null,
-                  package_id: 0
-                },
-              });
 
-        this.saveOtherData({signed_in: false})
+            this.user.next({
+              signed_in: false,
+              subscription: {
+                status: false,
+                start_date: null,
+                end_date: null,
+                package_id: 0
+              },
+            });
+
+            // @ts-ignore
+            this.localStorage.setItemSubscribe("user", {
+              signed_in: false,
+              subscription: {
+                status: false,
+                start_date: null,
+                end_date: null,
+                package_id: 0
+              },
+            });
 
           }
       });
 
 
+    this.localStorage.getItem("demo_played_quiz").subscribe((quizCounter: any) => {
+      if (quizCounter) {
+        this.demoQuizCounter.next(quizCounter);
+      } else {
+        let todaysDate = new Date().toDateString().split(' ').join('_') // get date from date object
+        let playedQuiz = {
+          [todaysDate]: 0
+        }
+
+        this.demoQuizCounter.next(playedQuiz);
+        this.localStorage.setItemSubscribe("demo_played_quiz", playedQuiz);
+
+      }
+    });
 
 
   }
@@ -167,17 +193,25 @@ export class LocalStorageService {
 
 
   saveUser(value) {
-    this.localStorage.setItem("user", value).subscribe(() => {
-      let curUserValue = this.user.value
-      let updatedUserValue = {...curUserValue , ...value}
-                this.user.next(updatedUserValue);
-            });
-        }
+    let curUserValue = this.user.value
+    let updatedUserValue = {...curUserValue, ...value}
+    this.localStorage.setItem("user", updatedUserValue).subscribe(() => {
+      this.user.next(updatedUserValue);
+    });
+  }
 
-        getUser() {
-        return this.user;
-    }
+  getUser() {
+    return this.user;
+  }
 
+  saveDemoPlayedQuiz(value: {}) {
+    this.localStorage.setItem("demo_played_quiz", value).subscribe(() => {
+      this.demoQuizCounter.next(value);
+    });
+  }
 
+  getDemoPlayedQuiz() {
+    return this.demoQuizCounter
+  }
 
 }

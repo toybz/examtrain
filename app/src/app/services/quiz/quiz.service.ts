@@ -34,6 +34,7 @@ export class QuizService {
             mathematics: [] ,
             physics: [] ,
 
+
         } ,
         'post-utme' : {
             accounting:  [2010 , 2011 ,  2012, 2013  ] ,
@@ -243,7 +244,6 @@ export class QuizService {
         //  return this.getLocalQuestions(exam_type, subject, year, amount)
 
         if (this.configService.USE_LOCAL_QUESTIONS) {
-
             return this.getLocalQuestions(exam_type, subject, year, amount)
         } else {
             return this.http.get(url.get_question(exam_type, subject, amount, year))

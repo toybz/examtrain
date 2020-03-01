@@ -6,6 +6,8 @@ import {MenuButtonComponent} from './menu-button/menu-button.component';
 import {ShareComponent} from './share/share.component';
 import {SafeUrlPipe} from "../pipes/safe-url/safe-url.pipe";
 import {RouterModule} from "@angular/router";
+import {SubscribeModalComponent} from './subscribe-modal/subscribe-modal.component';
+
 
 @NgModule({
 
@@ -15,9 +17,9 @@ import {RouterModule} from "@angular/router";
         RouterModule
 
     ],
-    declarations: [QuizHistoryComponent, MenuButtonComponent, ShareComponent, SafeUrlPipe],
-    exports: [QuizHistoryComponent, MenuButtonComponent, ShareComponent, SafeUrlPipe],
-    entryComponents: [ShareComponent]
+    declarations: [QuizHistoryComponent, MenuButtonComponent, ShareComponent, SafeUrlPipe, SubscribeModalComponent],
+    exports: [QuizHistoryComponent, MenuButtonComponent, ShareComponent, SafeUrlPipe, SubscribeModalComponent],
+    entryComponents: [ShareComponent, SubscribeModalComponent]
 })
 export class SharedComponentsModule {
 }

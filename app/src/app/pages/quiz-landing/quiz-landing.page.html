@@ -251,14 +251,17 @@
                 <ion-card>
                     <ion-card-header text-center="">
 
-                          <ion-icon name="information-circle-outline"></ion-icon>Note
+                        <ion-icon name="information-circle-outline"></ion-icon>
+                        Note
 
-                      </ion-card-header>
-                    <ion-card-content>
-                        <p>You are in demo mode and can only attempt 5 quiz questions 3 times daily.</p>
-
+                    </ion-card-header>
+                    <ion-card-content text-center="">
+                        <p>You are in demo mode and can only attempt 5 quiz questions {{maxDemoQuizPlay}} times
+                            daily.</p>
+                        You have {{  maxDemoQuizPlay - demoQuizCounter}} left
                         <p>
-                            <span routerLink="/subscribe" class="primary-color">Subscribe</span> to  enable unlimited usage and access to all features
+                            <span routerLink="/subscribe" class="primary-color">Subscribe</span> to enable unlimited
+                            usage and access to all features
                         </p>
 
 
@@ -271,8 +274,6 @@
 
                     </ion-card-content>
                 </ion-card>
-
-
 
             </div>
 
