@@ -281,10 +281,11 @@ export class QuizService {
             //if data doesnt exust, change the year to an available one in the available data array by random. add a key to the response to let the user know thhat data doesnt exist but new datat wa sselected for them.
             this.changed_year = true;
             let a = this.available_data[exam_type][subject];
-         let new_year =   a[Math.floor(Math.random() * a.length)];
 
-         year = new_year;
-            console.log('Updated the exam year to : ' , new_year)
+            let new_year = a[Math.floor(Math.random() * a.length)];
+
+            year = new_year;
+            console.log('Updated the exam year to : ', new_year)
 
         }
 
@@ -302,11 +303,13 @@ export class QuizService {
             map(
                 (res: any) => {
 
+                    res.data = res.data.slice(0, questions_no);
+                    if (questions_no < 20) {
+                        res.data = this.randomQuestions(res.data, questions_no);
+                    }
+                    res.changed_year = this.changed_year
 
-                    res.data = this.randomQuestions(res.data, questions_no);
-                    res.changed_year =  this.changed_year
-
-                    console.log("Local Fetch Response " , res)
+                    console.log("Local Fetch Response ", res)
                     return res
                 }
             )
