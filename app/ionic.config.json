@@ -1,5 +1,7 @@
 {
-  "name": "quizo-ionic",
-  "integrations": {},
+  "name": "examTrain",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

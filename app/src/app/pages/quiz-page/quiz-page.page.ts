@@ -169,7 +169,7 @@ export class QuizPagePage implements OnInit {
 
                         } else {
 
-                            let subStatus = this.user.subscription.status
+                      let subStatus = this.user.subscription.status
                             if (!subStatus) {
                                 this.invokeDemoCheck()
                             }
@@ -237,7 +237,8 @@ export class QuizPagePage implements OnInit {
                             if (response.changed_year) {
                                 this.loading.dismiss();
                                 const alert = await this.alertController.create({
-                                    message: `No Data For ${this.quiz_config.year}, Quizo Responded with these exciting Quiz instead`,
+                                    /*     message: `No Data For ${this.quiz_config.year}, Quizo Responded with these exciting Quiz instead`,*/
+                                    message: `Quiz is Ready.Get Set`,
                                     backdropDismiss: false
                                 });
                                 await alert.present();

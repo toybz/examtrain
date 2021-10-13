@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 
 import { PaymentPage } from './payment.page';
 import { MakePaymentComponent } from './make-payment/make-payment.component';
-import { Angular4PaystackModule } from 'angular4-paystack';
 
 
 const routes: Routes = [
@@ -28,7 +27,7 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-  //  Angular4PaystackModule.forRoot('pk_test_xxxxxxxxxxxxxxxxxxxxxxxx')
+
   ],
   declarations: [PaymentPage, MakePaymentComponent]
 })

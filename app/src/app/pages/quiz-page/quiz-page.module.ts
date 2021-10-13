@@ -11,7 +11,7 @@ import {QuizPagePage} from "./quiz-page.page";
 import {QuizReviewComponent} from "./quiz-review/quiz-review.component";
 import {PausedComponent} from "./paused/paused.component";
 import {AnswerExplanationComponent} from './answer-explanation/answer-explanation.component';
-import {SharedModule} from "../../../../../admin/src/app/shared/shared.module";
+
 import {SharedComponentsModule} from "../../shared-components/shared-components.module";
 
 const routes: Routes = [

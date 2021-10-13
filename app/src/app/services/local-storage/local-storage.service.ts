@@ -61,7 +61,7 @@ export class LocalStorageService {
 
       this.localStorage.getItem("user").subscribe((user: any) => {
           if (user) {
-            user.subscription.status = true;
+         //   user.subscription.status = true; //testing only
             this.user.next(user);
           }
           else {
@@ -105,7 +105,6 @@ export class LocalStorageService {
 
       }
     });
-
 
   }
 

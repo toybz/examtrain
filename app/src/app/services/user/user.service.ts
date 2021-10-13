@@ -15,7 +15,7 @@ export class UserService {
       const storedUser = this.localStorage.getUser()
       storedUser.subscribe((user: any) => {
 
-    //   user.signed_in = true //for testing purpose
+     // user.signed_in = true //for testing purpose
      console.log(user)
 
           this.user.next(user)

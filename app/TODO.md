@@ -1,6 +1,6 @@
 ** Validate that all fields are selected in Quiz landing page before they can proceed
 
-
+Integrate paystack payment
 
 Add sub info card to neccessary pages - DONE
  - Quiz landing page

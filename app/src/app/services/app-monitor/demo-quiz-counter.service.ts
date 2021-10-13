@@ -37,6 +37,7 @@ export class DemoQuizCounterService {
     }
 
     increaseUserPlayedQuizCount() {
+        //this.user_quiz_count_today++;
         let val = {[this.todaysDate]: this.getUserPlayedQuizCount() + 1}
         this.localStorageService.saveDemoPlayedQuiz(val)
     }
