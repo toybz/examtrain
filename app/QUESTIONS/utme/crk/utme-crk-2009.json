@@ -1,0 +1,646 @@
+{
+    "subject": "crk",
+    "status": 200,
+    "data": [
+        {
+            "id": 290,
+            "question": "Immediately after the contest on Mount Carmel, Elijah prayed and God answered him with",
+            "option": {
+                "a": "thunder",
+                "b": "rainfall",
+                "c": "a whirlwind",
+                "d": "a heavy storm."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 289,
+            "question": "\u201cBehold, I am the LORD, the God of all flesh; is anything too hard for me...\u201d The statement above suggests that God is",
+            "option": {
+                "a": "merciful",
+                "b": "awesome",
+                "c": "most powerful",
+                "d": "not changeable."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 266,
+            "question": "The good shepherd according to Jesus is one who",
+            "option": {
+                "a": "lays down his life for his sheep",
+                "b": "goes about with his sheep",
+                "c": "keeps many healthy sheep",
+                "d": "feeds his sheep in green pastures."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 254,
+            "question": "In His sermon on the Mount, Jesus said that the poor in spirit are blessed for they would",
+            "option": {
+                "a": "be satisfied",
+                "b": "be comforted on the last day",
+                "c": "inherit the kingdom of heaven",
+                "d": "inherit the earth."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 248,
+            "question": "According to Galatians, one of the benefits of being a joint heir with Christ is having His Spirit in",
+            "option": {
+                "a": "worship",
+                "b": "the heart",
+                "c": "the body",
+                "d": "prayers"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 263,
+            "question": "\u201cDo you understand what you are reading?\u201d Philip asked the Ethiopian eunuch the question above when he found him reading the book of",
+            "option": {
+                "a": "Hosea",
+                "b": "Ezekiel",
+                "c": "Jeremiah",
+                "d": "Isaiah."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 260,
+            "question": "According to Luke, when Moses and Elijah appeared during the Transfiguration, they spoke of Jesus\u2019",
+            "option": {
+                "a": "departure",
+                "b": "second coming",
+                "c": "resurrection",
+                "d": "trials."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 256,
+            "question": "Angel Gabriel told Zachariah that he would become dumb until John was born because he",
+            "option": {
+                "a": "looked down on the Angel",
+                "b": "was advanced in age",
+                "c": "disagreed with Elizabeth, his wife",
+                "d": "did not believe God\u2019s words."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 265,
+            "question": "In Luke, at the Last Supper, Jesus revealed His",
+            "option": {
+                "a": "resurrection",
+                "b": "imminent sufferings",
+                "c": "love for His disciples",
+                "d": "ascension."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 280,
+            "question": "\u201cBehold, if people of Israel are to come, let us deal shrewdly with them, lest they multiply.....\u201d ln the statement, the first step by the king of Egypt was to",
+            "option": {
+                "a": "cast all Hebrew male children into the Nile",
+                "b": "impose heavy tax on them",
+                "c": "kill Hebrew male children",
+                "d": "set taskmasters over them to afflict them with burdens"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 281,
+            "question": "\u201cLet the waters under the heavens be gathered together into one place, and let the dry land appear.\u201d In the statement above  the dry land and the water refer to",
+            "option": {
+                "a": "earth and oceans",
+                "b": "firmament and seas",
+                "c": "firmament and oceans",
+                "d": "earth and seas"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 258,
+            "question": "In the country of the Gerasenes, Jesus healed the",
+            "option": {
+                "a": "man possessed of demons",
+                "b": "paralytic at the pool",
+                "c": "leper",
+                "d": "blind man."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 275,
+            "question": "Saul leant from Samuel\u2019s spirit that the LORD would",
+            "option": {
+                "a": "give the Philistines into his hands",
+                "b": "afflict him with sickness",
+                "c": "because Isaac\u2019s future wife",
+                "d": "pardon his iniquity"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 255,
+            "question": "According to Matthew, the stone on the tomb of Jesus was removed by",
+            "option": {
+                "a": "an angel",
+                "b": "a Roman soldier",
+                "c": "Mary Magdalene",
+                "d": "Peter and John."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 271,
+            "question": "The sin of the sons of Eli was that they treated the offering of the LORD with",
+            "option": {
+                "a": "suspicion",
+                "b": "contempt",
+                "c": "disgust",
+                "d": "jealousy."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 270,
+            "question": "The message in the parable of the weeds is to",
+            "option": {
+                "a": "make Christians to be aware of the evil one",
+                "b": "remind Christians to pray always",
+                "c": "teach Christians to be aware of false teaching",
+                "d": "warn Christians on what will happen at the close of age"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 288,
+            "question": "The Kingdom of Israel was divided because the",
+            "option": {
+                "a": "kingdom was too large to be administered",
+                "b": "leadership wanted to create more nations",
+                "c": "followership wanted more nations",
+                "d": "last two kings made unwise policies."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 259,
+            "question": "Following the death of Stephen, the only group of believers not scattered by the great persecution was the",
+            "option": {
+                "a": "deacons",
+                "b": "apostles",
+                "c": "prophets",
+                "d": "disciples."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 253,
+            "question": "In Paul\u2019s arrangement of the spiritual gifts in Corinthians, the last is",
+            "option": {
+                "a": "the utterance of wisdom",
+                "b": "interpretation of tongues",
+                "c": "gifts of healing",
+                "d": "various kinds of tongues."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 282,
+            "question": "What did Gideon call the altar which he built to the LORD?",
+            "option": {
+                "a": "The LORD is merciful",
+                "b": "The LORD is peace",
+                "c": "Jehovah Jireh",
+                "d": "The LORD is great"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 250,
+            "question": "According to Thessalonians, the day of the Lord will not come unless the",
+            "option": {
+                "a": "living die first",
+                "b": "scoffers come first",
+                "c": "dead rise first",
+                "d": "rebellion comes first."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 251,
+            "question": "In Romans, Paul condemned sin taking over mortal bodies in the new life as instruments of",
+            "option": {
+                "a": "greediness",
+                "b": "wickedness",
+                "c": "sadness",
+                "d": "foolishness."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 294,
+            "question": "According to Prophet Jeremiah, one of the promises of God was that He would give the Israelites",
+            "option": {
+                "a": "new priests",
+                "b": "new commandments",
+                "c": "kings after His own heart",
+                "d": "shepherds after His own heart."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 268,
+            "question": "\u201cCan any one forbid water for baptizing these people who have received the Holy Spirit just as we have?\u201d The statement above was made by Peter at the conversion of",
+            "option": {
+                "a": "Herod",
+                "b": "Lydia",
+                "c": "Saul",
+                "d": "Cornelius."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 272,
+            "question": "In order for the people of Israel to be ready to meet the LORD by the third day at Mount Sinai, they were",
+            "option": {
+                "a": "not to drink alcohol",
+                "b": "to wear white garments",
+                "c": "to wash their garments everyday",
+                "d": "not to go near a woman."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 285,
+            "question": "Josiah believed that the wrath of the LORD was kindled against him and all Judah because",
+            "option": {
+                "a": "they did not observe the Passover",
+                "b": "there was an unholy thing in their midst",
+                "c": "the people have forgotten God",
+                "d": "their fathers were disobedient to God."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 287,
+            "question": "God had pity on the people of Nineveh because",
+            "option": {
+                "a": "they listened to Jonah\u2019s message",
+                "b": "the king punished all the violent people in the land",
+                "c": "they turned from their evil way.",
+                "d": "they made sacrifices of sin offering to God."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 262,
+            "question": "Herod was delighted to see Jesus because he had heard of Him for so long and wanted to",
+            "option": {
+                "a": "send Him to Rome",
+                "b": "sentence Him to death",
+                "c": "see Him perform miracles",
+                "d": "make Him his friend."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 283,
+            "question": "When King Nebuchadnezzar besieged Judah, he took away all classes of people but spared the",
+            "option": {
+                "a": "poorest people of the land",
+                "b": "palace guards",
+                "c": "children and the aged",
+                "d": "priests and prophets"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 261,
+            "question": "The baptism of Jesus by John in River Jordan was to",
+            "option": {
+                "a": "convince others that John was His forerunner",
+                "b": "ensure that proper baptism must be in a river",
+                "c": "service as an example",
+                "d": "fulfil all righteousness."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 296,
+            "question": "\u201cTest your servants for ten days; let us be given vegetables to eat and water to drink...\u201d In the statement above, Daniel was talking to",
+            "option": {
+                "a": "King Darius",
+                "b": "the chief of the eunuchs",
+                "c": "the steward of the chief eunuch.",
+                "d": "King Artaxerxes."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 295,
+            "question": "Prophet Hosea named his second child Not Pitied because God would no more pity the",
+            "option": {
+                "a": "kings of Judah",
+                "b": "kings of Israel",
+                "c": "house of Judah",
+                "d": "house of Israel."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 293,
+            "question": "\u201cAm I God, to kill and to make alive, that this man sends words to me to cure a man of his leprosy...\u201d Prophet Elisha responded to the king\u2019s reaction in the statement above by",
+            "option": {
+                "a": "directing the nation of Israel to pray and fast",
+                "b": "requesting the leper to come to his house",
+                "c": "directing the leper to go to River Jordan",
+                "d": "asking the leper to offer a sacrifice."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 284,
+            "question": "After Prophet Ezekiel had eaten what he was offered, he was sent to speak to",
+            "option": {
+                "a": "a people of hard language",
+                "b": "the house of Israel",
+                "c": "the house of Judah",
+                "d": "a people of foreign language"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 277,
+            "question": "According to proverbs, a son that is attentive to a father\u2019s instruction will",
+            "option": {
+                "a": "be rich",
+                "b": "have eternal life",
+                "c": "gain insight",
+                "d": "be forgiven his sins"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 269,
+            "question": "The disciple who replaced Judas Iscariot was",
+            "option": {
+                "a": "Justus",
+                "b": "Stephen",
+                "c": "Mathias",
+                "d": "Luke."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 274,
+            "question": "\u201c1 will not eat until I have told my errand\u201d In the statement above, the errand of Abraham\u2019s servant was to",
+            "option": {
+                "a": "find a wife for Isaac",
+                "b": "deliver the camels to Laban",
+                "c": "assess Isaac\u2019s future wife",
+                "d": "deliver Isaac\u2019s message to Laban"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 278,
+            "question": "When God called Moses to deliver the Israelites, he resisted because he could not speak and he was told to",
+            "option": {
+                "a": "perform some signs with his rod",
+                "b": "wait for a sign from God",
+                "c": "go with Joshua who would speak for him",
+                "d": "go with Aaron who would speak for him"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 247,
+            "question": "In Timothy, Paul urges Christians to pray for kings and those in authority for the achievement of",
+            "option": {
+                "a": "a successful Christian life",
+                "b": "godly and acceptable life",
+                "c": "peace and exaltation in life",
+                "d": "quiet and peaceable life."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 286,
+            "question": "\u201cSon of man, stand upon your feet, and I will speak with you.\u201d What happened to the Son of man after the instruction above?",
+            "option": {
+                "a": "The Spirit entered him.",
+                "b": "He became terrified.",
+                "c": "The angels gave him support.",
+                "d": "He began to prophesy."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        }
+    ]
+}

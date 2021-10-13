@@ -1,0 +1,646 @@
+{
+    "subject": "crk",
+    "status": 200,
+    "data": [
+        {
+            "id": 546,
+            "question": "On the fourth day, God created the sun, moon and stars for the following purposes except",
+            "option": {
+                "a": "to separate the day from the night.",
+                "b": "for signs of seasons, days and years.",
+                "c": "to give light upon the earth.",
+                "d": "to dry up flood from the face of the earth."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 578,
+            "question": "When the apostles in Jerusalem heard that Samaria had received the gospel, they sent to them",
+            "option": {
+                "a": "Mark and Barnabas.",
+                "b": "Peter and John.",
+                "c": "Paul and John.",
+                "d": "Peter and Paul."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 575,
+            "question": "At whose well did Jesus meet the Samaritan woman?",
+            "option": {
+                "a": "Abraham",
+                "b": "Isaac",
+                "c": "Jacob",
+                "d": "Joseph"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 568,
+            "question": "By the action of the Good Samaritan, Christians are encouraged to",
+            "option": {
+                "a": "go out to the streets and look for someone to help.",
+                "b": "always travel with enough money in case the need arises to help.",
+                "c": "show compassion and render help to the needy.",
+                "d": "avoid travelling on lonely roads where armed robbers could attack."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 569,
+            "question": "The <em>lost sheep<\/em> and the <em>lost coin<\/em> share the following except that",
+            "option": {
+                "a": "both of them are lost and need to be found",
+                "b": "it is their owners\u2019 responsibility to look for them.",
+                "c": "the coin, may not know that it is lost.",
+                "d": "their owners rejoice when they are found."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 587,
+            "question": "In Corinthians, Paul cited all the following resurrection appearances of Jesus except",
+            "option": {
+                "a": "Cephas.",
+                "b": "The Twelve.",
+                "c": "Mary Magdalene",
+                "d": "James."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 583,
+            "question": "Why according to Paul must Christians be subject to civil authority?",
+            "option": {
+                "a": "To receive God\u2019s approval",
+                "b": "To avoid God\u2019s wrath",
+                "c": "God has commanded it",
+                "d": "It is an Old Testament law"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 589,
+            "question": "In which of the following ways did the Philippians share in Paul\u2019s suffering while in prison?",
+            "option": {
+                "a": "Appealing for the release of Paul",
+                "b": "Sending him relief materials",
+                "c": "Continuing in prayer for him",
+                "d": "Remaining in partnership with him in receiving."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 564,
+            "question": "According to Amos\u2019 prophecy, the \u201cDay of the Lord\u201d to the Israelites would be a day of",
+            "option": {
+                "a": "victory over enemies",
+                "b": "happiness.",
+                "c": "doom.",
+                "d": "national triumph."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 550,
+            "question": "How old was Joshua before he died?",
+            "option": {
+                "a": "95 years",
+                "b": "98 years",
+                "c": "110 years",
+                "d": "111 years"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 590,
+            "question": "What advice did Peter give to the elders of the church in their relationship with the younger members?",
+            "option": {
+                "a": "Work as if being under external constraint",
+                "b": "Work without a domineering spirit",
+                "c": "Work with a desire for material gains",
+                "d": "Control their flocks with firm hands"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 593,
+            "question": "James teaches that the man who shall be blessed is he who",
+            "option": {
+                "a": "hears the word of God.",
+                "b": "knows the law perfectly.",
+                "c": "does the word he hears.",
+                "d": "teaches the word of God well."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 561,
+            "question": "Which of the following prophets taught that Yahweh was merciful?",
+            "option": {
+                "a": "Isaiah",
+                "b": "Hosea",
+                "c": "Amos",
+                "d": "Ezekiel"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 562,
+            "question": "Daniel was delivered from the lion\u2019s den because",
+            "option": {
+                "a": "of his faith in God\u2019s power.",
+                "b": "of the king\u2019s prayers.",
+                "c": "he was able to charm the lions.",
+                "d": "the lions were kind to him."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 573,
+            "question": "St. John refers to Jesus\u2019 miracles as \u2018signs\u2019 because they convey the following ideas except",
+            "option": {
+                "a": "acceptance of Jesus as son of God.",
+                "b": "proofs of the kingdom of God.",
+                "c": "faith in Jesus as the means to eternal life.",
+                "d": "demand for more wonders."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 571,
+            "question": "In one of the resurrection appearances Jesus asked his disciples, whether they had anything to eat as he",
+            "option": {
+                "a": "was hungry after three days in the grave without food.",
+                "b": "suspected that the disciples stock may have finished",
+                "c": "wanted to prove to them that he was not a ghost.",
+                "d": "wanted to replenish the food stuff."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 570,
+            "question": "The parable of the rich man and Lazarus indicates that",
+            "option": {
+                "a": "poverty is a mark of righteousness.",
+                "b": "death is a leveler for rich and poor",
+                "c": "only poor people will die physically.",
+                "d": "all rich men are going to hell fire."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 552,
+            "question": "The first king of Israel lost his throne because he",
+            "option": {
+                "a": "was a weak king.",
+                "b": "knew little about governance.",
+                "c": "lost the support of Yahweh.",
+                "d": "was irresponsible."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 554,
+            "question": "When Abner wanted to transfer his allegiance to David, the latter gave him the condition to",
+            "option": {
+                "a": "openly submit to Joab.",
+                "b": "convince all Israel to come over to David.",
+                "c": "restore his wife Michal to him.",
+                "d": "slay Ishbosheth. Saul\u2019s successor."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 548,
+            "question": "The wife of Moses was called",
+            "option": {
+                "a": "Rebecca.",
+                "b": "Rachel.",
+                "c": "Zipporah.",
+                "d": "Deborah"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 585,
+            "question": "By saying that no human being will be justified in the sight of God by works: Paul meant that",
+            "option": {
+                "a": "the mosaic law was useless in ensuring justification for man.",
+                "b": "the law had been weakened in human flesh.",
+                "c": "knowledge of sin came through the law.",
+                "d": "Moses who gave the law was not justified by the law."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 566,
+            "question": "From Luke\u2019s account of the baptism of Jesus, which of the following happened before the voice was heard?",
+            "option": {
+                "a": "John was reluctant to baptize Him.",
+                "b": "John called Jesus the Lamb of God.",
+                "c": "Jesus arrived with Peter, James and John",
+                "d": "The Holy Spirit descended upon Jesus."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 565,
+            "question": "Isaiah said that when Israel spread forth their hands, God would hide his face because they were",
+            "option": {
+                "a": "making many prayers",
+                "b": "offering vain sacrifices.",
+                "c": "worshipping God with their hearts.",
+                "d": "observing elaborate feasts."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 556,
+            "question": "Solomon showed lack of wisdom when he",
+            "option": {
+                "a": "put up temples for the gods of his wives",
+                "b": "married many wives with children",
+                "c": "invited the Queen of Sheba",
+                "d": "gave out judgment to two harlots."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 577,
+            "question": "The descent of the Holy Spirit on the day of  Pentecost was prophesied by",
+            "option": {
+                "a": "Amos.",
+                "b": "Joel.",
+                "c": "David.",
+                "d": "Ezekiel."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 559,
+            "question": "Who was the king who reintroduced the Passover feast in Israel?",
+            "option": {
+                "a": "Jeroboam",
+                "b": "Asa",
+                "c": "Josiah",
+                "d": "Rehoboam"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 549,
+            "question": "When Joseph was sent to his brothers, he met them pasturing at",
+            "option": {
+                "a": "Hebron.",
+                "b": "Bethel.",
+                "c": "Beersheba",
+                "d": "Dothan"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 553,
+            "question": "During the Ammonite war Uriah disobeyed King David by refusing to go to his house to sleep because",
+            "option": {
+                "a": "it was wrong to go home drunk.",
+                "b": "his wife would regard him as a coward.",
+                "c": "it would be unpatriotic to break military vow.",
+                "d": "he suspected that the king had lost interest in the battle."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 555,
+            "question": "God said to Solomon in a dream, <em>\u201cAsk what I shall give you\u201d<\/em>. What did Solomon ask for?",
+            "option": {
+                "a": "Power and authority",
+                "b": "Great wealth and riches",
+                "c": "Stable and long term in office",
+                "d": "An understanding mind"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 580,
+            "question": "After his conversion, Paul was introduced to the disciples in Jerusalem by",
+            "option": {
+                "a": "Peter",
+                "b": "Ananias.",
+                "c": "Barnabas.",
+                "d": "Philip"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 574,
+            "question": "Apart from the miracles at the wedding feast, another miracle of Jesus at Cana in Galilee was",
+            "option": {
+                "a": "feeding the four thousand.",
+                "b": "healing the noble man\u2019s son.",
+                "c": "healing of a man born blind",
+                "d": "healing a paralytic man."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 563,
+            "question": "The person who discovered the book of law in the sanctuary during the reign of Josiah was",
+            "option": {
+                "a": "Zedekiah",
+                "b": "Huldah.",
+                "c": "Hilkiah",
+                "d": "Jeremiah."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 557,
+            "question": "Solomon told Hiram, King of Tyre that he had decided to build a temple for the Lord because",
+            "option": {
+                "a": "the Lord had given him peace and all good things.",
+                "b": "his father, David, never intended to build one.",
+                "c": "he wanted to force Hiram to come to his aid.",
+                "d": "Hiram had entered into a marriage alliance with his father."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 572,
+            "question": "By introducing Jesus as the Lamb, John was pointing to",
+            "option": {
+                "a": "Jesus\u2019 sacrificial death.",
+                "b": "Jesus\u2019 miraculous healing.",
+                "c": "the Jewish yearly sacrifices.",
+                "d": "the priestly function of Jesus"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 586,
+            "question": "Paul\u2019s greatest writing about spiritual gift is found in his letter to the",
+            "option": {
+                "a": "Galatians.",
+                "b": "Ephesians.",
+                "c": "Romans.",
+                "d": "Corinthians"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 560,
+            "question": "Who was the prophet responsible for the re-building of the Temple during the exile?",
+            "option": {
+                "a": "Ezra",
+                "b": "Isaiah",
+                "c": "Jeremiah",
+                "d": "Ezekiel"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 594,
+            "question": "Through God the Christian is no longer a slave but a son, and if a son then",
+            "option": {
+                "a": "a master.",
+                "b": "a redeemed.",
+                "c": "an heir.",
+                "d": "a beneficiary."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 591,
+            "question": "In Philippians, Paul taught that Jesus \u2018humility and death on the cross earned Him",
+            "option": {
+                "a": "salvation for Israel.",
+                "b": "adoption as son of God.",
+                "c": "exaltation as Lord.",
+                "d": "eternal life in the kingdom."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 576,
+            "question": "The lame man who was healed at the pool of Bethizatha was charged by the Jews for breaking the law of the Sabbath \tbecause he",
+            "option": {
+                "a": "consulted Jesus on the Sabbath day.",
+                "b": "was carrying his pallet on a Sabbath day.",
+                "c": "was on a journey on a Sabbath day.",
+                "d": "was seen with Jesus on a Sabbath day."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        },
+        {
+            "id": 582,
+            "question": "The man who delivered judgment of the Jerusalem Council on the admission of Gentiles into the Church was",
+            "option": {
+                "a": "Peter.",
+                "b": "Paul.",
+                "c": "Barnabas.",
+                "d": "James."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "wassce",
+            "examyear": "2010"
+        }
+    ]
+}

@@ -1,0 +1,390 @@
+{
+    "subject": "crk",
+    "status": 200,
+    "data": [
+        {
+            "id": 188,
+            "question": "\u2018Those who honour me I will honour , and those who despise  me shall be lightly esteemed.\u2019 Who was being addressed?  ",
+            "option": {
+                "a": "Eli   ",
+                "b": "Samuel",
+                "c": "Hophni   ",
+                "d": "Joshua"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 185,
+            "question": "The sons of Samuel who did not walk in his ways were:",
+            "option": {
+                "a": "Phinehas and Hophni    ",
+                "b": "Hophni and Amos  ",
+                "c": "Joel and Phinehas        ",
+                "d": "Abijah and Joel"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 182,
+            "question": "In one of the missionary journeys, Paul was stoned   to a state of coma in  ",
+            "option": {
+                "a": "Antioch in Pisidia   ",
+                "b": "Iconium  ",
+                "c": "Lystra   ",
+                "d": "Antioch of Syria"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 187,
+            "question": "Jonah refused to go to Nineveh because  ",
+            "option": {
+                "a": "Ninevites were in human and wicked",
+                "b": "God was merciful, gracious and could forgive them  ",
+                "c": "he was timid to deliver the message  ",
+                "d": "he did not want to endanger his life"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 192,
+            "question": "The relationship between God and Israel was described by Hosea as that of a",
+            "option": {
+                "a": "faithless wife and a loving husband",
+                "b": "a loving wife and a faithless husband  ",
+                "c": "a penitent wife and aggressive husband  ",
+                "d": "a faithless husband and a faithless and nonchalant wife."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 173,
+            "question": "The women sang and said David slain his ten thousands and Saul his  ",
+            "option": {
+                "a": "five thousands   ",
+                "b": "thousand  ",
+                "c": "thousands   ",
+                "d": "six thousand"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 179,
+            "question": "Who among the seven deacons was an evangelist  who had four daughters who prophesied?  ",
+            "option": {
+                "a": "Stephen  ",
+                "b": "Philip   ",
+                "c": "Barnabas   ",
+                "d": "Nicholas"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 177,
+            "question": "\u201cTalitha cumi\u201d means",
+            "option": {
+                "a": "Dorcas, Arise   ",
+                "b": "Little girl, I say to you, arise  ",
+                "c": "Thy will be done",
+                "d": "Jesus is coming"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 186,
+            "question": "What was the second temptation of Jesus according to the Gospel according to Luke?",
+            "option": {
+                "a": "The Devil wanted Jesus to worship him  ",
+                "b": "The Devil wanted Jesus to deny God",
+                "c": "The Devil wanted Jesus to jump from the pinnacle of the Temple    ",
+                "d": "The devil wanted Jesus to turn stones to bread"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 183,
+            "question": "Moses spoke  to the Israelites to fear not, but be calm, confident and see the salvation of God at  ",
+            "option": {
+                "a": "Pi-Hahirotti   ",
+                "b": "Meribah   ",
+                "c": "Wilderness of Sinai ",
+                "d": "d.Elim"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 184,
+            "question": "One of the following is not in the Pentateuch  ",
+            "option": {
+                "a": "Exodus    ",
+                "b": "Judges     ",
+                "c": "Leviticus   ",
+                "d": "Numbers"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 196,
+            "question": "The eunuch who went to Jerusalem to worship in Acts 8:27 was a  ",
+            "option": {
+                "a": "minister of God  ",
+                "b": "minister of Candace the queen Gaza  ",
+                "c": "minister of Candace the king of the Ethiopians",
+                "d": "minister of Candace the queen of the Ethiopians"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 191,
+            "question": "Who was the prophet who said \u201cI will put my law within them, and will write it upon their heart\u2026.\u201d?  ",
+            "option": {
+                "a": "Isaiah  ",
+                "b": "Jeremiah",
+                "c": "Hosea   ",
+                "d": "Amos"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 174,
+            "question": "Israel went into Assyria captivity in",
+            "option": {
+                "a": "720BC  ",
+                "b": "730 AD   ",
+                "c": "750BC",
+                "d": "722 BC"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 176,
+            "question": "One of the following was not among the religious sects in the New Testament  ",
+            "option": {
+                "a": "The Pharisees   ",
+                "b": "The Nazarenes",
+                "c": "The Essenes",
+                "d": "The Sadducees"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 193,
+            "question": "One of the following is not among the \u201cI am\u201d Sayings of Jesus  ",
+            "option": {
+                "a": "I am the bread of life",
+                "b": "I am the gate of life",
+                "c": "I am the good shepherd",
+                "d": "I am the way"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 195,
+            "question": "\u201cO dry bones, hear the word of the Lord\u2026 \u201cThe dry bones mentioned by Prophet Ezekiel  in the statement above refer to the",
+            "option": {
+                "a": "Amalakite king and soldiers  ",
+                "b": "Whole house of Israel  ",
+                "c": "Hittites and the Assyrians  ",
+                "d": "Babylonians troubling Israel"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 194,
+            "question": "In what way was Moses a prototype of Jesus Christ?",
+            "option": {
+                "a": "Moses was a great prophet who led Israel out of Egypt",
+                "b": "Moses did not die naturally",
+                "c": "Moses appeared to Jesus on Mount of Transfiguration",
+                "d": "Moses was persecuted by his people"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 181,
+            "question": "The book of ____ mostly emphasized social justice",
+            "option": {
+                "a": "Amos   ",
+                "b": "Ezekiel   ",
+                "c": "Hoshea",
+                "d": "Isaiah"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 190,
+            "question": "Amos explained true religion as  ",
+            "option": {
+                "a": "singing of praises to God  ",
+                "b": "self-righteousness",
+                "c": "fasting and praying  ",
+                "d": "being just and righteous"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 189,
+            "question": "Amos reference to \u2018cows of Bashan\u2019 was a metaphoric allusion to  ",
+            "option": {
+                "a": "women of Samaria  ",
+                "b": "rich people of Samaria   ",
+                "c": "poor people of Samaria  ",
+                "d": "illustrious sons of Samaria"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 175,
+            "question": "A prophet mostly emphasized the holiness of God. This prophet was  ",
+            "option": {
+                "a": "Hosea  ",
+                "b": "Jeremiah  ",
+                "c": "Ezekiel   ",
+                "d": "Isaiah"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 178,
+            "question": "Who was the secretary employed by Jeremiah to write his prophecy?",
+            "option": {
+                "a": "Amanuensis  ",
+                "b": "Amos  ",
+                "c": "Baruch  ",
+                "d": "Joshua"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 180,
+            "question": "The son of Solomon who made unwise decisions was \u2026.",
+            "option": {
+                "a": "Jeroboam      ",
+                "b": "Rechoboam",
+                "c": "Rehoboam    ",
+                "d": "Asa"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        }
+    ]
+}
