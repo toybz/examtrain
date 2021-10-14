@@ -102,7 +102,7 @@ subjects = [];
       this.study_service.getSubjects().subscribe((subjects)=>{
 
         this.subjects = subjects
-        this.showTopicsFor(this.subjects[1])
+        this.showTopicsFor(this.subjects[0])
       })
 
       Swal.fire({

@@ -1,57 +1,58 @@
-import {Component, OnInit} from "@angular/core";
-import {LocalStorageService} from "../../services/local-storage/local-storage.service";
-import {UtilsService} from "../../services/utils/utils.service";
-import {ActivatedRoute, Router} from "@angular/router";
-import {QuizService} from "../../services/quiz/quiz.service";
-import {first} from "rxjs/operators";
-import {LocalQuizService} from "../../services/local-quiz.service";
-import {ConfigService} from "../../services/config.service";
-import {UserService} from "../../services/user/user.service";
-import {DemoQuizCounterService} from "../../services/app-monitor/demo-quiz-counter.service";
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {first} from 'rxjs/operators';
+import {DemoQuizCounterService} from '../../services/app-monitor/demo-quiz-counter.service';
+import {ConfigService} from '../../services/config.service';
+import {LocalQuizService} from '../../services/local-quiz.service';
+import {LocalStorageService} from '../../services/local-storage/local-storage.service';
+import {QuizService} from '../../services/quiz/quiz.service';
+import {UserService} from '../../services/user/user.service';
+import {UtilsService} from '../../services/utils/utils.service';
 
 @Component({
-    selector: "app-quiz-landing",
-    templateUrl: "./quiz-landing.page.html",
-    styleUrls: ["./quiz-landing.page.scss"]
+    selector: 'app-quiz-landing',
+    templateUrl: './quiz-landing.page.html',
+    styleUrls: ['./quiz-landing.page.scss']
 })
 export class QuizLandingPage implements OnInit {
     paused_quiz;
     data_loaded = false;
     quiz_journey_data = false;
 
-    max_question_count = this.configService.DEFAULT_MAX_QUESTION
+    max_question_count = this.configService.DEFAULT_MAX_QUESTION;
 
     customActionSheetOptions: any = {
-        header: "Select Category  (Scroll Down For More)"
+        header: 'Select Category  (Scroll Down For More)'
     };
 
     yearActionSheetOptions: any = {
-        header: "2000 - 2013 (Scroll Down For More)"
+        header: '2000 - 2013 (Scroll Down For More)'
     };
 
     questionNumberActionSheetOptions: any = {
-        header: `Scroll Down For More (Subscribe To Increase To ${this.configService.SUBSCRIBE_USER_MAX_QUESTION})`
+      //  header: `Scroll Down For More (Subscribe To Increase To ${this.configService.SUBSCRIBE_USER_MAX_QUESTION})`
+        header: `Scroll Down For More`
     };
 
-  exam_years = ['2000', '2001', '2002', '2003', '2004',  '2005',"2006" ,'2007', '2008', '2009', '2010', '2011', '2012', '2013'];
+  exam_years = ['2000', '2001', '2002', '2003', '2004',  '2005', '2006' , '2007', '2008', '2009', '2010', '2011', '2012', '2013'];
 
 
     quiz_config = {
-      type: "utme",
-      subject: "english",
-        amount: this.max_question_count,
+      type: 'utme',
+      subject: 'english',
+        amount: 5,
         year: '2013'
     };
 
     exam_types = [];
     subjects = [];
 
-    user
-    isSignedIn
-    isSubscribedUser = false
+    user;
+    isSignedIn;
+    isSubscribedUser = false;
     demoQuizCounter = 0;
     canDemoUserPlay;
-    maxDemoQuizPlay = this.configService.DEMO_QUIZ_COUNT
+    maxDemoQuizPlay = this.configService.DEMO_QUIZ_COUNT;
 
     /*getExamTypeDisplayName = this.quizService.getExamTypeDisplayName
     getSubjectDisplayName = this.quizService.getSubjectDisplayName*/
@@ -82,36 +83,35 @@ export class QuizLandingPage implements OnInit {
 
         this.userService.getUser().subscribe((user: any) => {
 
-            this.user = user
-            this.isSignedIn = user.signed_in
-            this.isSubscribedUser = user.subscription.status
-
-            console.log(this.user)
+            this.user = user;
+            this.isSignedIn = user.signed_in;
+           // this.isSubscribedUser = user.subscription.status;
+            this.isSubscribedUser = true;
+            console.log(this.user);
             if (this.isSubscribedUser) {
 
-                this.max_question_count = this.configService.SUBSCRIBE_USER_MAX_QUESTION
-                this.quiz_config.amount = this.max_question_count
-
+                this.max_question_count = this.configService.SUBSCRIBE_USER_MAX_QUESTION;
+             //   this.quiz_config.amount = this.max_question_count;
+                this.quiz_config.amount = 5;
 
                 this.questionNumberActionSheetOptions = {
                     header: `Scroll Down For More`
                 };
             }
-      } )
+      } );
 
 
         this.localStorage.getPausedQuiz().subscribe((paused_quiz: any) => {
 
-        console.log('L Page new stream' ,paused_quiz)
+        console.log('L Page new stream' , paused_quiz);
 
           if (!this.util.isEmptyObject(paused_quiz) && typeof paused_quiz.quiz_config.type === 'string') {
-            console.log('Pause quiz is not empty')
+            console.log('Pause quiz is not empty');
 
               this.paused_quiz = paused_quiz;
               this.paused_quiz.type = paused_quiz.type;
-          }
-          else{
-              console.log('Pause quiz is empty')
+          } else {
+              console.log('Pause quiz is empty');
               this.paused_quiz = null;
           }
 
@@ -129,7 +129,7 @@ export class QuizLandingPage implements OnInit {
   }
 
   startNewQuiz() {
-    this.localStorage.deletePausedQuiz()
+    this.localStorage.deletePausedQuiz();
     this.paused_quiz = false;
   }
 
@@ -153,7 +153,7 @@ export class QuizLandingPage implements OnInit {
       !this.quiz_config.subject ||
       this.quiz_config.amount < 1
     ) {
-      this.util.showToast("Please Enter Data For all Fields To Proceed", 5000);
+      this.util.showToast('Please Enter Data For all Fields To Proceed', 5000);
 
       return false;
     }

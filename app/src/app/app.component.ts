@@ -1,31 +1,31 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
-import {ModalController, Platform} from "@ionic/angular";
-import { SplashScreen } from "@ionic-native/splash-screen/ngx";
-import { StatusBar } from "@ionic-native/status-bar/ngx";
-import { PwaService } from "./services/pwa/pwa.service";
-import { ActivatedRoute, Router } from "@angular/router";
-import { LocalStorageService } from "./services/local-storage/local-storage.service";
-import {UserService} from "./services/user/user.service";
-import {AuthTokenInterceptorService} from "./auth-token-interceptor.service";
-import {ShareComponent} from "./shared-components/share/share.component";
-import {ShareMonitorService} from "./services/app-monitor/share-monitor.service";
+import { ActivatedRoute, Router } from '@angular/router';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+import {ModalController, Platform} from '@ionic/angular';
+import {AuthTokenInterceptorService} from './auth-token-interceptor.service';
+import {ShareMonitorService} from './services/app-monitor/share-monitor.service';
+import { LocalStorageService } from './services/local-storage/local-storage.service';
+import { PwaService } from './services/pwa/pwa.service';
+import {UserService} from './services/user/user.service';
+import {ShareComponent} from './shared-components/share/share.component';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "app.component.html"
+  selector: 'app-root',
+  templateUrl: 'app.component.html'
 })
 export class AppComponent {
 
     public show_add_to_home = false;
 
-    is_user_signed_in:any
-    user_details
+    is_user_signed_in: any;
+    user_details;
 
 
     appPages = [];
 
-user: any
+user: any;
 
     constructor(
         private platform: Platform,
@@ -45,14 +45,14 @@ user: any
 
         this.initializeApp();
 
-        this.user = localStorage.getUser()
+        this.user = localStorage.getUser();
 
         this.user.subscribe((user: any) => {
 
-            this.is_user_signed_in = user.signed_in
-            this.user_details = user
+            this.is_user_signed_in = user.signed_in;
+            this.user_details = user;
 
-            console.log(user)
+            console.log(user);
             this.appPages = [
                 {
                     title: 'Home',
@@ -60,7 +60,7 @@ user: any
                     icon: 'home',
                     should_display: true
                 },
-
+/*
                 {
                     title: 'Logout',
                     url: '#',
@@ -68,13 +68,13 @@ user: any
                     should_display: this.is_user_signed_in,
                     click_handler: () => {
 
-                        this.userService.logOut()
-                        this.router.navigate(['login'])
+                        this.userService.logOut();
+                        this.router.navigate(['login']);
 
 
-                        /*   this.userService.logOut().subscribe(()=>{
+                        /!*   this.userService.logOut().subscribe(()=>{
                                this.router.navigate(['login'])
-                           })*/
+                           })*!/
 
                     }
                 },
@@ -86,16 +86,12 @@ user: any
                     should_display: !this.is_user_signed_in
                 },
 
-
                 {
                     title: 'Subscribe',
                     url: '/subscribe',
                     icon: 'key',
                     should_display: true
-                },
-
-
-
+                },*/
 
                 {
                     title: 'Share App',
@@ -103,13 +99,13 @@ user: any
                     icon: 'share',
                     should_display: true,
                     click_handler: () => {
-                        this.showShare()
+                        this.showShare();
 
                     }
                 },
 
             ];
-        })
+        });
 
 
     }
@@ -129,11 +125,11 @@ user: any
     });
 
     this.localStorage.getOtherData().subscribe((other_data: any) => {
-      let first_visit = other_data.first_time;
+      const first_visit = other_data.first_time;
      //  this.router.navigate(["onboard"]);
       if (first_visit) {
 
-        this.router.navigate(["onboard"]);
+        this.router.navigate(['onboard']);
       }
     });
   }
@@ -147,7 +143,7 @@ user: any
 
     async  showShare() {
 
-    this.shareService.showShare()
+    this.shareService.showShare();
 
       /*  const modal = await this.modalController.create({
             component: ShareComponent

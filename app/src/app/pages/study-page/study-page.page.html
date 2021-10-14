@@ -5,12 +5,12 @@
       <ion-menu-button class="menu-button" ></ion-menu-button>
     </ion-buttons>
 
-    <ion-title class="no-centralize">
+    <ion-title class="no-centralize" >
 
       <ion-grid>
-        <ion-row>
+        <ion-row class="ion-align-items-start">
 
-          <ion-col>
+          <ion-col class="ion-align-self-start">
 
             <ion-select [interfaceOptions]="customPopoverOptionsCategory" interface="popover" [(ngModel)]="selected_category" name="selected_category">
               <ion-select-option value="explore" selected>Explore</ion-select-option>
@@ -19,7 +19,7 @@
             </ion-select>
           </ion-col>
 
-          <ion-col *ngIf="selected_category == 'explore'">
+          <ion-col class="ion-align-self-end" *ngIf="selected_category == 'explore'">
             <ion-select placeholder="Select Exam" [interfaceOptions]="customPopoverOptionsExamType" interface="popover" [(ngModel)]="selected_exam" name="selected_exam">
               <ion-select-option value="jamb" selected>JAMB</ion-select-option>
               <ion-select-option value="waec">WAEC</ion-select-option>

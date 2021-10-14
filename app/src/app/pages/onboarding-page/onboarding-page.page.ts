@@ -25,7 +25,7 @@ export class OnboardingPagePage implements OnInit {
     start(){
       console.log("Nav")
        this.localStorage.saveOtherData({ first_time: false });
-        this.router.navigate(["register"]);
+        this.router.navigate(["/tabs/dashboard"]);
     }
 
 

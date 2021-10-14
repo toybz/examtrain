@@ -88,171 +88,6 @@ export const Study = {
     }
   },
 
-  Mathematics: {
-    subject_id: 2,
-    logo_path: "assets/images/maths.jpg",
-    topics: {
-
-      1 : {
-        topic_id: 1 ,
-        topic : "Number Bases",
-        logo_path: "",
-        description: "This math video tutorial provides a basic introduction into number systems.  It explains how to interconvert between decimal, binary, octal, hexadecimal and BCD using successive division and multiplication of base powers",
-        sub_topics: {
-          1:  {
-            sub_topic_id: 1,
-            sub_topic : 'operations in different number bases from 2 to 10',
-            logo_path: "",
-            description: "This math video tutorial provides a basic introduction into number systems.  It explains how to interconvert between decimal, binary, octal, hexadecimal and BCD using successive division and multiplication of base powers",
-            url: "https://www.youtube.com/embed/L2zsmYaI5ww"} ,
-          2:  {
-            sub_topic_id: 2,
-            sub_topic : ' conversion from one base to another including fractional parts',
-            logo_path: "",
-            description: "This math video tutorial provides a basic introduction into number systems.  It explains how to interconvert between decimal, binary, octal, hexadecimal and BCD using successive division and multiplication of base powers",
-            url: "https://www.youtube.com/embed/L2zsmYaI5ww"} ,
-
-        }
-      } ,
-
-      2 : {
-        topic_id: 2 ,
-        topic : "Fractions, Decimals, Approximations and Percentages",
-        logo_path: "",
-        description: "Percentages, fractions and decimals are essential for maths students - This Lesson covers all on it.",
-        sub_topics: {
-          1:  {
-            sub_topic_id: 1,
-            sub_topic : 'fractions and decimals',
-            logo_path: "",
-            description: "Percentages, fractions and decimals are essential",
-            url: "https://www.youtube.com/embed/AMiJGQ5rKHM"} ,
-          2:  {
-            sub_topic_id: 2,
-            sub_topic : 'significant figures',
-            logo_path: "",
-            description: "Introduction to significant figures",
-            url: "https://www.youtube.com/embed/eCJ76hz7jPM"} ,
-
-          3:  {
-            sub_topic_id: 3,
-            sub_topic : 'decimal places',
-            logo_path: "",
-            description: "Decimal Place Value",
-            url: "https://www.youtube.com/embed/x-Dqe5U1TXA"} ,
-
-          4:  {
-            sub_topic_id: 4,
-            sub_topic : 'simple interest',
-            logo_path: "",
-            description: "Simple interest lesson",
-            url: "https://www.youtube.com/embed/ZWCXrbnMN-E"} ,
-
-          5:  {
-            sub_topic_id: 5,
-            sub_topic : 'profit and loss percent',
-            logo_path: "",
-            description: "Derivation of formulas to find Loss percentage, Profit percentage, Cost Price and Selling price. Knowing derivation helps to understand topic properly",
-            url: "https://www.youtube.com/embed/I9KFGlUDH6I"} ,
-        }
-      } ,
-
-
-      3 : {
-        topic_id: 3 ,
-        topic : "Indices, Logarithms and Surds",
-        logo_path: "",
-        description: "This lesson covers Laws of indices, Standard form, Laws of logarithm",
-        sub_topics: {
-          1:  {
-            sub_topic_id: 1,
-            sub_topic : 'Laws of indices',
-            logo_path: "",
-            description: "Laws of indices",
-            url: "https://www.youtube.com/embed/BUJKEDqGp1U"} ,
-          2:  {
-            sub_topic_id: 2,
-            sub_topic : 'Standard form',
-            logo_path: "",
-            description: "Standard form",
-            url: "https://www.youtube.com/embed/BUJKEDqGp1U"} ,
-
-          3:  {
-            sub_topic_id: 3,
-            sub_topic : 'Laws of logarithm',
-            logo_path: "",
-            description: "Laws of logarithm",
-            url: "https://www.youtube.com/embed/bPLyCH1WaEY"} ,
-
-          4:  {
-            sub_topic_id: 4,
-            sub_topic : 'Change of bases in logarithm and application',
-            logo_path: "",
-            description: "Change of bases in logarithm and application",
-            url: "https://www.youtube.com/embed/OkFdDqW9xxM"} ,
-
-          5:  {
-            sub_topic_id: 5,
-            sub_topic : 'Surds',
-            logo_path: "",
-            description: "Surds",
-            url: "https://www.youtube.com/embed/OqPbF3nkeyQ"} ,
-        }
-      } ,
-
-
-      4 : {
-        topic_id: 4 ,
-        topic : "Sets Theory",
-        logo_path: "",
-        description: "This math video tutorial provides a basic introduction into the intersection of sets and union of sets as it relates to venn diagrams.",
-        sub_topics: {
-          1:  {
-            sub_topic_id: 1,
-            sub_topic : 'Types of sets',
-            logo_path: "",
-            description: "This math video tutorial provides a basic introduction into the intersection of sets and union of sets as it relates to venn diagrams.",
-            url: "https://www.youtube.com/embed/xZELQc11ACY"} ,
-          2:  {
-            sub_topic_id: 2,
-            sub_topic : 'algebra of sets',
-            logo_path: "",
-            description: "This math video tutorial provides a basic introduction into the intersection of sets and union of sets as it relates to venn diagrams.",
-            url: "https://www.youtube.com/embed/xZELQc11ACY"} ,
-
-          3:  {
-            sub_topic_id: 3,
-            sub_topic : 'venn diagrams and their applications',
-            logo_path: "",
-            description: "This math video tutorial provides a basic introduction into the intersection of sets and union of sets as it relates to venn diagrams.",
-            url: "https://www.youtube.com/embed/xZELQc11ACY"} ,
-
-        }
-      } ,
-
-        5 : {
-            topic_id: 4 ,
-            topic : "Simple Interest ",
-            logo_path: "",
-            description: "",
-            sub_topics: {
-                1:  {
-                    sub_topic_id: 1,
-                    sub_topic : 'Simple Interest ',
-                    logo_path: "",
-                    description: "",
-                    url: "https://www.youtube.com/embed/NCYNXkbTTUo"} ,
-
-
-            }
-        } ,
-
-
-
-
-
-    }
-  },
 
     Biology: {
         subject_id: 3,
@@ -336,6 +171,171 @@ export const Study = {
         }
     } ,
 
+    Mathematics: {
+        subject_id: 2,
+        logo_path: "assets/images/maths.jpg",
+        topics: {
+
+            1 : {
+                topic_id: 1 ,
+                topic : "Number Bases",
+                logo_path: "",
+                description: "This math video tutorial provides a basic introduction into number systems.  It explains how to interconvert between decimal, binary, octal, hexadecimal and BCD using successive division and multiplication of base powers",
+                sub_topics: {
+                    1:  {
+                        sub_topic_id: 1,
+                        sub_topic : 'operations in different number bases from 2 to 10',
+                        logo_path: "",
+                        description: "This math video tutorial provides a basic introduction into number systems.  It explains how to interconvert between decimal, binary, octal, hexadecimal and BCD using successive division and multiplication of base powers",
+                        url: "https://www.youtube.com/embed/L2zsmYaI5ww"} ,
+                    2:  {
+                        sub_topic_id: 2,
+                        sub_topic : ' conversion from one base to another including fractional parts',
+                        logo_path: "",
+                        description: "This math video tutorial provides a basic introduction into number systems.  It explains how to interconvert between decimal, binary, octal, hexadecimal and BCD using successive division and multiplication of base powers",
+                        url: "https://www.youtube.com/embed/L2zsmYaI5ww"} ,
+
+                }
+            } ,
+
+            2 : {
+                topic_id: 2 ,
+                topic : "Fractions, Decimals, Approximations and Percentages",
+                logo_path: "",
+                description: "Percentages, fractions and decimals are essential for maths students - This Lesson covers all on it.",
+                sub_topics: {
+                    1:  {
+                        sub_topic_id: 1,
+                        sub_topic : 'fractions and decimals',
+                        logo_path: "",
+                        description: "Percentages, fractions and decimals are essential",
+                        url: "https://www.youtube.com/embed/AMiJGQ5rKHM"} ,
+                    2:  {
+                        sub_topic_id: 2,
+                        sub_topic : 'significant figures',
+                        logo_path: "",
+                        description: "Introduction to significant figures",
+                        url: "https://www.youtube.com/embed/eCJ76hz7jPM"} ,
+
+                    3:  {
+                        sub_topic_id: 3,
+                        sub_topic : 'decimal places',
+                        logo_path: "",
+                        description: "Decimal Place Value",
+                        url: "https://www.youtube.com/embed/x-Dqe5U1TXA"} ,
+
+                    4:  {
+                        sub_topic_id: 4,
+                        sub_topic : 'simple interest',
+                        logo_path: "",
+                        description: "Simple interest lesson",
+                        url: "https://www.youtube.com/embed/ZWCXrbnMN-E"} ,
+
+                    5:  {
+                        sub_topic_id: 5,
+                        sub_topic : 'profit and loss percent',
+                        logo_path: "",
+                        description: "Derivation of formulas to find Loss percentage, Profit percentage, Cost Price and Selling price. Knowing derivation helps to understand topic properly",
+                        url: "https://www.youtube.com/embed/I9KFGlUDH6I"} ,
+                }
+            } ,
+
+
+            3 : {
+                topic_id: 3 ,
+                topic : "Indices, Logarithms and Surds",
+                logo_path: "",
+                description: "This lesson covers Laws of indices, Standard form, Laws of logarithm",
+                sub_topics: {
+                    1:  {
+                        sub_topic_id: 1,
+                        sub_topic : 'Laws of indices',
+                        logo_path: "",
+                        description: "Laws of indices",
+                        url: "https://www.youtube.com/embed/BUJKEDqGp1U"} ,
+                    2:  {
+                        sub_topic_id: 2,
+                        sub_topic : 'Standard form',
+                        logo_path: "",
+                        description: "Standard form",
+                        url: "https://www.youtube.com/embed/BUJKEDqGp1U"} ,
+
+                    3:  {
+                        sub_topic_id: 3,
+                        sub_topic : 'Laws of logarithm',
+                        logo_path: "",
+                        description: "Laws of logarithm",
+                        url: "https://www.youtube.com/embed/bPLyCH1WaEY"} ,
+
+                    4:  {
+                        sub_topic_id: 4,
+                        sub_topic : 'Change of bases in logarithm and application',
+                        logo_path: "",
+                        description: "Change of bases in logarithm and application",
+                        url: "https://www.youtube.com/embed/OkFdDqW9xxM"} ,
+
+                    5:  {
+                        sub_topic_id: 5,
+                        sub_topic : 'Surds',
+                        logo_path: "",
+                        description: "Surds",
+                        url: "https://www.youtube.com/embed/OqPbF3nkeyQ"} ,
+                }
+            } ,
+
+
+            4 : {
+                topic_id: 4 ,
+                topic : "Sets Theory",
+                logo_path: "",
+                description: "This math video tutorial provides a basic introduction into the intersection of sets and union of sets as it relates to venn diagrams.",
+                sub_topics: {
+                    1:  {
+                        sub_topic_id: 1,
+                        sub_topic : 'Types of sets',
+                        logo_path: "",
+                        description: "This math video tutorial provides a basic introduction into the intersection of sets and union of sets as it relates to venn diagrams.",
+                        url: "https://www.youtube.com/embed/xZELQc11ACY"} ,
+                    2:  {
+                        sub_topic_id: 2,
+                        sub_topic : 'algebra of sets',
+                        logo_path: "",
+                        description: "This math video tutorial provides a basic introduction into the intersection of sets and union of sets as it relates to venn diagrams.",
+                        url: "https://www.youtube.com/embed/xZELQc11ACY"} ,
+
+                    3:  {
+                        sub_topic_id: 3,
+                        sub_topic : 'venn diagrams and their applications',
+                        logo_path: "",
+                        description: "This math video tutorial provides a basic introduction into the intersection of sets and union of sets as it relates to venn diagrams.",
+                        url: "https://www.youtube.com/embed/xZELQc11ACY"} ,
+
+                }
+            } ,
+
+            5 : {
+                topic_id: 4 ,
+                topic : "Simple Interest ",
+                logo_path: "",
+                description: "",
+                sub_topics: {
+                    1:  {
+                        sub_topic_id: 1,
+                        sub_topic : 'Simple Interest ',
+                        logo_path: "",
+                        description: "",
+                        url: "https://www.youtube.com/embed/NCYNXkbTTUo"} ,
+
+
+                }
+            } ,
+
+
+
+
+
+        }
+    },
 
     Geography: {
         subject_id: 4,

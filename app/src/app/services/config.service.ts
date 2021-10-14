@@ -11,11 +11,11 @@ export class ConfigService {
     USE_LOCAL_QUESTIONS: true
   }
 
-  DEFAULT_MAX_QUESTION = 5;
+  DEFAULT_MAX_QUESTION = 10;
   SUBSCRIBE_USER_MAX_QUESTION = 40;
   USE_LOCAL_QUESTIONS = true;
   SUB_AMOUNT = 1000;
-  DEMO_QUIZ_COUNT = 3;
+  DEMO_QUIZ_COUNT = 50;
 
 
   constructor() {

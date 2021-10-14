@@ -14,6 +14,7 @@ import {UserService} from "../../../services/user/user.service";
   templateUrl: './view-tutorial.component.html',
   styleUrls: ['./view-tutorial.component.scss']
 })
+
 export class ViewTutorialComponent implements OnInit {
 
 
@@ -25,7 +26,6 @@ export class ViewTutorialComponent implements OnInit {
   selected_sub_topic ;
   isSubscribedUser = false;
   user;
-
 
   constructor(private _location: Location, private router: Router, private route: ActivatedRoute, private study_service: StudyService , private sanitizer: DomSanitizer , public loadingController: LoadingController , public actionSheetController: ActionSheetController, private  userService: UserService) {
 
@@ -85,8 +85,8 @@ export class ViewTutorialComponent implements OnInit {
       storedUser.subscribe((user: any) => {
 
         this.user = user;
-        this.isSubscribedUser = user.subscription && user.subscription.status || false
-
+      //  this.isSubscribedUser = user.subscription && user.subscription.status || false
+        this.isSubscribedUser = true;
         if(!this.isSubscribedUser){
           this.showSubscribeActionSheet();
         }
