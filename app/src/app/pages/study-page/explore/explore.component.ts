@@ -105,7 +105,7 @@ subjects = [];
         this.showTopicsFor(this.subjects[0])
       })
 
-      Swal.fire({
+     /* Swal.fire({
           position: 'center',
           type: 'info',
           title: 'We are constantly updating the tutorials, please always check back for updates',
@@ -120,7 +120,7 @@ subjects = [];
 
           }
 
-      })
+      })*/
 
   }
 

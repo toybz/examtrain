@@ -17,8 +17,8 @@ export class UserService {
 
      // user.signed_in = true //for testing purpose
     // set all user as subscribed so they can access all features
-          user.signed_in = true;
-         user.subscription.status = true;
+        //  user.signed_in = true;
+        // user.subscription.status = true;
 
      console.log({user});
 

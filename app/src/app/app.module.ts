@@ -26,7 +26,9 @@ import {AuthTokenInterceptorService} from "./auth-token-interceptor.service";
     FormsModule,
     HttpClientModule,
     RoundProgressModule,
-      IonicModule.forRoot(),
+      IonicModule.forRoot({
+        'mode': 'md',
+      }),
       AppRoutingModule,
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production
